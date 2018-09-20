@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	<title>아이더</title>
+	<link rel="stylesheet" href="style.css">
+
+	<style>
+	#content { clear:both; }
+	.page_title { line-height:60px; text-indent:10px; }
+	.page_sub_title { line-height:40px; text-indent:10px; }
+	#visual { width:100%; position:relative; height:auto; overflow: hidden;}
+	.visual_img { display:block; width:100%; height: auto;}
+	.visual_content { position:absolute; z-index:3;
+		top:25px; left:10px; }
+	.sub_visual_title { font-size:0.9em; line-height:1.8;
+	 text-indent:15px; }
+	.visual_title { font-size:1.1em; line-height:1.8; text-indent:15px; }
+	.visual_coment { font-size:0.8em; color:#fff; padding:15px;
+		text-shadow:0px 0px 2px #333; }
+
+	.visual_more { display:block; margin-left:150px; margin-top:80px;
+		width:90px; text-align:center; border:2px solid #fff; background-color: #333;
+		 color:#fff; height:40px; line-height:40px; }
+	.detail { display:block; left:120px; top:120px;
+		width:90px; text-align:center; border:2px solid #fff; color:#fff; height:40px; line-height:40px;
+		position:absolute; font-size:0.8em; font-weight:bold; }
+
+	.page_coment { margin:10px; border:1px solid #3180ae;
+	padding:10px; font-size:0.85em; line-height:1.8; }
+
+	.pro_frame { clear:both; position:relative; height:auto;  overflow:visible; }
+	.pro_ck { display:none;  }
+	.pro1 { display:block; width:100%; height:auto; }
+	.pro_content { display:none; height:130px; border-bottom:2px solid #333; text-align: center; }
+	.pro_ck:checked + .detail + .pro_content { display:block; }
+	.pro_title { font-size:1.1em; padding-left:10px; line-height:45px; }
+	.pro_coment { font-size:0.85em; font-weight:600; line-height: 1.8; padding:10px; }
+	.proTxt {text-align: center; background: inherit;}
+
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<header id="hd">
+			<div class="hd_wrap">
+				<a href="index.html" id="home" class="left"></a>
+				<h2 class="logo">
+					<img src="./images/logo.png" alt="로고">
+				</h2>
+				<label for="ck" id="lst_btn" class="right"></label>
+			</div>
+			<input type="checkbox" id="ck" />
+			<nav id="collap" class="menu">
+				<ul>
+					<li class="col4"><a href="">MEN</a></li>
+					<li class="col4"><a href="">WOMEN</a></li>
+					<li class="col4"><a href="">KIDS</a></li>
+					<li class="col4"><a href="">SHOES</a></li>
+          <li class="col4"><a href="">BAG</a></li>
+          <li class="col4"><a href="">ACCESSORY</a></li>
+          <li class="col4"><a href="">COMPING</a></li>
+          <li class="col4"><a href="">2018 F/W</a></li>
+				</ul>
+
+			</nav>
+			<nav id="tnb" class="menu">
+				<ul>
+					<li class="col4"><a href="">SHOP</a></li>
+					<li class="col4"><a href="">BEST SELLER</a></li>
+					<!-- <li class="col4"><a href="">EVENT</a></li> -->
+					<!-- <li class="col4"><a href="">SHOES</a></li> -->
+					<!-- <li class="col4"><a href="">BRAND</a></li> -->
+					<li class="col4"><a href="">CS CENTER</a></li>
+					<li class="col4"><a href="">마이페이지</a></li>
+					<!-- <li class="col4"><a href="">제품8</a></li> -->
+				</ul>
+			</nav>
+			<nav id="gnb" class="menu">
+				<ul>
+					<li class="col5"><a href="">BEST</a></li>
+					<li class="col5"><a href="">EVENT</a></li>
+					<li class="col5"><a href="">BRAND</a></li>
+					<li class="col5"><a href="">로그인</a></li>
+					<li class="col5"><a href="">회원가입</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="content">
+			<div class="wrap">
+				<figure id="visual">
+					<img src="./images/banner1.jpg" alt="상품설명" class="visual_img">
+					<img src="./images/banner2.jpg" alt="" class="visual_img">
+					<img src="./images/banner3.jpg" alt="" class="visual_img">
+					<div style="text-align:center; margin-top:-22px; position:relative;">
+					  <span class="dot"></span>
+					  <span class="dot"></span>
+					  <span class="dot"></span>
+					</div>
+				</figure>
+				<script>
+					var slideIndex = 0;
+					showSlides();
+
+					function showSlides() {
+					    var i;
+					    var slides = document.getElementsByClassName("visual_img");
+					    var dots = document.getElementsByClassName("dot");
+					    for (i = 0; i < slides.length; i++) {
+					       slides[i].style.display = "none";
+					    }
+					    slideIndex++;
+					    if (slideIndex > slides.length) {slideIndex = 1}
+					    for (i = 0; i < dots.length; i++) {
+					        dots[i].className = dots[i].className.replace(" active", "");
+					    }
+					    slides[slideIndex-1].style.display = "block";
+					    dots[slideIndex-1].className += " active";
+					    setTimeout(showSlides, 2000); // Change image every 2 seconds
+					}
+</script>
+
+				<div class="banner">
+					<li>
+						<a href=""><img src="./images/eider-benefit-01.jpg" alt=""></a>
+					</li>
+					<li>
+						<a href=""><img src="./images/eider-benefit-02.jpg" alt=""></a>
+					</li>
+					<li>
+						<a href=""><img src="./images/eider-benefit-03.jpg" alt=""></a>
+					</li>
+				</div>
+
+				<div class="pro_frame">
+					<img src="./images/18001.jpg" alt="기획상품" class="pro1">
+					<input type="checkbox" id="pro1" class="pro_ck">
+					<label for="pro1" class="detail">자세히</label>
+					<div class="pro_content">
+						<h3 class="pro_title">EIDER 기획상품</h3>
+						<p class="pro_coment">품질은 UP! 가격은 GOOD! <BR> 2018년 신상기획</p>
+					</div>
+				</div>
+				<div class="pro_frame">
+					<img src="./images/18002.jpg" alt="spicial" class="pro1">
+					<input type="checkbox" id="pro2" class="pro_ck">
+					<label for="pro2" class="detail">자세히</label>
+					<div class="pro_content">
+						<h3 class="pro_title">SPECIAL PRICE</h3>
+						<p class="pro_coment">지난 시즌 아이템을<BR> 특별한 가격으로 만나보세요! </p>
+					</div>
+				</div>
+				<div class="pro_frame">
+					<img src="./images/18003.jpg" alt="18fw" class="pro1">
+					<input type="checkbox" id="pro3" class="pro_ck">
+					<label for="pro3" class="detail">자세히</label>
+					<div class="pro_content">
+						<h3 class="pro_title">18FW MOMENTUM</h3>
+						<p class="pro_coment">당신을 위한 완벽한 서포터 <br> 모멘텀 라인</p>
+					</div>
+				</div>
+				<div class="pro_frame" style="height:130px;">
+					<img src="./images/18004.jpg" alt="미백크림" class="pro1">
+					<input type="checkbox" id="pro4" class="pro_ck">
+					<div class="proTxt">
+						<h3>오직 회원님만을 위한 파격혜택!</h3>
+						<p>지금 바로 누리세요!</p>
+						<button><a href="http://www.eider.co.kr/eider/ko/deal/deal">파워딜 보기</a></button>
+					</div>
+				</div>
+			</div>
+			<div class="blank_box"></div>
+		</div>
+
+		<!-- footer -->
+		<footer id="ft">
+			<div class="wrap">
+				<img src="./images/logo.png" alt="" class="ft_logo">
+				<p class="copyright">COPYRIGHT 2017 EIDER.ALL RIGHTS RESERVED.</p>
+			</div>
+		</footer>
+	</div>
+	<input type="checkbox" id="aside_ck" />
+	<label for="aside_ck" id="quick_btn"></label>
+	<aside id="aside">
+		<h2 class="aside_title">주요제품</h2>
+		<nav id="lnb">
+			<input type="radio" name="ra" id="ra0" class="ra_btn" checked />
+			<ul>
+				<input type="radio" name="ra" id="ra1" class="ra_btn">
+				<li>
+					<a href="" class="lnb_main">MEN</a>
+					<label for="ra1" class="accr_btn">+</label>
+					<ul class="sub">
+						<li><a href="">자켓</a></li>
+						<li><a href="">티셔츠/셔츠</a></li>
+						<li><a href="">조끼</a></li>
+						<li><a href="">팬츠</a></li>
+						<li><a href="">이너웨어</a></li>
+						<li><a href="">래쉬가드</a></li>
+					</ul>
+				</li>
+				<input type="radio" name="ra" id="ra2" class="ra_btn">
+				<li>
+					<a href="" class="lnb_main">WOMEN</a>
+					<label for="ra2" class="accr_btn">+</label>
+					<ul class="sub">
+						<li><a href="">자켓</a></li>
+						<li><a href="">티셔츠/셔츠</a></li>
+						<li><a href="">조끼</a></li>
+						<li><a href="">팬츠</a></li>
+						<li><a href="">이너웨어</a></li>
+						<li><a href="">래쉬가드</a></li>
+					</ul>
+				</li>
+				<input type="radio" name="ra" id="ra3" class="ra_btn">
+				<li>
+					<a href="" class="lnb_main">KIDS</a>
+					<label for="ra3" class="accr_btn">+</label>
+					<ul class="sub">
+						<li><a href="">자켓/티셔츠</a></li>
+						<li><a href="">팬츠</a></li>
+						<li><a href="">신발</a></li>
+						<li><a href="">용품</a></li>
+					</ul>
+				</li>
+				<input type="radio" name="ra" id="ra4" class="ra_btn">
+				<li>
+					<a href="" class="lnb_main">SHOES</a>
+					<label for="ra4" class="accr_btn">+</label>
+					<ul class="sub">
+						<li><a href="">등산화</a></li>
+						<li><a href="">워킹화/런닝화</a></li>
+						<li><a href="">캐주얼화</a></li>
+						<li><a href="">계절화</a></li>
+					</ul>
+				</li>
+				<input type="radio" name="ra" id="ra5" class="ra_btn">
+				<li>
+					<a href="" class="lnb_main">BAG</a>
+					<label for="ra5" class="accr_btn">+</label>
+					<ul class="sub">
+						<li><a href="">등산배낭</a></li>
+						<li><a href="">일반배낭</a></li>
+					</ul>
+				</li>
+				<input type="radio" name="ra" id="ra6" class="ra_btn">
+				<li>
+					<a href="" class="lnb_main">ACCESSORY</a>
+					<label for="ra6" class="accr_btn">+</label>
+					<ul class="sub">
+						<li><a href="">모자</a></li>
+						<li><a href="">장갑</a></li>
+						<li><a href="">양말</a></li>
+						<li><a href="">스틱</a></li>
+						<li><a href="">기타</a></li>
+					</ul>
+				</li>
+				<input type="radio" name="ra" id="ra7" class="ra_btn">
+				<li>
+					<a href="" class="lnb_main">CAMPING</a>
+					<label for="ra7" class="accr_btn">+</label>
+					<ul class="sub">
+						<li><a href="">텐트</a></li>
+						<li><a href="">가구/침대</a></li>
+						<li><a href="">기타</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+	<div class="trans_wrap"></div>
+
+
+</body>
+</html>
