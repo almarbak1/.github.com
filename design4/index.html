@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>::: 코오롱에 오신 것을 환영합니다. :::</title>
+    <!-- Mobile & Tablet & Responsive on the Screen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Render to IE's latest version-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Refresh Interval Time -->
+    <meta http-equiv="refresh" content="180">
+    <!-- website information -->
+    <meta name="application-name" content="ilshin website">
+    <meta name="author" content="kitae Cortez">
+    <meta name="description" content="웹사이트 소개"> 
+    <meta name="keywords" content="일신, 방직, 패션, 섬유">
+    
+    <!-- Shortcut icon Setting -->
+    <!-- Chrome, Safari, IE --> 
+    <link rel="shortcut icon" href="./ico/favicon.ico"> 
+    <!-- Firefox, Opera (Chrome and Safari say thanks but no thanks) --> <link rel="icon" href="./ico/favicon.png">
+    <!-- Still works in IE6+ series2 --> 
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/vnd.microsoft.icon"> 
+    <!-- Still works in IE6+ series3 -->
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon"> 
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 
+    <meta name="msapplication-TileImage" content="./ico/ms-icon-144.png">
+    
+    <!-- Favicon for iOS Touch Base -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./ico/apple-icon-180x180.png">
+
+    <!-- Favicon using to manifest for Android -->
+    <link rel="manifest" href="manifest.json">
+   
+    <!-- Favicon Setting -->
+    <link rel="icon" type="image/png" href="./ico/favicon-16.png" sizes="16x16"> 
+    <link rel="icon" type="image/png" href="./ico/favicon-32.png" sizes="32x32"> 
+    <link rel="icon" type="image/png" href="./ico/favicon-48.png" sizes="48x48"> 
+    <link rel="icon" type="image/png" href="./ico/favicon-64.png" sizes="64x64"> 
+    <link rel="icon" type="image/png" href="./ico/favicon-128.png" sizes="128x128">
+    <link rel="apple-touch-icon-precomposed" href="./ico/favicon-152.png">
+
+    <!-- IE9 Less then Setting -->
+    <!--[if lte IE 8]>
+        <script src="./dist/html5shiv.js"></script>
+    <![endif]-->
+    
+    <!-- Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <link rel="stylesheet" href="./dist/normalize.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="wsg.css">
+    <style>
+    .hd { clear:both; }
+    .hdContain { width:100%;  max-width:100%; height:40px;    padding:0px 80px;  background:#e4e2dc;  line-height:40px; box-sizing:border-box;
+        text-align:right; position:absolute; top:0px; left:0; z-index:10; opacity: 0.6; position: fixed;}
+    .tnb { float:right; }
+    .tnb.left { float:left; }
+    .tnb li { float:left; padding:0 10px; }
+    .tnb li label, .tnb li a { color:#000; font-size:16px; cursor:pointer;font-weight: bold; }
+    .tnb li .opener:after, .tnb li .login:after { content:"·"; padding-left:15px; }
+    .hdWrap { width:100%; height:85px; border-bottom:1px solid #f1f1f1; 
+        position:absolute; top:40px; left:0; z-index:10; background:#fff; 
+        z-index:23; }
+    .gnb { width:1200px; margin:auto; } 
+    .logo { display:block; width: 300px; height:27px; float:left;
+        margin-right:40px; margin-top:30px; background-repeat:no-repeat;
+        background-image:url("./img/logo.png"); }
+    /* .mainMenu { float:left; margin-left:50px; } */
+    .gnb li { float:left; margin:0px 20px; }
+    .gnb label { display:block; font-size:20px; cursor:pointer; 
+        height:85px; line-height:85px; color:#333;  padding:0px 10px; }
+    .gnb li .raItem ~ .sub { display:none; position:absolute; 
+        top:85px; left:0; width:100%; background:#fff;  z-index:23; 
+        border-top:1px solid #f1f1f1; }
+    .gnb li .raItem:checked ~ .sub { display:block; }
+    .gnb li .raItem:checked ~ label { color:#d1392b; }
+    .raItem:not(:checked) ~ .hdWrap { background:#fff; }
+    .raItem:checked ~ .hdWrap { background:transparent; }
+    .raItem:not(:checked) ~ .hdWrap label { color:#000; }
+    .raItem:checked ~ .hdWrap label { color:#333; }
+    .raItem:checked ~ .hdWrap .logo {     
+        background-image:url("./img/logo.png");  }
+    .raItem:not(:checked) ~ .hdWrap .logo {     
+        background-image:url("./img/logo.png");  }
+    .subFrame { float:left; padding:30px; width:280px; padding-left:60px; 
+        height:450px; }
+
+/*    .subFrame img { position:absolute; left:0px; top: 0px;}*/
+         .bgGnb { position:absolute; left:0px; top: 0px;}
+/*    .subMenu {float: left;padding-top:50px;padding-bottom:30px;margin-left: 100px;min-width:800px;max-width: 910px; margin-left: 163px; }*/
+
+                .subMenu {
+    float: right;
+    padding-top: 40px;
+
+    margin-right: 20px;
+    min-width: 800px;
+    max-width: 58%;
+}
+    .subMenu li {float:left;margin:20px;}
+
+    .gnb .lstBtn { display:block; float:right; width:30px;  height:30px; 
+        margin-right:37px; margin-top:25px; position:relative; }
+    .ckItem:checked ~ .collap { display:block; }        
+    .ckItem:checked ~ .hdWrap .mainMenu .sub { display:none; }        
+    .collap { position:absolute; z-index:25; top:125px; left:0; 
+        min-width:1920px; max-width:2400px; background:#fff; display:none; }
+    .sitemap { clear:both; width:100%; padding:0px 10%; box-sizing:border-box; padding-bottom:20px; }
+    .sitemap ul { float:left; padding:10px; margin:0px 40px; padding-bottom:150px; }
+    .sitemap li { clear:both; height:30px; }
+    .sitemap li a { color:#333; }
+    .sitemap li a:hover { text-decoration:underline; color:#d1392b; }    
+    </style>
+    <style>
+    /* 콘텐츠 영역 설정  */
+    #page1 { clear:both; position:absolute; top:65%; left:0; z-index:21; 
+        height:640px; padding-bottom:100px; }
+    .content { position:relative; width:100%; height:auto; min-height:100%; }
+    .mainSlider { width:100%; height:auto; }
+    .imgFrame { width:400%; height:auto; position:absolute;
+        top:0; left:0; transition:0.8s; }
+    .mainSlider .imgFrame li { float:left; background-repeat:no-repeat;
+        background-position:center top; width:25%; height:100%; opacity:0.5; 
+        transition:0.8s;  }
+    .mainSlider .imgFrame li.item1 { background-image:url("./img/bg_main2.jpg"); }
+    .mainSlider .imgFrame li.item2 { background-image:url("./images/slide02.jpg"); }
+    .mainSlider .imgFrame li.item3 { background-image:url("./images/slide03.jpg"); }
+    .mainSlider .imgFrame li.item4 { background-image:url("./images/slide04.jpg"); }
+    .sliderFrame { width:400%; height:auto; position:absolute;
+        top:0; left:0; top:35%; z-index:20; }
+    .sliderFrame li { width:25%; float:left; position:relative; height: 100px; }
+        
+    .sliderNumFrame { position:absolute; z-index:20; right:180px; top:40%;}
+    #slRa01:checked ~ .mainSlider .imgFrame { left:0; }
+    #slRa02:checked ~ .mainSlider .imgFrame { left:-100%; }
+    #slRa03:checked ~ .mainSlider .imgFrame { left:-200%; }
+    #slRa04:checked ~ .mainSlider .imgFrame { left:-300%; }
+    #slRa01:checked ~ .mainSlider .imgFrame li.item1 { opacity:1; }
+    #slRa02:checked ~ .mainSlider .imgFrame li.item2 { opacity:1; }
+    #slRa03:checked ~ .mainSlider .imgFrame li.item3 { opacity:1; }
+    #slRa04:checked ~ .mainSlider .imgFrame li.item4 { opacity:1; }
+    #slRa01:checked ~ .mainSlider .sliderFrame { left:0; }
+    #slRa02:checked ~ .mainSlider .sliderFrame { left:-100%; }
+    #slRa03:checked ~ .mainSlider .sliderFrame { left:-200%; }
+    #slRa04:checked ~ .mainSlider .sliderFrame { left:-300%; }
+    #slRa01:checked ~ .mainSlider .sliderNumFrame .item1 .sliderNumBtn { background:url("./images/icons.png") -120px 0; }    
+    #slRa02:checked ~ .mainSlider .sliderNumFrame .item2 .sliderNumBtn { background:url("./images/icons.png") -120px 0; }   
+    #slRa03:checked ~ .mainSlider .sliderNumFrame .item3 .sliderNumBtn { background:url("./images/icons.png") -120px 0; }    
+    #slRa04:checked ~ .mainSlider .sliderNumFrame .item4 .sliderNumBtn { background:url("./images/icons.png") -120px 0; }    
+    .txtFrame { margin:30px auto; padding-top:200px; z-index:18; 
+        position:absolute; top:0; left:0; padding-left:10%; }
+    .grdFrame { position:relative; width:960px; margin:0 auto; height:520px; }
+    .grdFrame li { position:absolute; z-index:21; box-sizing:border-box; 
+         padding:35px 40px; background-repeat:no-repeat; }
+    .grdFrame li.item1 { top:0; left:0; width:330px; height:300px; }    
+    .grdFrame li.item2 { top:0; left:330px; width:300px; height:300px; 
+        background-image:url("./img/product4_1_img1.jpg");
+        background-position:left top; }
+    .grdFrame li.item3 { top:0; left:630px; width:330px; height:520px; 
+        background-image:url("./img/recurit.png");
+        background-position:center bottom; }
+    .grdFrame li.item4 { top:300px; left:0; width:630px; height:220px; 
+        background-image:url("./img/bg_history.jpg");
+        background-position:left top; padding-left:320px;border-left: solid 1px #000; border-bottom: solid 1px #000;}
+    </style>
+    <style>
+    /* 푸터 영역 설정 */
+    .ft { clear:both; position:absolute; bottom:-430px;  left:0; z-index:25; width:100%; border-top:1px solid #ccc; background: #e4e2dc; opacity: 0.8;}
+    .ftFrame { width:960px; margin:10px auto; padding-bottom:40px; position:relative; }
+    .fnb { width:100%; padding-top:30px; height:40px; }
+    .fnb li { float:left; height:40px; line-height:40px; }
+    .fnb a { display:block; color:#000; padding:0px 20px 0px 0px; }
+    .fnb a:after { content: " |"; padding-left:20px; color:#999; }    
+    .fnb .last a:after { content: ""; }     
+    .copyright { clear:both; padding-top:20px; }
+    .copyright span { padding:20px; padding-left:0; }
+    </style>
+    <style>
+    /* 콜랩시블 알림영역 설정 */
+    .collapFrame { position:fixed; left:-100%; top:0; width:100%; 
+        height:180%; z-index:90; background:rgba(0,0,0,0.4); transition:0.9s; }
+    .cnb { width:900px; height:320px; border-radius:0px 25px 25px 0px; 
+        position:absolute; top:27%; left:auto; right:-70px; background:#c69c6d;
+        box-sizing:border-box; padding:50px; transition:0.9s; } 
+    .cnb li { float:left; }
+    .cnb .collapImgFrame { width:300px; }
+    .cnb .collapTxtFrame { width:400px; padding:35px; }    
+    .cnb .collapImgFrame img { display:block; width:100%; }
+    #collapCk1:checked ~ .collapFrame { left:0; }
+    #collapCk1:checked ~ .collapFrame .cnb { left:0px; right:auto; }
+    #collapCk1:checked ~ .wrap { opacity:0.6; }
+    </style>
+    
+<!--    obj_group-->
+    <style>
+        .obj_group {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 51;
+}
+       .obj1 {
+    top: 405px;
+    left: 50%;
+    margin-left: -104px; position: absolute;}
+       .obj1 img {width: 100%; max-width: 100%; background-size: 100%;}
+       .obj2 {top: 404px; left: 470px;}
+    </style>
+</head>
+<body>
+    <input type="checkbox" class="ckItem" id="collapCk1">
+    <div class="wrap">
+        <header class="hd" id="hd">
+           <input type="checkbox" id="ia_open" class="ckItem">
+           <div class="hdContain" id="hd1">
+                <ul class="tnb left">
+                    <li><a href="" class="login">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                </ul>
+                <ul class="tnb">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><label for="ia_open" class="opener">SITEMAP</label></li>
+                    <li><a href="">ENGLISH</a></li>
+                </ul>
+            </div>
+            <input type="radio" name="subRa" class="raItem" id="subRa0" checked>
+            <div class="hdWrap">
+                <nav class="gnb">
+                    <a href="" class="logo"></a>
+                    <ul class="mainMenu">
+                        <li class="cate1">
+                            <input type="radio" name="subRa" class="raItem" id="subRa1">
+                            <label for="subRa1">회사소개</label>
+                            <div class="sub">
+                                <figure class="subFrame">
+                                    <h2 class="subMenuTit">
+                                    <img src="./img/visual1_txt1.gif" alt="" class="visualTit1">
+                                    <br>
+                                    <span class="bdTxt">
+                                    <img src="./img/visual1_txt2.gif" alt="" class="visualTit2">
+                                    </span></h2>
+                                    <img src="./img/bg_gnb.png" alt="기업소개" class="bgGnb">
+                                </figure>
+                                <ul class="subMenu">
+                                    <li><a href="intro.html#tb1">
+                                            <img src="./img/company1.jpg" alt="회사정보">
+                                            <h3 class="subMenuCateTit">회사정보</h3>
+                                            <p class="subMenuCateDesc">
+                                            고객으로부터 가장 사랑받는 기업<br>
+                                            코오롱 인더스트리
+                                        </a></li>
+                                    <li><a href="intro.html#tb2">
+                                            <img src="./img/company2.jpg" alt="연혁">
+                                            <h3 class="subMenuCateTit">
+                                                연혁
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                1957년 설립되어 현재까지<br> 
+                                                한국경제의 지킴이입니다.
+                                            </p>
+                                        </a></li>
+                                    <li><a href="intro.html#tb3">
+                                            <img src="./img/company3.jpg" alt="사업장안내">
+                                            <h3 class="subMenuCateTit">
+                                                사업장안내
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                업계선두주자로써 최상위<br> 
+                                                생산시설을 보유하고 있습니다.
+                                            </p>
+                                        </a></li>
+                                    <li><a href="intro.html#tb4">
+                                            <img src="./img/company4.jpg" alt="경영철학">
+                                            <h3 class="subMenuCateTit">
+                                                경영철학
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                CHANGE<br> 
+                                                CHALLENGE
+                                            </p>
+                                        </a></li>
+                                    <li><a href="intro.html#tb5">
+                                            <img src="./img/company5.jpg" alt="사회공헌">
+                                            <h3 class="subMenuCateTit">
+                                                사회공헌
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                기업과 사회가 동반성장하는 <br>모범이 되겠습니다.
+                                            </p>
+                                        </a></li>
+                                    <li><a href="intro.html#tb6">
+                                            <img src="./img/company6.jpg" alt="코오롱소식">
+                                            <h3 class="subMenuCateTit">
+                                                코오롱소식
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                코오롱의 소식을<br>
+                                                알려드립니다.
+                                            </p>
+                                        </a></li>
+                                        <label for="subRa0" class="closeBtn menuBtn"></label>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="cate2">
+                            <input type="radio" name="subRa" class="raItem" id="subRa2">
+                            <label for="subRa2">사업분야</label>
+                            <div class="sub">
+                                <figure class="subFrame">
+                                    <h2 class="subMenuTit">
+                                        Wonderful Life with <br>
+                                        <span class="bdTxt">KORON PRODUCTS</span>
+                                    </h2>
+                                    <img src="./img/bg_gnb.png" alt="사업분야" class="bgGnb">
+                                </figure>
+                                <ul class="subMenu">
+                                    <li><a href="product.html#tb1">
+                                            <img src="./img/product1.jpg" alt="">
+                                            <h3 class="subMenuCateTit">
+                                                사업개요
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                코오롱 인더스트리의 사업을<br>
+                                                요약해드립니다.
+                                            </p>
+                                        </a></li>
+                                    <li><a href="product.html#tb2">
+                                            <img src="./img/product2.jpg" alt="">
+                                            <h3 class="subMenuCateTit">
+                                                산업자재
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+  
+                                        </a></li>
+                                    <li><a href="product.html#tb3">
+                                            <img src="./img/product3jpg.jpg" alt="">
+                                            <h3 class="subMenuCateTit">
+                                                필름/전자재료
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+
+                                            </p>
+                                        </a></li>
+                                    <li><a href="product.html#tb1">
+                                            <img src="./img/product4.jpg" alt="">
+                                            <h3 class="subMenuCateTit">
+                                                화학
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+
+                                            </p>
+                                        </a></li>
+                                    <li><a href="product.html#tb1">
+                                            <img src="./img/product5.jpg" alt="">
+                                            <h3 class="subMenuCateTit">
+                                                패션
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+
+                                            </p>
+                                        </a></li>
+                                        <label for="subRa0" class="closeBtn menuBtn"></label>
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        <li class="cate3">
+                            <input type="radio" name="subRa" class="raItem" id="subRa3">
+                            <label for="subRa3">투자정보</label>
+                            <div class="sub">
+                                <figure class="subFrame">
+                                    <h2 class="subMenuTit">
+                                        Global Frontire with<br>
+                                        <span class="bdTxt">BEST SERVICE</span>
+                                    </h2>
+                                    <img src="./img/bg_gnb.png" alt="투자정보" class="bgGnb">
+                                </figure>
+                                <ul class="subMenu">
+                                    <li><a href="information.html#tb1">
+                                            <img src="./img/invest1.jpg" alt="재무정보">
+                                            <h3 class="subMenuCateTit">
+                                               재무정보
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                코오롱의 재무정보를<br>
+                                                확인할 수 있습니다.
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li><a href="information.html#tb2">
+                                            <img src="./img/invest2.jpg" alt="주가정보">
+                                            <h3 class="subMenuCateTit">
+                                                주식정보
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                자본 관련 요약정보를<br>
+                                                제공합니다.
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li><a href="information.html#tb3">
+                                            <img src="./img/invest3.jpg" alt="공시조회">
+                                            <h3 class="subMenuCateTit">
+                                                공시조회
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                기업공시 시스템으로<br>
+                                                연결합니다.
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li><a href="information.html#tb4">
+                                            <img src="./img/invest4.jpg" alt="지배구조">
+                                            <h3 class="subMenuCateTit">
+                                                지배구조
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                코오롱의 기업지배구조를<br>
+                                                알려드립니다.
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li><a href="information.html#tb5">
+                                            <img src="./img/invest5.jpg" alt="자료실">
+                                            <h3 class="subMenuCateTit">
+                                                자료실
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                분석자료를 제시합니다.
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <label for="subRa0" class="closeBtn menuBtn"></label>
+                                 </ul>
+                            </div>
+                            
+                        </li>
+                        <li class="cate4">
+                            <input type="radio" name="subRa" class="raItem" id="subRa4">
+                            <label for="subRa4">채용정보</label>
+                            <div class="sub">
+                                <figure class="subFrame">
+                                    <h2 class="subMenuTit">
+                                        Sensibel Company of<br> 
+                                        <span class="bdTxt">ALL PEOPLE</span>
+                                    </h2>
+                                    <img src="./img/bg_gnb.png" alt="채용정보" class="bgGnb">
+                                </figure>
+                                <ul class="subMenu">
+                                    <li><a href="recruit.html#tb1">
+                                            <img src="./img/job.png" alt="인재상">
+                                            <h3 class="subMenuCateTit">
+                                                인재상
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                코오롱이 추구하는 인재상을<br> 
+                                                알려드립니다.
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li><a href="recruit.html#tb2">
+                                            <img src="./img/job2.jpg" alt="인사제도">
+                                            <h3 class="subMenuCateTit">
+                                                인사제도
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                인재를 중시하는<br>
+                                                합리저이고 효율적인 직급체계
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li><a href="" class="recruit html" id="tb3">
+                                            <img src="./img/job3.jpg" alt="인재채용">
+                                            <h3 class="subMenuCateTit">
+                                                인재채용
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                코오롱에서 여러분의 꿈을 펼쳐보세요!
+                                            </p>
+                                        </a></li>
+                                    <label for="subRa0" class="closeBtn menuBtn"></label>
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        <li class="cate5">
+                            <input type="radio" name="subRa" class="raItem" id="subRa5">
+                            <label for="subRa5">고객센터</label>
+                            <div class="sub">
+                                <figure class="subFrame">
+                                    <h2 class="subMenuTit">
+                                        Happiness Project with<br> 
+                                        <span class="bdTxt">KORON COMPANY</span>
+                                    </h2>
+                                    <img src="./img/bg_gnb.png" alt="고객지원" class="bgGnb">
+                                </figure>
+                                <ul class="subMenu">
+                                    <li><a href="custom.html">
+                                            <img src="./img/customer1.jpg" alt="온라인문의">
+                                            <h3 class="subMenuCateTit">
+                                                온라인문의
+                                            </h3>
+                                            <p class="subMenuCateDesc">
+                                                코오롱에 대한 문의를 할 수 있습니다.
+                                            </p>
+                                        </a></li>
+                                    <label for="subRa0" class="closeBtn menuBtn"></label>
+                                </ul>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                    <label for="ia_open" class="lstBtn">
+                        <span class="icon"></span>
+                    </label>
+                </nav>
+            </div>
+            <div class="collap" id="collap1">
+                <h2 class="sitemapTit">SITEMAP</h2>
+                <nav class="sitemap">
+                    <ul>
+                        <li class="sitemapCateTit">회사소개</li>
+                        <li><a href="intro.html#tb1">기업정보</a></li>
+                        <li><a href="intro.html#tb2">연혁</a></li>
+                        <li><a href="intro.html#tb3">사업장안내</a></li>
+                        <li><a href="intro.html#tb4">경영철학</a></li>
+                        <li><a href="intro.html#tb5">사회공헌</a></li>
+                        <li><a href="intro.html#tb6">코오롱소식</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sitemapCateTit">사업분야</li>
+                        <li><a href="product.html#tb1">사업개요</a></li>
+                        <li><a href="product.html#tb2">산업자재</a></li>
+                        <li><a href="product.html#tb3">필름/전자재료</a></li>
+                        <li><a href="product.html#tb1">화학</a></li>
+                        <li><a href="product.html#tb1">패션</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sitemapCateTit">투자정보</li>
+                        <li><a href="information.html#tb1">재무정보</a></li>
+                        <li><a href="information.html#tb1">주가정보</a></li>
+                        <li><a href="information.html#tb1">공시조회</a></li>
+                        <li><a href="information.html#tb1">지배구조</a></li>
+                        <li><a href="information.html#tb1">자료실</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sitemapCateTit">채용정보</li>
+                        <li><a href="recruit.html#tb1">인재상</a></li>
+                        <li><a href="recruit.html#tb2">인사제도</a></li>
+                        <li><a href="recruit.html#tb3">인재채용</a></li>
+                    </ul>
+                    <ul>
+                        <li class="sitemapCateTit">온라인문의</li>
+                        <li><a href="custom.html">CONTACT US</a></li>
+                    </ul>
+                </nav>
+                <label for="ia_open" class="closeBtn2" style="left:1140px; right:auto; top:50px; z-index:26;"></label>
+            </div>
+        </header>
+        <main class="content">
+           <input type="radio" class="raItem" id="slRa01" name="slRa1" checked>
+           <input type="radio" class="raItem" id="slRa02" name="slRa1" >
+           <input type="radio" class="raItem" id="slRa03" name="slRa1" >
+           <input type="radio" class="raItem" id="slRa04" name="slRa1" >
+            <figure class="mainSlider" id="visual1">
+                <ul class="imgFrame">
+                    <li class="item1">
+                        <img src="./img/bg_main2.jpg" alt="비주얼" class="mainBg">
+                    </li>
+                    <li class="obj obj1" >
+								<img src="/img/s0_obj_0.png" alt="">
+							</li>
+							<li class="obj obj2" style="display: block;">
+								<img src="/img/s0_obj_1.png" alt="">
+							</li>
+							<li class="obj obj3" style="display: block;">
+								<img src="/img/s0_obj_2.png" alt="">
+							</li>
+							<li class="obj obj4" style="display: block;">
+								<img src="/img/s0_obj_3.png" alt="">
+							</li>
+							<div class="obj obj5" style="display: block;">
+								<img src="/img/s0_obj_4.png" alt="">
+							</div>
+							<div class="obj obj6" style="display: block;">
+								<img src="/img/s0_obj_5.png" alt="">
+							</div>
+							<div class="obj obj7" style="display: block;">
+								<img src="/img/s0_obj_6.png" alt="">
+							</div>
+                </ul>
+							
+                <ul class="sliderFrame">
+                    <li>
+                        <label for="slRa02" class="slider_right"></label>
+                        <label for="slRa04" class="slider_left"></label>
+                    </li>
+                    <li>
+                        <label for="slRa03" class="slider_right"></label>
+                        <label for="slRa01" class="slider_left"></label>
+                    </li>
+                    <li>
+                        <label for="slRa04" class="slider_right"></label>
+                        <label for="slRa02" class="slider_left"></label>
+                    </li>
+                    <li>
+                        <label for="slRa01" class="slider_right"></label>
+                        <label for="slRa03" class="slider_left"></label>
+                    </li>
+                </ul>
+                <ul class="sliderNumFrame">
+                    <li class="item1">
+                        <label for="slRa01" class="sliderNumBtn"></label>
+                    </li>
+                    <li class="item2">
+                        <label for="slRa02" class="sliderNumBtn"></label>
+                    </li>
+                    <li class="item3">
+                        <label for="slRa03" class="sliderNumBtn"></label>
+                    </li>
+                    <li class="item4">
+                        <label for="slRa04" class="sliderNumBtn"></label>
+                    </li>
+                </ul>
+                <div class="txtFrame">
+                    <h2 class="vsTit wTxt1"><span>ONLY & ONLY</span> &nbsp;Change & Challenges</h2>
+                    <p class="vsDesc wTxt2">코오롱이 만드는 새로운 세상<br>One&Only의 마음으로 열어갑니다.</p>
+                    <a href="" class="vsMore wTxt">KORON NEWS</a>
+                </div>
+            </figure>
+            
+            <section class="page" id="page1">
+                <ul class="grdFrame">
+                    <li class="grdCol item1 bgC1">
+                        <h3 class="grdName">PRODUCT</h3>
+                        <h2 class="grdTit">고객의 삶의 질을 <br> 높이는 기업</h2>
+                        <a href="product.html#tb1" class="grdMore">사업분야 바로가기 →</a>
+                    </li>
+                    <li class="grdCol item2">
+                        <h3 class="grdName"></h3>
+                        <h2 class="grdTit"></h2>
+                    </li>
+                    <li class="grdCol item3 bgC2">
+                        <h3 class="grdName">RECRUIT</h3>
+                        <h2 class="grdTit">미래를 함께<br>열어갈 인재</h2>
+                        <a href="recruit.html#tb1" class="grdMore">채용정보 바로가기 →</a>
+                    </li>
+                    <li class="grdCol item4 bgC3">
+                        <h3 class="grdName1">STORY</h3>
+                        <h2 class="grdTit2">우리들의 발자취</h2>
+                        <a href="intro.html#tb2" class="grdMore2">코오롱 역사관 바로가기 →</a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="ft">
+            <div class="ftFrame">
+                <nav class="fnb">
+                    <ul>
+                        <li><a href="member1.html">개인정보 취급방침</a></li>
+                        <li><label for="ia_open" style="cursor:pointer;">사이트맵</label></li>
+                        <li><a href="#">&nbsp;</a></li>
+                        <li class="last"><a href="">ENGLISH</a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">
+                   <span>경상북도 구미시 수출대로 48 (공단동)</span> <span>Copyright 2010 Kolon Industries, Inc, All Right Reserved.</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <aside class="collapFrame">
+        <ul class="cnb">
+            <li class="collapCol">
+                <div class="collapImgFrame">
+                    <img src="./images/news01.jpg" alt="뉴스">
+                </div>
+            </li>
+            <li class="collapCol">
+               <a href="">
+                <div class="collapTxtFrame">
+                    <h3 class="collapTit wTxt">
+                        <span class="tit">코오롱 인더스트리, PI 영업 포탈 사용 우수 사례 시상식 실시</span>
+                    </h3>
+                    <p class="collapDesc wTxt">중앙기술원 필름연구그룹 임직원은 7월 필름 'Turn-Around' 성공기원을 다짐 하였다.
+        필름연구그룹은 필름 'Turn-Around' 성공기원 및 팀, 개인의 목표달성을 위한 Mind Set을 고취시키고'우리는 하나'라는 단합을 목적으로,   
+        2014년 대구 영남일보 마라톤대회를 시작으로 상주국제 마라톤대회, 2015년 대구 국제마라톤 대회에 참가하고 있으며,
+        이번 상반기를 마감하고 하반기로 들어서며, '금오산 극기산행'을 실시하여, 필름의 성공기원을 한번 더 다짐하였다. 
+        필름 'turn around' 성공기원을 위한 도전! 열정!!필름연구그룹 화이팅!!  <br><br>
+                    <br>
+ 
+                </div>
+              </a>
+            </li>
+            <label for="collapCk1" class="closeBtn1"></label>
+            <h3 class="collapName wTxt">KORON NEWS</h3>
+        </ul>            
+    </aside>
+</body>
+</html>
