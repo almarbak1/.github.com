@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/start/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <title>국가정보원에 오신것을 환영합니다</title>
+  <style>
+  *{margin: 0 auto; padding: 0;}
+  body, html {width: 100%; height: 100%;}
+  li {list-style: none;}
+  a {text-decoration:  none; color:#000;}
+  </style>
+
+  <style>
+    .wrap {width: 360px; height: 2367px;}
+    header {width: 100%; height: 61px; background: #f1f1f1; margin: 0 auto;}
+    .fas {font-size: 2em; padding-left: 10px;}
+    .logo {margin: 0 auto;}
+    .logo>img {width: 70%;height: 60%; margin-top: 10px;}
+    #hd>span {float: right; margin-right: 10px; margin-top: 4px;}
+    .page {width: 100%; height: 100%;}
+    .sidenav {
+    height: 100%;width: 0;position: fixed;
+    z-index: 1;top: 0;right: 0;
+    background-color: #f1f1f1;overflow-x: hidden;
+    transition: 0.5s;padding-top: 160px;}
+    .sidenav a {padding: 8px 8px 18px 32px;
+    text-decoration: none;font-size: 2em;
+    color: #818181;display: block;transition: 0.3s;}
+    .sidenav a:active {color: #f1f1f1;}
+    .sidenav .closebtn {position: absolute;
+    top: 0;right: 25px;font-size: 36px;
+    margin-left: 50px;}
+    .sub {display: none;}
+
+    </style>
+    <!-- 이미지슬라이드 -->
+    <style>
+      #pg1 {height: 382px; background: darkorchid;}
+      .imgs {width: 100%; height: 100%; position: relative;overflow: hidden;}
+      .imgs>img {width: 100%; height: 100%;}
+    </style>
+    <!-- 링크메뉴 -->
+    <style>
+      #pg2 {height: 60px; background:#f2f2f2;border-bottom: 1px solid #000;}
+      .linkMenu {width: 100%; height: 100%;}
+      .linkMenu>li {float: left; width: 49%;height: 100%;line-height:1.9;}
+      .linkMenu>li>h2 {font-size: 1em; text-align: center;}
+      .linkTxt>span {float: right; margin-right: 10px;}
+      .linkTxt b {color: darkblue;}
+      .linkMenu>li:nth-child(1) {border-right: 1px solid #000;}
+    </style>
+    <!-- 센터소개 -->
+    <style>
+      #pg3 {height: 505px; background: #inherit;border-bottom: 1px solid #000;}
+      #pg3>h2 {text-align: center;padding-top: 10px; font-size: 1.8em; padding-top: 20px; padding-bottom: 25px;border-bottom: 1px solid #000;}
+      .btnBox {width: 100%; height: 60px;margin-top: 10px; text-align: center;border-bottom: 1px solid #000;}
+      .btnBox button {width: 80px; height: 50px;background: inherit; border: none;}
+      .btnBox button:active {border-bottom: 1px solid blue;}
+      .centerBox {width: 100%;}
+      .centerBox>h3 {text-align: center;margin-top: 20px;}
+      .centerBox img {margin-top: 10px;margin-left: 40px;width: 75%; border-radius: 20px;}
+      .centerBox span {text-align: center; display: block; margin-top: 20px; font-size: 1.4em;font-weight: bold;}
+      .buttonBox {top: -200px; position: relative;}
+      .buttonBox button {width: 10%; border: none; background: none; font-size: 70px; font-weight: bold; color: #333;}
+      .next {left: 280px; position: relative;}
+      .mySlides {display: none;}
+      #tb2, #tb3, #tb4 {display:none;}
+					#tb1:target,
+          #tb2:target, #tb3:target, #tb4:target {display:block;}
+    </style>
+      <!-- 111신고하기  -->
+    <style>
+      #pg4 {height: 220px; background-image: url(./img/111pic.jpg); background-size: 100% 80%; border-bottom: 1px solid #000; background-repeat: no-repeat;}
+        .box {width: 35%; height: 10%; border: 2px solid #f00; border-radius: 20px; position: relative; top: 185px; background: #f1f1f1; color: #000; text-align: center;}
+        .box span {}
+    </style>
+    <!-- 추리퀴즈 -->
+    <style>
+      #pg5 {height: 338px; border-bottom: 1px solid #111;}
+      #pg5 img {width: 100%; height: 40%;}
+      .keyBox {width: 90%; height: 60%; border: 1px solid #000; border-radius: 20px;margin-top: -30px; z-index: 33; background: #F2f2f2; position: relative; text-align: center; line-height: 3; background-image: url(./img/quizimg.jpg);  background-size: 50% 50%;background-repeat: repeat-x; background-position: bottom;}
+      .keyBox button {width: 100px;height: 30px; margin-top: 20px; background: #000; border: none; border-radius: 30px; font-weight: bold; color: #fff;}
+    </style>
+    <!-- 최신뉴스 -->
+    <style>
+      #pg6 {height: 282px; background: #F2F2F2;}
+      .news-area {padding: 0 3.75% 7.45%;}
+      .news-area h3 {padding: 5.45% 0 1%;
+      border-bottom: 1px solid #e5e5e5;}
+      .news-area h3 img {width: 18.42%;}
+      .news-area ul li {overflow: hidden;width: 100%;
+      padding: 1% 0;}
+      .news-area ul li span.flow {width: 72%;
+          vertical-align: middle; overflow: hidden;}
+      .news-area ul li span.flow img.ico-news {
+          width: 11.1%;
+          margin: 5% 0 0;
+          vertical-align: middle;}
+      .news-area ul li span.flow a { font-size: 0.8em;
+      overflow: hidden;padding: 0.4% 0; width: 20%;
+      max-width: 38%;white-space: nowrap;
+      word-break: break-all;text-overflow: ellipsis;}
+      .news-area ul li span.reverse {
+      width: 27%; font-size: 0.8em;
+      padding: 0.6% 1% 0 0;
+      color: #b2b2b2;
+      text-align: right;}
+    </style>
+    <!-- 링크박스 -->
+    <style>
+    #pg7 {height: 155px;border-top: 1px solid #c11;margin: 0 auto;}
+    .linkBox {width: 150px; height: 60px; border: 1px solid #111; margin: 5px; float: left; text-align: center; line-height: 3; margin-left: 20px;}
+
+    footer {height: 247px; background: #191919;}
+    .fnb {text-align: center;}
+    .fnb button {width: 100px; height: 40px; text-align: center; line-height: 2; margin-top: 15px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header id="hd">
+      <i class="fas fa-search"></i>
+      <a href="index.html" class="logo">
+        <img src="./img/h1-logo.png" alt="">
+      </a>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#gnb01" class="menu">든든한 안보
+         <li class="sub"><a href="">대공수사</a></li>
+         <li class="sub"><a href="">대북정보</a></li>
+         <li class="sub"><a href="">해외정보</a></li></a>
+        <a href="#gnb02">국민과 함께</a>
+        <a href="#gnb03">국가정보원</a>
+        </div>
+         <script>
+           $(document).ready(function(){
+             $(".menu").click(function(){
+               $(".sub").slideToggle(300)
+             })
+           })
+         </script>
+                <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+    </header>
+  <!-- 이미지슬라이드 -->
+    <section class="page" id="pg1">
+      <div class="imgs">
+        <img src="./img/gookjungwon_final.png" alt=""></div>
+    </section>
+    <!-- 링크메뉴 -->
+    <section class="page" id="pg2">
+      <ul class="linkMenu">
+        <li class="linkTxt">
+          <h2><b>사이버</b> 경보단계</h2>
+          <span>정상</span>
+        </li>
+        <li class="linkTxt">
+          <h2><b>국내테러</b> 경보단계</h2>
+          <span>주의</span>
+        </li>
+      </ul>
+    </section>
+    <!-- 센터소개 -->
+    <section class="page" id="pg3">
+      <h2>센터소개</h2>
+      <div id="tabs">
+        <ul class="btnBox">
+          <li><a href="#tabs-1">국가사이버 안전센터</a></li>
+          <li><a href="#tabs-2">산업기밀 보호센터</a></li>
+          <li><a href="#tabs-3">국제범죄 보호센터</a></li>
+          <li><a href="#tabs-4">테러정보 통합센터</a></li>
+        </ul>
+          <div id="tabs-1">
+            <h3>주요업무</h3>
+            <li class="mySlides">
+              <img src="./img/centerImg1.png">
+            <span>국가 사이버안전 정책 총괄</span></li>
+            <li class="mySlides">
+              <img src="./img/centerImg2.png">
+                <span>사이버위기 예방활동</span>
+            </li>
+            <li class="mySlides">
+              <img src="./img/centerImg3.png">
+                <span>사이버공격 탐지활동</span>
+            </li>
+            <li class="mySlides">
+              <img src="./img/centerImg3.png">
+                <span>사이버공격 탐지활동</span>
+            </li>
+            <li class="mySlides">
+              <img src="./img/centerImg4.png">
+                <span>사고조사 및 위협정보 분석</span>
+            </li>
+          </div>
+          <!-- 국가사이버 안전센터 end -->
+          <div id="tabs-2">
+
+          </div>
+          <!-- 산업기밀 보호센터 end -->
+          <div id="tabs-3">
+
+          </div>
+          <!-- 국제범죄 보호센터 end -->
+          <div id="tabs-4">
+
+          </div>
+          <!-- 테러정보 통합센터 end -->
+      </div>
+
+
+        <script>
+          $("#tabs").tabs();
+        </script>
+
+        <div class="buttonBox">
+          <button class="prev" onclick="plusDivs(-1)">&#8249;</button>
+          <button class="next" onclick="plusDivs(1)">&#8250;</button>
+        </div>
+        <!-- <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+          }
+        </script> -->
+    </section>
+    <!-- 111신고하기 -->
+    <section class="page" id="pg4">
+      <div class="box">
+        <span>111 신고하기</span>
+      </div>
+    </section>
+    <!-- 추리퀴즈 -->
+    <section class="page" id="pg5">
+      <img src="./img/key.png" alt="">
+      <div class="keyBox">
+        <h3>제 41회 추리퀴즈</h3>
+        <span>-보물섬-</span><br>
+        <button>퀴즈풀기</button>
+      </div>
+    </section>
+    <!-- 최신뉴스 -->
+    <section class="page" id="pg6">
+      <section class="news-area">
+        <h3 class="img-title">
+          <img src="./img/h3-main-news.png" alt="최근소식"></h3>
+          <ul>
+            <li>
+              <span class="flow">
+                <img src="./img/ico-m-rec.png" class="ico-news" alt="채용">
+                <!-- 채용사이트 채용공고-->
+                  <a href="https://career.nis.go.kr:4017/info/notice/view.html?noticeNum=1285" target="_blank">2018년도 임기제 직원 채용 공고&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </span>
+              <span class="reverse">2018-08-31</span>
+            </li>
+	          <li>
+              <span class="flow">
+                <img src="./img/ico-m-not01.png" class="ico-news" alt="보도">
+                  <a href="javascript:void(0);" onclick="$.view(1,158)">서훈 원장, "제2기 국정원의 새 이...</a>
+              </span>
+              <span class="reverse">2018-06-11</span>
+            </li>
+	          <li>
+              <span class="flow">
+                <img src="./img/ico-m-not01.png" class="ico-news" alt="보도">
+                  <a href="javascript:void(0);" onclick="$.view(1,157)">국정원, 「러시아 월드컵 안전정보...</a>
+              </span>
+              <span class="reverse">2018-06-01</span>
+            </li>
+	          <li>
+              <span class="flow">
+                <img src="./img/ico-m-not02.png" class="ico-news" alt="공지">
+                  <a href="javascript:void(0);" onclick="$.view(0,264)">인권보호관 모집공고문&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </span>
+              <span class="reverse">2018-02-20</span>
+            </li>
+	          <li>
+              <span class="flow">
+                <img src="./img/ico-m-not01.png" class="ico-news" alt="보도">
+                  <a href="javascript:void(0);" onclick="$.view(1,156)">국정원, 「해외진출기업 對테러협....</a>
+              </span>
+              <span class="reverse">2018-01-25</span>
+            </li>
+          </ul>
+            </section>
+    </section>
+    <!-- 링크박스 -->
+    <section class="page" id="pg7">
+      <div class="linkBox" id="box1">
+        <a href="notice.html">공지사항</a>
+      </div>
+      <div class="linkBox" id="box2">
+        <a href="spy.html">간첩신고</a>
+      </div>
+      <div class="linkBox" id="box3">
+        <a href="recruit.html">채용안내</a>
+      </div>
+      <div class="linkBox" id="box4">
+        <a href="visit.html">
+          견학신청</a>
+      </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer id="ft">
+      <div class="fnb">
+        <button><a href="faq.html">FAQ</a></button>
+        <button><a href="index.html">PC버전</a></button>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
