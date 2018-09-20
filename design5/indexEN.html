@@ -1,0 +1,176 @@
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>TelcokoreaIS</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/default-style.css">
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<link rel="stylesheet" type="text/css" href="style/hsilder.css">
+	<link rel="stylesheet" type="text/css" href="style/default-style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script type="text/javascript" src="javascript/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery.HSlider.min.js"></script>
+
+  <style>
+			*{margin: 0; padding: 0;}
+			body {font-family: "Lato", sans-serif; width: 100%;height: 100%;}
+			.con {width: 100%;height: 100%;}
+			.sidenav {height: 100%;width: 0;position: fixed;z-index: 100;
+			    top: 0;right: 0;background-color: #FFF;overflow-x: hidden;
+			    transition: 0.5s;padding-top: 140px;}
+			.sidenav a {padding: 18px 18px 40px 32px;text-decoration: none;
+			    font-size: 25px;color: #818181;display: block;transition: 0.3s;}
+			.sidenav a:hover {color: #000;}
+			.sidenav .closebtn {  position: absolute;top: 10;right: 25px;font-size: 40px;margin-left: 50px;}
+			#main {transition: margin-left .5s;;}
+			#main h1 {position: relative; display: block; }
+	    a.navi {font-size: 20px;display:  block;  margin-right: 20px;}
+	    .navi img {margin-right: 15px;}
+			.conBox span a {margin-top: 30px;}
+			@media screen and (max-height: 450px) {
+		  .sidenav {padding-top: 15px;}
+		  .sidenav a {font-size: 18px;}}
+  </style>
+</head>
+<body>
+  	<div class="hd">
+      <div class="tnb">
+		      <a href="indexEN.html">
+						<img src="http://telcokoreais.cdn3.cafe24.com/H_logo.png"></a>
+		  </div>
+      <div class="gnb">
+        <div>
+          <a href="index.html" class="navi" onclick="openNav()"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xMi4wMiAwYzYuNjE0LjAxMSAxMS45OCA1LjM4MyAxMS45OCAxMiAwIDYuNjIzLTUuMzc2IDEyLTEyIDEyLTYuNjIzIDAtMTItNS4zNzctMTItMTIgMC02LjYxNyA1LjM2Ny0xMS45ODkgMTEuOTgxLTEyaC4wMzl6bTMuNjk0IDE2aC03LjQyN2MuNjM5IDQuMjY2IDIuMjQyIDcgMy43MTMgNyAxLjQ3MiAwIDMuMDc1LTIuNzM0IDMuNzE0LTdtNi41MzUgMGgtNS41MjNjLS40MjYgMi45ODUtMS4zMjEgNS40MDItMi40ODUgNi43NzEgMy42NjktLjc2IDYuNjcxLTMuMzUgOC4wMDgtNi43NzFtLTE0Ljk3NCAwaC01LjUyNGMxLjMzOCAzLjQyMSA0LjM0IDYuMDExIDguMDA5IDYuNzcxLTEuMTY0LTEuMzY5LTIuMDU5LTMuNzg2LTIuNDg1LTYuNzcxbS0uMTIzLTdoLTUuNzM2Yy0uMzMxIDEuMTY2LS43NDEgMy4zODkgMCA2aDUuNzM2Yy0uMTg4LTEuODE0LS4yMTUtMy45MjUgMC02bTguNjkxIDBoLTcuNjg1Yy0uMTk1IDEuOC0uMjI1IDMuOTI3IDAgNmg3LjY4NWMuMTk2LTEuODExLjIyNC0zLjkzIDAtNm02Ljc0MiAwaC01LjczNmMuMDYyLjU5Mi4zMDggMy4wMTkgMCA2aDUuNzM2Yy43NDEtMi42MTIuMzMxLTQuODM1IDAtNm0tMTIuODI1LTcuNzcxYy0zLjY2OS43Ni02LjY3MSAzLjM1LTguMDA5IDYuNzcxaDUuNTI0Yy40MjYtMi45ODUgMS4zMjEtNS40MDMgMi40ODUtNi43NzFtNS45NTQgNi43NzFjLS42MzktNC4yNjYtMi4yNDItNy0zLjcxNC03LTEuNDcxIDAtMy4wNzQgMi43MzQtMy43MTMgN2g3LjQyN3ptLTEuNDczLTYuNzcxYzEuMTY0IDEuMzY4IDIuMDU5IDMuNzg2IDIuNDg1IDYuNzcxaDUuNTIzYy0xLjMzNy0zLjQyMS00LjMzOS02LjAxMS04LjAwOC02Ljc3MSIvPjwvc3ZnPg==">KOR</a>
+        </div>
+				<script>
+			function openNav() {
+			    document.getElementById("mySidenav").style.width = "250px";
+			    document.getElementById("main").style.marginLeft = "250px";
+			    document.getElementById("navi").style.display = "block;"}
+			function closeNav() {
+			    document.getElementById("mySidenav").style.width = "0";
+			    document.getElementById("main").style.marginLeft= "0";}
+		</script>
+		  </div>
+		</div>
+    <ul class="pagination">
+        <li><a data-index="1" href="#1" class="active">HOME</a></li>
+        <li><a data-index="2" href="#2" class="">ABOUT US</a></li>
+        <li><a data-index="3" href="#3" class="">PROJECT</a></li>
+        <li><a data-index="4" href="#4" class="">PROMOTION</a></li>
+        <li><a data-index="5" href="#5" class="">CONTACT</a></li>
+		</ul>
+		<div class="wrap">
+			<div class="slider HSlider" style="position: relative; width: 100%; height: 100%; transform: translate3d(0%, 0px, 0px); transition: all 400ms ease;">
+
+<!--		    page1/main-->
+				<section id=
+"page1" class="section active" data-index="1" style="position: absolute; width: 100%; height: 100%; left: 0%; ">
+					<img src="http://telcokoreais.cdn3.cafe24.com/mainbg2.jpg" style="position: absolute;  z-inex:1;background-size:cover;">
+					<div class="mv" style="top:400px; left:600px;">
+						<iframe width="700" height="350" src="https://www.youtube.com/embed/Xk-4nFCRCuU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+		        <article style="position: absolute; box-sizing: border-box; width: 100%;height:150px;top: 150px; z-index: 4; text-align:center; background:none;">
+							<h1 style="color: #fff; text-align: center;text-shadow: 3px 3px 15px #000; ;">OUR BEST<br> Disaster prevention TelcokoreaIS</h1>
+		        </article>
+      	</section>
+
+<!--			page2/about us-->
+			<section id="page2" class="section" data-index="2" style="position: absolute; width: 100%; height: 100%; left: 100%;">
+					<div id="menuBox2">
+						<h1><a href="aboutEN.html" style="color:#fff;">ABOUT US</a></h1>
+						<ul class="conBox">
+							<li style="width:300px; height:350px; background:#735a43">
+								<span><a href="overviewEN.html" style="padding-top:100px; font-size:33px; font-weight:bold; color:#fff;">OVERVIEW</a></span>
+							</li>
+							<li style="width:300px; height:350px; background:#1a1e28;">
+								<span><a href="histo
+									ryEN.html" style="color:#fff; padding-top:90px; font-size:33px;">COMPANY<br> HISTORY</a></span>
+							</li>
+							<li style="width:300px; height:350px;background:#8f6c42">
+								<span><a href="ceoEN.html" style="padding-top:90px; font-size:33px; color:#fff;">CEO GREETING</a></span>
+							</li>
+						</ul>
+	      	</div>
+					<article class="left" style="position: absolute; box-sizing: border-box; width: 100%; bottom: 0px; z-index: 4;">
+						<h1>About us</h1>
+					</article>
+					<img src="http://telcokoreais.cdn3.cafe24.com/aboutbg.jpg" style="min-width: 100%; min-height: 100%; position: absolute; z-index: 1; background-size:100% 100%;">
+			</section>
+
+<!--			page3-->
+			<section id="page3" class="section" data-index="3" style="position: absolute; width: 100%; height: 100%; left: 200%;">
+        <div id="menubox3">
+					<h1 class="boxTit">PROJECT</h1>
+					<ul class="conBox">
+						<li style="width:300px; height:350px; background:#afd0a1">
+							<span><a href="productEN.html" style="padding-top:100px; font-size:33px; font-weight:bold;color:#fff;">PRODUCT</a></span>
+						</li>
+						<li style="width:300px; height:350px; background:#669fa6;">
+							<span><a href="certificationEN.html" style="color:#fff; padding-top:100px; font-size:33px;">CERTIFICATION</a></span>
+						</li>
+					</ul>
+        </div>
+				<article style="position: absolute; box-sizing: border-box; width: 100%; bottom: 0px; z-index: 4;">
+					<h1>Project</h1>
+				</article>
+				<img src="http://telcokoreais.cdn3.cafe24.com/projectpic.jpg" style="min-width: 100%; min-height: 100%; position: absolute; z-index: 1;">
+			</section>
+
+<!--			page4-->
+			<section class="section" data-index="4" style="position: absolute; width: 100%; height: 100%; left: 300%;">
+        <div id="menuBox4">
+					<h1><a href="promotionEN.html">PROMOTION</a></h1>
+					<ul class="conBox">
+						<li style="width:300px; height:350px; background:#cecece">
+							<span><a href="newsEN.html" style="padding-top:100px; font-size:33px; font-weight:bold;">COMPANY NEWS</a></span>
+						</li>
+						<li style="width:300px; height:350px; background:#a4a4a4;">
+							<span><a href="videoEN.html" style="color:#fff; padding-top:90px; font-size:33px;">PROMOTION<br> VIDEO</a></span>
+						</li>
+						<li style="width:300px; height:350px;background:#dbdbdb">
+							<span><a href="galleryEN.html" style="padding-top:90px; font-size:33px;">GALLERY</a></span>
+						</li>
+					</ul>
+        </div>
+				<article class="left" style="position: absolute; box-sizing: border-box; width: 100%; bottom: 0px; z-index: 4;">
+					<h1>Promotion</h1>
+				</article>
+				<img src="http://telcokoreais.cdn3.cafe24.com/1.jpg" style="min-width: 100%; min-height: 100%; position: absolute; z-index: 1;">
+			</section>
+
+<!--			page5-->
+			<section class="section" data-index="5" style="position: absolute; width: 100%; height: 100%; left: 400%;">
+				<div class="menuBox5">
+	        <div id="box44" style="color:#f5f5f5;">
+	            <a data-index="5" href="contactEN.html">CONTACT</a>
+					</div>
+					<div class="box" id="box46">
+							<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3210.052546143899!2d127.38662151558484!3d36.432112096031666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35653670bab7b433%3A0x1cf8dd15eb0cf0e!2z64yA7KCE6rSR7Jet7IucIOycoOyEseq1rCDqtIDtj4nrj5kg7YWM7YGs64W4MeuhnCAxMS0z!5e0!3m2!1sko!2skr!4v1533201811511" width="100%" height="100%" frameborder="0" style="border:#e0e0e0 3px solid;" allowfullscreen>
+							</iframe>
+	       	</div>
+	      </div>
+				<article style="position: absolute; box-sizing: border-box; width: 100%; bottom: 0px; z-index: 4;">
+						<h1>Contact</h1>
+				</article>
+				<img src="http://telcokoreais.cdn3.cafe24.com/contactpic.jpg" style="position: absolute; z-index: 1; background-size:100% 100%;">
+			</section>
+
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(".slider").HSlider({
+			easing: 'ease',
+			animationTime: '400',
+			pagination: true
+		});
+	</script>
+</body>
+</html>

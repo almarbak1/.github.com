@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PRODUCT</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/default-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Ruslan+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Ruslan+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+  <style>
+      body {font-family: "Lato", sans-serif;}
+      .sidenav {
+      height: 100%;width: 0;
+      position: fixed;z-index: 100;
+      top: 0;right: 0;
+      background-color: #FFF;overflow-x: hidden;
+      transition: 0.5s;padding-top: 140px;}
+      .sidenav a {
+      padding: 18px 18px 40px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;}
+      .sidenav a:hover {color: #000;}
+      .sidenav .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 40px;
+      margin-left: 50px;}
+      #main {
+        transition: margin-left .5s;;}
+      #main h1 {position: relative; display: block; }
+      a.navi {font-size: 20px;
+      display:  block;
+      margin-right: 20px;}
+      .navi img {
+      margin-right: 15px;}
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}}
+  </style>
+    <style>
+        li {list-style: none;}
+      a {text-decoration: none;}
+      #vs1 {background-image: url("http://telcokoreais.cdn3.cafe24.com/projectbg.jpg");background-size: 100%;
+      background-position: center center;width: 80%; height: 250px;overflow: hidden; margin-top: 100px;background-repeat: no-repeat; margin-left: 200px;}
+      .pageTitle {font-family: 'Do Hyeon', sans-serif;text-align: center;color: #444;padding-top: 85px;font-size: 80px;
+      text-shadow: 5px 5px 5px #665, 4px 4px 4px #FFF5EE, 3px 3px 3px #333, 2px 2px 2px #FFFFF0, 1px 1px 1px #111;font-weight: 200;width: 100%;clear: both;}
+      #side {margin-top: 100px;}
+      .pageTitle a {color: #fff;}
+      .subWrap {position: relative;line-height: 34px;text-align: center;color: #fff;}
+      #content {width: 100%;height: 100%;}
+      .pg { width: 100%;height: 100%;clear: both;}
+      #pg1 {width: 1200px;margin-left: 300px;margin-top: 0px; background: #fff;height: 1200px; font-family: 'Fjalla One', sans-serif;}
+      .left {float: left;}
+      .cTitle {line-height: 132px;background:#F5FFFA;text-align: center; width: 250px; font-size: 30px;}
+      .cTitle a{ color: #000;}
+      .lnb {text-align: center; font-size: 25px;}
+      .lnb li {height: 110px;border: 1px dashed #ddd;margin: 2px;line-height: 110px;}
+      .lnb li a {color: #000;}
+      .lnb li:hover {font-size: 30px; }
+      .lnb li.active {border: 4px dashed cyan;}
+      #con { background-position: center bottom; background-size: contain;  background-repeat: no-repeat;
+      width: 1200px;height: 100%;font-family: 'Fjalla One', sans-serif;margin-left: 250px;}
+    </style>
+    <style>
+       #con {width: 1200px;height: 100%;font-family: 'Fjalla One', sans-serif;margin-left: 250px;}
+      .pgTitle {padding-top: 60px; font-size: 60px; text-align: center;font-family: 'Sunflower', sans-serif;}
+        .pgBtn {padding-left: 8%;hpadding-top: 25px;width: 100%;height: 170px;}
+        .pgBtn .active {background: #e7e7e7; color:#fff;}
+        .pgBtn button {width: 250px; height: 110px; font-size: 25px;font-family: 'Anton', sans-serif; background: none; border: none; float: left;margin: 15px;}
+        .pgBtn button:hover {  background:#B0E0E6; color: #fff;}
+        .pgBtn button:hover a{color:#fff;}
+        .pgBtn button a {color: #000;}
+        /* .productInt {width: 100%; height: 90px;} */
+        .productInt h1 {font-size: 30px; text-align: center; font-weight: bold;color:blue; display: none;}
+        .productPg {width: 100%; height: 100%;}
+        .proTxt {font-size: 50px;text-align: center; padding-top: 120px;}
+        .productInt img {width: 100%; margin-left: 50px;}
+    </style>
+</head>
+<body>
+   <div class="wrap">
+      <div class="hd">
+        <div class="tnb">
+		       <a href="indexEN.html">
+		          <img src="http://telcokoreais.cdn3.cafe24.com/H_logo.png"></a>
+		    </div>
+            <div class="gnb">
+               <div>
+                <a href="ai.html" class="navi" onclick="openNav()"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xMi4wMiAwYzYuNjE0LjAxMSAxMS45OCA1LjM4MyAxMS45OCAxMiAwIDYuNjIzLTUuMzc2IDEyLTEyIDEyLTYuNjIzIDAtMTItNS4zNzctMTItMTIgMC02LjYxNyA1LjM2Ny0xMS45ODkgMTEuOTgxLTEyaC4wMzl6bTMuNjk0IDE2aC03LjQyN2MuNjM5IDQuMjY2IDIuMjQyIDcgMy43MTMgNyAxLjQ3MiAwIDMuMDc1LTIuNzM0IDMuNzE0LTdtNi41MzUgMGgtNS41MjNjLS40MjYgMi45ODUtMS4zMjEgNS40MDItMi40ODUgNi43NzEgMy42NjktLjc2IDYuNjcxLTMuMzUgOC4wMDgtNi43NzFtLTE0Ljk3NCAwaC01LjUyNGMxLjMzOCAzLjQyMSA0LjM0IDYuMDExIDguMDA5IDYuNzcxLTEuMTY0LTEuMzY5LTIuMDU5LTMuNzg2LTIuNDg1LTYuNzcxbS0uMTIzLTdoLTUuNzM2Yy0uMzMxIDEuMTY2LS43NDEgMy4zODkgMCA2aDUuNzM2Yy0uMTg4LTEuODE0LS4yMTUtMy45MjUgMC02bTguNjkxIDBoLTcuNjg1Yy0uMTk1IDEuOC0uMjI1IDMuOTI3IDAgNmg3LjY4NWMuMTk2LTEuODExLjIyNC0zLjkzIDAtNm02Ljc0MiAwaC01LjczNmMuMDYyLjU5Mi4zMDggMy4wMTkgMCA2aDUuNzM2Yy43NDEtMi42MTIuMzMxLTQuODM1IDAtNm0tMTIuODI1LTcuNzcxYy0zLjY2OS43Ni02LjY3MSAzLjM1LTguMDA5IDYuNzcxaDUuNTI0Yy40MjYtMi45ODUgMS4zMjEtNS40MDMgMi40ODUtNi43NzFtNS45NTQgNi43NzFjLS42MzktNC4yNjYtMi4yNDItNy0zLjcxNC03LTEuNDcxIDAtMy4wNzQgMi43MzQtMy43MTMgN2g3LjQyN3ptLTEuNDczLTYuNzcxYzEuMTY0IDEuMzY4IDIuMDU5IDMuNzg2IDIuNDg1IDYuNzcxaDUuNTIzYy0xLjMzNy0zLjQyMS00LjMzOS02LjAxMS04LjAwOC02Ljc3MSIvPjwvc3ZnPg==">KOR</a>
+                </div>
+		            <div id="mySidenav" class="sidenav">
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                      <a href="indexEN.html">HOME</a>
+                      <a href="aboutEN.html">ABOUT</a>
+                      <a href="projectEN.html">PROJECT</a>
+                      <a href="promotionEN.html">PROMOTION</a>
+                      <a href="contactEN.html">CONTACT</a>
+                    </div>
+        <div id="main">
+            <span style="font-size:30px;cursor:pointer;color:#000" onclick="openNav()"> &#9776;</span>
+        </div>
+      <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("navi").style.display = "block;"}
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+      </script>
+          </div>
+		    </div>
+    <section id="vs1">
+        <h2 class="pageTitle"><a href="projectEN.html">PROJECT</a></h2>
+        <div class="subWrap">
+            <span></span>
+        </div>
+    </section>
+        <section class="pg" id="content">
+            <div class="pgWrap" id="pg1">
+                <aside class="left" id="side">
+                  <h2 class="cTitle"><a href="projectEN.html">PROJECT</a></h2>
+                    <ul class="lnb">
+                        <li class="active"><a href="productEN.html">PRODUCT</a></li>
+                        <li><a href="certificationEN.html">CERTIFICATION</a></li>
+                    </ul>
+                </aside>
+                <div class="right" id="con">
+                  <h1 class="pgTitle">PRODUCT</h1>
+                    <div class="pgBtn">
+                      <button ><a href="meerkeepEN.html">  MEERKEEP</a></button>
+                      <button><a href="fahmEN.html">FAHM</a></button>
+                      <button ><a href="emergencyEN.html">Emergency disaster call mobile device</a></button>
+                      <button class="active"><a href="aiEN.html">AI emergency evacuation system</a></button>
+                    </div>
+                    <div class="productPg">
+                      <div class="productInt">
+                          <h1>AI-Emergency Evacuation System</h1>
+                          <img src="http://telcokoreais.cdn3.cafe24.com/ai.jpg">
+                          <img src="http://telcokoreais.cdn3.cafe24.com/ai2.jpg" style="margin-top:0">
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+   </div>
+
+</body>
+</html>
