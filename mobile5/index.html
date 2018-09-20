@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<title>메리츠화재에 오신것을 환영합니다.</title>
+	<style>
+		body, html {background: #fff; width: 100%;height: 100%;}
+		.wrap {width: 360px; height: 100%;}
+		ul, li {list-style: none;}
+		a {color: #000;}
+		header {height: 50px;}
+		.nav_logo {margin-top: 50px;}
+		.chat img {width: 100%; height: auto;}
+		#vs {width: 100%; height: 300px; border-bottom: 1px solid #000; background: #2a2a2a; color: #fff; padding: 5px;}
+		#vs h1, span, p {padding: 10px;}
+		#vs h1 {font-weight: bold; font-size: 1.2em;}
+		#vs>span {color: #cccc22;}
+		#vs p {font-size: 0.8em; color: #c2c2c2;}
+		#vs img {width: 100%;}
+		.btnarea {margin: 20px 0 0; text-align: center;}
+		.btn_calc {width: 70%;display: inline-block; background-color: #f00; height: 40px;font-size: 90%; color: #fff; cursor: pointer; line-height: 2.4;}
+		.bannerSlide {height: 74px;}
+		.bannerSlide imgs {overflow: hidden;position: relative;}
+		.imgs>img {overflow: hidden; width: 100%; position: absolute; transition: all 1s;}
+	</style>
+	<style>
+		.linkBox {width: 100%;height: 246px; border-bottom: 1px solid #000;padding: 10px;}
+		.linkBox li {float: left; width: 170px; height: 55px; text-align: center; line-height: 3; background: #fff;overflow: hidden;}
+		.linkBox li a{color: #000; }
+		.linkBox li:after {content: "-"; }
+		.fas {color: #ccc; float: left; line-height: 3;margin-left: 10px;}
+	</style>
+	<style>
+		.list {height: 142px; border-bottom: 1px solid #000; background: #fff; padding: 15px;}
+		.list li {width: 45%; float: left; height: 120px; text-align: center; border: 1px solid #001; margin-left: 5px;}
+		.list li:nth-child(1) img {width: 60%; height: 70%; margin: 10px;}
+		.list li:nth-child(2) img {width: 30%; height: 40%;margin: 5px;}
+	</style>
+	<style>
+		footer {height: 210px; border-top: 1px solid #000; bottom: 0;}
+		.fnb {font-size: 11px; line-height: 30px; background: #ccc; width: 100%; height: 35px; border-bottom: 1px solid #323538;}
+		.fnb li {float: left; width: 33.33%; height: 100%; text-align: center; border-left: 1px solid #010101; box-sizing: border-box;
+		}
+		.fnb li a{color: #fff;}
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+</head>
+<body>
+  <div class="wrap">
+	<header>
+		<a id="cd-logo" href="#0">
+      <img src="img/logo_direct.png" alt="Homepage"></a>
+		<a id="cd-menu-trigger" href="#0">
+			<span class="cd-menu-icon"></span>
+			</a>
+	</header>
+	<main class="cd-main-content">
+		<!-- put your content here -->
+		<!-- 상단비주얼 -->
+		<section id="vs">
+			<h1>다이렉트 자동차 보험> </h1>
+			<span>58.2%까지 절약할 수 있는 4단계 할인!</span>
+			<p>(모든 요건 충족 시)</p>
+			<img src="./img/main_top_img1226.gif" alt="">
+			<div class="btnarea">
+				<a href="" class="btn_calc">
+					<span>다이렉트 4단계 할인보험료 계산</span>
+				</a>
+			</div>
+		</section>
+			<div class="bannerSlide">
+				<div class="imgs">
+					<img src="./img/banner1.gif" alt=""><a href=""></a></img>
+					<img src="./img/banner2.gif" alt=""><a href=""></a></img>
+					<img src="./img/banner3.gif" alt=""><a href=""></a></img>
+				</div>
+				<script>
+									start();
+					var imgs = 2;
+					var now = 0;
+					function start(){
+					$(".imgs>img").eq(0).siblings().css({"margin-left":"-1200px"});
+					setInterval(function(){slide();},2000);
+					}
+					function slide(){
+					now = now==imgs?0:now+=1;
+					$(".imgs>img").eq(now-1).css({"margin-left":"-1200px"});
+					$(".imgs>img").eq(now).css({"margin-left":"0px"});
+					}
+				</script>
+			</div>
+			<!-- bannerslide end -->
+			<section id="pg3" class="linkBox">
+				<ul class="linkMenu">
+					<li><a href=""><i class="fas fa-car"></i>자동차보험</a></li>
+					<li><a href=""><i class="fas fa-tooth"></i>치아보험</a></li>
+					<li><a href=""><i class="fas fa-plane"></i>해외여행·유학보험 </a></li>
+					<li><a href=""><i class="fas fa-hospital"></i>실손의료비보험</a></li>
+					<li><a href=""><i class="fas fa-child"></i>어린이/신생아(태아)보험</a></li>
+					<li><a href=""><i class="fas fa-briefcase-medical"></i>암보험</a></li>
+					<li><a href=""><i class="fas fa-user-plus"></i>알파Plus보장보험</a></li>
+					<li><a href=""><i class="fas fa-car-crash"></i>운전자보험</a></li>
+				</ul>
+			</section>
+			<!-- linkbox end -->
+			<section class="list">
+				<li><a href="">내 보험 진단하기 </a>
+					<img src="./img/phone.jpg" alt=""></li>
+				<li><a href="">sns로 만나는 메리츠 다이렉트 이야기</a>
+					<img src="./img/sns.gif" alt=""></li>
+			</section>
+
+			<footer id="ft">
+				<ul class="fnb">
+					<li><a href="">개인정보처리방침</a></li>
+					<li><a href="">신용정보활용체제공시</a></li>
+					<li><a href="">전자금융거래약관</a></li>
+				</ul>
+				<address>
+	<p>대표이사 부회장 김용범 사업자번호 116-81-03752</p>
+	<p>서울 강남구 강남대로 382 (역삼동) 메리츠타워 </p>
+	<p class="copyright">©MERITZ Fire &amp; Marine Insurance Co., Ltd. ALL RIGHTS RESERVED.</p>
+</address>
+			</footer>
+		</main> <!-- cd-main-content -->
+		</div>
+
+	<nav id="cd-lateral-nav">
+		<a href="" class="nav_logo">
+			<img src="./img/logo_direct.png" alt="">
+		</a>
+		<div class="chat">
+			<img src="./img/banner_menu_chat.png" alt=""></div>
+		<ul class="cd-navigation">
+			<li class="item-has-children">
+				<a href="#0">자동차/운전자</a>
+				<ul class="sub-menu">
+					<li><a href="#0">다이렉트 자동차보험</a></li>
+					<li><a href="#0">다이렉트 운전자보험</a></li>
+					<li><a href="#0">다이렉트 운전자보험(1~3년)</a></li>
+					<li><a href="#0">올인원 라이프보장보험</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+			<li class="item-has-children">
+				<a href="#0">건강/어린이</a>
+				<ul class="sub-menu">
+					<li><a href="#0">올바른 암보험</a></li>
+					<li><a href="#0">올바른 치아보험</a></li>
+					<li><a href="#0">알파Plus 보장보험</a></li>
+					<li><a href="#0">올바른 간편보험</a></li>
+					<li><a href="#0">3대 질병 보장보험</a></li>
+					<li><a href="#0">매월 계속받는 암치료보험</a></li>
+					<li><a href="#0">올인원 라이프보장보험</a></li>
+					<li><a href="#0">시니어 케어보험</a></li>
+					<li><a href="#0">The간편알뜰암보험</a></li>
+					<li><a href="#0">알파치매간병보험</a></li>
+					<li><a href="#0">내Mom같은 어린이보험</a></li>
+					<li><a href="#0">실손의료비보험</a></li>
+					<li><a href="#0">다이렉트암보험</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+			<li class="item-has-children">
+				<a href="#0">여행/골프</a>
+				<ul class="sub-menu">
+					<li><a href="#0">다이렉트 해외여행/유학보험</a></li>
+					<li><a href="#0">다이렉트 골프보험(1년)</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+		</ul> <!-- cd-navigation -->
+		<ul class="cd-navigation cd-single-item-wrapper">
+			<li><a href="#0">공인인증서 안내</a></li>
+			<li><a href="#0">이벤트</a></li>
+		</ul> <!-- cd-single-item-wrapper -->
+		<ul class="cd-navigation">
+			<li class="item-has-children">
+				<a href="#0">Direct lab.</a>
+				<ul class="sub-menu">
+					<li><a href="#0">착한 보험안내서</a></li>
+					<li><a href="#0">다이렉트 멤버십</a></li>
+					<li><a href="#0">팀 다이렉트를 소개합니다</a></li>
+					<li><a href="#0">코드명 Mondi</a></li>
+					<li><a href="#0">프로젝트D</a></li>
+					<li><a href="#0">내 보험 진단하기</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+		</ul>
+		<ul class="cd-navigation">
+			<li class="item-has-children">
+				<a href="#0">라운지</a>
+				<ul class="sub-menu">
+					<li><a href="#0">공지사항</a></li>
+					<li><a href="#0">도와줘요 몬디(FAQ)</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+		</ul>
+		<div class="cd-navigation socials">
+			<a class="cd-twitter cd-img-replace" href="#0">Twitter</a>
+			<a class="cd-github cd-img-replace" href="#0">Git Hub</a>
+			<a class="cd-facebook cd-img-replace" href="#0">Facebook</a>
+			<a class="cd-google cd-img-replace" href="#0">Google Plus</a>
+		</div> <!-- socials -->
+	</nav>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</div>
+
+</body>
+</html>
