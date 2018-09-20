@@ -1,0 +1,12 @@
+       
+    #ft { background-color:#333; width: 100%;height: auto;}    
+    .ft_wrap { width: 1200px; margin:0 auto; position:relative; }
+    #fnb { width:750px; margin:0 auto; }
+    #fnb li { float:left; padding:10px; }
+    #fnb li { float:left; padding:10px; }
+    #fnb a { color:#fff; font-size:0.85em; }
+    #fnb a:after { content : "|"; padding-left:15px; color:#666; }
+    #fnb .first a { color:#d3af35; }
+    #fnb .last a:after { content:""; }
+    .copyright { clear:both; color:#fff; font-weight:100;  font-family:'NanumGothic', sans-serif; font-size:0.8em; text-align:center; line-height:1.6; padding-bottom:50px; }
+    .cj { position:absolute; right:20px; top:20px; }

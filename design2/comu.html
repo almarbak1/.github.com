@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>청주에 오신 것을 환영합니다.</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+        #s_visual {width: 100%; text-align: center; margin-top: -140px;}
+        .visual-1 {background-image:url(./img/Untitled_Panorama1.jpg); background-repeat: no-repeat; margin-bottom: 300px;}
+        #s_visual > div {width: 100%; height: 450px;}
+        .vis-txt {padding-top: 190px; }
+        .vis-txt span {font-size: 2.8em; display: block; margin-bottom: 15px; font-weight: bold; color: #fff; text-shadow: 1px 1px #333;}
+        .vis-txt p {font-size: 1.2em;color: #e2e3e5; letter-spacing: 0.02em;}
+        
+        
+        #container {width: 1200px; margin: -131px auto 0; overflow: hidden;}
+        #container #side{width: 250px; float: left;}
+        #side > h2 {background: green; color: #fff; height: 130px; padding-top: 50px; text-align: center; font-size: 1.6em;}
+        #side > ul > li {border: 1px solid #ddd; margin: 3px 0;}
+        #side > ul > li.on > a{color: #333; font-weight: bold;}
+        #side > ul > li > a{height: 52px; padding: 18px 20px 18px 16px; font-size: 1.15em; line-height: 1;}
+        #side a {display: block;}
+        
+        #container #content {position: relative; width: 950px; float: left; background: #fff;}
+        .subTit {height: 131px; padding: 30px 0 10px 0; border-bottom: 1px solid #dbdbdb;}
+        .subTit h3 {font-size: 2em; padding-bottom: 20px;}
+        .subTit .subUtil .path {float: left;}
+        .subTit .subUtil .path > li:first-child {padding-left: 0; background: 0;}
+        .subTit .subUtil .path > li {float: left; padding: 2px 10px 2px 14px; color: #666; line-height: 1.6;}
+        .subTit .subUtil .path > li a.home {display: block; padding-left: 25px;}
+        .subTit .subUtil .path > li:last-child {font-weight: bold; }
+        
+        .subCnt {padding: 30px 0; min-height: 600px;}
+        .boardsearch {overflow: hidden; margin-bottom: 25px;}
+        .boardsearch > div {border: 1px solid #ddd; padding: 15px 20px; overflow: hidden; text-align: center; }
+        .boardsearch .search {display: inline-block;}
+        input{border-radius: 0;}
+        fieldset {border: none;}
+        .boardsearch form > fieldset {position: relative;}
+        .blind
+    </style>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script> 
+
+//좌표 값을 바꿔서 입력 36.3491563,127.3776857
+
+function initialize() {
+  var myLatlng = new google.maps.LatLng(36.3491563,127.3776857);
+  var mapOptions = {
+    zoom: 17,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: '그린컴퓨터아트학원'	  //레이블을 바꿔서 입력
+  });
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+ </script>
+</head>
+<body>
+        <div class="wrap">
+        <header class="hd">
+            <div class="hdwrap">
+                <!-- nav.top>(ul.left>li*4>a)+(ul.right>li*3>a) -->
+                <nav class="top">
+                    <ul class="left">
+                        <li><a href="http://www.cheongju.go.kr/" target="_blank">시청</a></li>
+                        <li><a href="http://council.cheongju.go.kr/" target="_blank">시의회</a></li>
+                        <li><a href="https://tour.geoje.go.kr/board/download.geoje?boardId=BBS_0000548&dataSid=305940387&fileSid=138526" target="_blank">청주시기구표</a></li>
+                        <li><a href="https://tour.geoje.go.kr/board/download.geoje?boardId=BBS_0000548&dataSid=305941522&fileSid=139147" target="_blank">행정전화번호부</a></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="join.html">회원가입</a></li>
+                        <li><a href="" class="pkpro">즐겨찾기</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hdwrap">
+                <!-- (a.logo>img)+(nav.gnb>li.menu*6>a+(div.sub>(aside.left>h2.menuTit+p.menuCon+img)+(section.right>ul*8>(li.subTit>a)+(li*7>a))))+input[type=checkbox]#ck+(label[for=ck].lstBtn>span.line*3)+(nav#collapse>(ul.item*8>li*10>a)+label[for=ck]#close) -->
+                <a href="index.html" class="logo">
+                    <img src="./img/logo2.png" alt="로고">
+                </a>
+                <nav class="gnb">
+                   <ul>
+                    <li class="menu item1">
+                        <a href="">한눈에 청주</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">한눈에 청주</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+                                <img src="./img/festival.jpg" alt="한눈에 청주">
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">360 VR체험</a>
+                                    </li>
+                                    <li><a href="">360 VR영상</a></li>
+                                    <li>
+                                        <a href="">남산서울타워 VR체험관</a>
+                                    </li>
+                                    <li>
+                                        <a href="">거제조선해양문화관 VR체험</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">관광전자지도</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">거제8경</a>
+                                    </li>
+                                    <li><a href="">외도/내도비경</a></li>
+                                    <li><a href="">거제 해금강</a></li>
+                                    <li><a href="">학동 흑진주 몽돌해변</a></li>
+                                    <li><a href="">여차-홍포 해안비경</a></li>
+                                    <li><a href="">계룡산</a></li>
+                                    <li><a href="">바람의 언덕과 신선대</a></li>
+                                    <li><a href="">동백섬 지심도</a></li>
+                                    <li><a href="">공곶이</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">체험관광</a>
+                                    </li>
+                                    <li><a href="">씨라인</a></li>
+                                    <li><a href="">크루즈투어</a></li>
+                                    <li><a href="">요트투어</a></li>
+                                    <li><a href="">유람선관광</a></li>
+                                    <li><a href="">낚시여행</a></li>
+                                    <li><a href="">드라마촬영지</a></li>
+                                    <li><a href="">거제블루시티투어</a></li>
+                                    <li><a href="">테마체험여행</a></li>
+                                    <li><a href="">거제씨월드</a></li>
+                                    <li><a href="">모노레일</a></li>
+                                    <li><a href="">정보화마을</a></li>
+                                    <li><a href="">어촌체험마을</a></li>
+                                    <li><a href="">농촌체험마을</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">캠핑여행</a>
+                                    </li>
+                                    <li><a href="">학동자동차야영장</a></li>
+                                    <li>
+                                        <a href="">거제문화관광농원 오토캠핑장</a>
+                                    </li>
+                                    <li><a href="">글램핑힐야영장</a></li>
+                                    <li><a href="">북캠프지오야영장</a></li>
+                                    <li><a href="">거제글램퍼스</a></li>
+                                    <li><a href="">옥계영농조합법인</a></li>
+                                    <li><a href="">트로피칼드림</a></li>
+                                    <li><a href="">거제자연휴양림</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">칠천량 해전길</a>
+                                    </li>
+                                    <li><a href="">맹종죽순 체험길</a></li>
+                                    <li><a href="">고려촌 문화체험길</a></li>
+                                    <li><a href="">계룡산 둘레길</a></li>
+                                    <li><a href="">충무공이순신 만나러가는길</a></li>
+                                    <li><a href="">양지암 등대길</a></li>
+                                    <li><a href="">천주교 순례길</a></li>
+                                    <li><a href="">바람의 언덕길</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">스탬프투어</a>
+                                    </li>
+                                    <li> </li>
+                                    <li> </li>
+                                    <li> </li>
+                                    <li class="subTit">
+                                        <a href="">거제 할인쿠폰북</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">추천여행코스</a>
+                                    </li>
+                                    <li><a href="">드라이버코스</a></li>
+                                    <li><a href="">관광코스</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="">청주여행</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">청주여행</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+                                <img src="./img/bg_subtit-2.gif" alt="청주여행">
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit"><a href="">해수욕장</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">섬여행</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">바다/등대/다리</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">공원/유원지/관광농원</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">산/계곡</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">음식</a></li>
+                                    <li><a href="">청주의 모범음식점</a></li>
+                                    <li><a href="">청주의 맛집</a></li>
+                                    <li><a href="">한정식 바로가기</a></li>
+                                    <li><a href="">향토음식 바로가기</a></li>
+                                    <li><a href="">대물림업소 바로가기</a></li>
+                                    <li><a href="">삼겹살거리 바로가기</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">숙박</a></li>
+                                    <li><a href="">관광호텔</a></li>
+                                    <li><a href="">일반숙박업소(300실이상)</a></li>
+                                    <li><a href="">일반숙박업소</a></li>
+                                    <li><a href="">펜션/민박</a></li>
+                                    <li><a href="">호텔/콘도</a></li>
+                                    
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">쇼핑</a></li>
+                                    <li><a href="">한국공예관</a></li>
+                                    <li><a href="">한국도자기</a></li>
+                                    <li><a href="">육거리전통시장</a></li>
+                                    <li><a href="">성안길</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="">즐거운 축제</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">즐거운축제</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+                                <img src="./img/festival.jpg" alt="즐거운 축제">
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit"><a href="">직지코리아 페스티벌</a></li>
+                                    <li class="subTit"><a href="">세종대왕과초정약수축제</a></li>
+                                    <li class="subTit"><a href="">대청호마라톤대회</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">청원생명축제</a></li>
+                                    <li class="subTit"><a href="">청주읍성큰잔치</a></li>
+                                    <li class="subTit"><a href="">청풍명월예술제</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">청주예술제</a></li>
+                                    <li class="subTit"><a href="">청주공예비엔날레</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">문화공간</a></li>
+                                    <li><a href="">박물관</a></li>
+                                    <li><a href="">공연장</a></li>
+                                    <li><a href="">미술관</a></li>
+                                    <li><a href="">도서관</a></li>
+                                    <li><a href="">영화관</a></li>
+                                    <li><a href="">문화공간</a></li>
+                                </ul>
+                                <ul>
+                                    
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="">역사/문화</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">역사/문화</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+                                <img src="./img/cts.jpg" alt="역사/문화">
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit"><a href="">문화유적</a></li>
+                                    <li><a href="">지정문화재</a></li>
+                                    <li><a href="">유형문화재</a></li>
+                                    <li><a href="">무형문화재</a></li>
+                                    <li><a href="">등록문화재</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">도지정문화재</a></li>
+                                    <li><a href="">유형문화재</a></li>
+                                    <li><a href="">기념물</a></li>
+                                    <li><a href="">문화재자료</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">청주시 향토유적</a></li>
+                                    <li><a href="">문화유적</a></li>
+                                    <li><a href="">고분유적</a></li>
+                                    <li><a href="">전통사찰</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">문화예술단체</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="">여행가이드</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">여행가이드</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+                                <img src="./img/sungan.jpg" alt="여행가이드">
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit"><a href="">여행준비</a></li>
+                                    <li><a href="">관광안내전화</a></li>
+                                    <li><a href="">관광안내책자 신청</a></li>
+                                    <li><a href="">문화관광해설사</a></li>
+                                    <li><a href="">손안의 나드리</a></li>
+                                    <li><a href="">여행불편신고</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">교통정보</a></li>
+                                    <li><a href="">찾아오시는길</a></li>
+                                    <li><a href="">시외버스</a></li>
+                                    <li><a href="">시내버스</a></li>
+                                    <li><a href="">조은섬콜택시</a></li>
+                                    <li><a href="">렌터카</a></li>
+                                    <li><a href="">항공편</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">섬으로 들어가는 배 예약</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">공공와이파이</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="">커뮤니티</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">커뮤니티</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+                                <img src="./img/com.jpg" alt="커뮤니티">
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit"><a href="">공지사항</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">관광뉴스</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">내가 쓰는 청주여행</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">홍보영상</a></li>
+                                    <li class="subTit"><a href="">공모전</a></li>
+                                    <li class="subTit"><a href="">이벤트</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                  </ul>
+                </nav>
+                <input type="checkbox" id="ck">
+                <label for="ck" class="lstBtn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </label>
+                <nav id="collapse">
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>한눈에 거제</h2>
+                        </li>
+                        <li><a href="">360 VR체험</a></li>
+                        <li><a href="">관광 전자지도</a></li>
+                        <li><a href="">거제 8경</a></li>
+                        <li><a href="">체험관광</a></li>
+                        <li><a href="">캠핑여행</a></li>
+                        <li><a href="">섬&섬길</a></li>
+                        <li><a href="">스탬프투어</a></li>
+                        <li><a href="">추천여행코스</a></li>
+                        <li><a href="">거제 할인쿠폰북</a></li>
+                    </ul>
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>거제여행</h2>
+                        </li>
+                        <li><a href="">해수욕장</a></li>
+                        <li><a href="">섬여행</a></li>
+                        <li><a href="">바다/등대/다리</a></li>
+                        <li><a href="">공원/유원지/관광농원</a></li>
+                        <li><a href="">산/계곡</a></li>
+                        <li><a href="">음식</a></li>
+                        <li><a href="">숙박</a></li>
+                        <li><a href="">쇼핑</a></li>
+                    </ul>
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>즐거운 축제</h2>
+                        </li>
+                        <li><a href="">신년해맞이축제</a></li>
+                        <li><a href="">국제펭귄수영축제</a></li>
+                        <li><a href="">산방산삼월삼짇날축제</a></li>
+                        <li><a href="">대금산 진달래 축제</a></li>
+                        <li><a href="">거제 맹종 대나무 축제</a></li>
+                        <li><a href="">양지암축제</a></li>
+                        <li><a href="">옥포대첩기념제전</a></li>
+                        <li><a href="">거제몽돌해변축제</a></li>
+                        <li><a href="">바다로 세계로</a></li>
+                        <li><a href="">거제 예술제</a></li>
+                        <li><a href="">시민의 날 행사</a></li>
+                        <li><a href="">거제 섬꽃축제</a></li>
+                        <li><a href="">거제 대구수산물 축제</a></li>
+                        <li><a href="">송년불꽃축제</a></li>
+                        <li><a href="">문화/공연행사</a></li>
+                    </ul>
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>역사/문화</h2>
+                        </li>
+                        <li><a href="">국가지정문화재</a></li>
+                        <li><a href="">도지정문화재</a></li>
+                        <li><a href="">향토문화재</a></li>
+                        <li><a href="">거제인물</a></li>
+                    </ul>
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>여행가이드</h2>
+                        </li>
+                        <li><a href="">여행준비</a></li>
+                        <li><a href="">교통정보</a></li>
+                        <li><a href="">섬으로 들어가는 배 예약</a></li>
+                        <li><a href="">공공와이파이</a></li>
+                    </ul>
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>커뮤니티</h2>
+                        </li>
+                        <li><a href="">새소식</a></li>
+                        <li><a href="">내가찍은거제</a></li>
+                        <li><a href="">거제관광투어 SNS 공모전</a></li>
+                        <li><a href="">여행후기</a></li>
+                        <li><a href="">여행Q&A</a></li>
+                        <li><a href="">관광불편신고</a></li>
+                        <li><a href="">포토 갤러리</a></li>
+                    </ul>
+                    <label for="ck" id="close"></label>
+                </nav>
+            </div>
+        </header>
+        
+        <section id="s_visual">
+				<div class="visual-1"> <!-- 메뉴별 비주얼 : 넘버링 -->
+					<div class="vis-txt">
+						<span>커뮤니티</span>
+						<p>문화관광 행복한 도시! 청주</p>						
+					</div>
+				</div>
+			</section>
+
+        <div id="container">
+            <nav id="side">
+                <h2>커뮤니티</h2>
+                <ul>
+                    <li class=on><a href="">공지사항</a></li>
+                    <li><a href="">관광뉴스</a></li>
+                    <li><a href="">내가 쓰는 청주여행</a></li>
+                    <li><a href="">홍보영상</a></li>
+                    <li><a href="">공모전</a></li>
+                    <li><a href="">이벤트</a></li>
+                </ul>
+            </nav>
+            <section id="content">
+                <div class="subTit">
+                    <h3>공지사항</h3>
+                    <div class="subUtil">
+                        <ul class="path">
+                            <li><a href="" class="home">홈</a></li>
+                            <li><a href="">커뮤니티</a></li>
+                            <li><a href="">공지사항</a></li>
+                        </ul>
+                    </div>
+                    <div class="subCnt">
+                        <div class="boardsearch">
+                            <div class="serach">
+                                <form action="/board/list.geoje" name="rfc_bbs_searchForm" method="get">
+<input type="hidden" name="orderBy" value="">
+<input type="hidden" name="boardId" value="BBS_0000008">
+<input type="hidden" name="searchStartDt" value="">
+<input type="hidden" name="searchEndDt" value="">
+<input type="hidden" name="startPage" value="1">
+<input type="hidden" name="menuCd" value="DOM_000008507001000000">
+<input type="hidden" name="contentsSid" value="8232">
+				<fieldset>
+                                        <label for="searchType" class="blind">항목선택</label>
+					<select id="searchType" name="searchType" title="항목선택" class="select">
+						<option value="DATA_TITLE">제목</option>
+						<option value="DATA_CONTENT">내용</option>
+						<option value="USER_NICK">작성자</option>
+					</select>
+					<label for="searchKrwd" class="blind">검색어 입력</label>
+					<input name="keyword" id="searchKrwd" type="text" value="" class="input_text" title="검색어 입력">
+					<label for="searchSubmit" class="blind">검색 버튼</label>
+					<input type="submit" id="searchSubmit" value="검색">
+				</fieldset>
+</form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        
+        <section id="con3" class="pg">
+            <!-- div.noti#news*2>h2.secTit+a.more2+h3.notiTit+p.notiCom+hr+(ul.lstBox>li*3>a.lstTit+span.date) -->
+            <div class="pgWrap">
+                <div class="noti" id="news">
+                    <h2 class="secTit">새소식</h2>
+                    <a href="" class="more2"></a>
+                    <h3 class="notiTit">서청주청소년상담복지센터 위.수탁 협약 체결</h3>
+                    <p class="notiCom">청주시(청주시장 권한대행 이범석)와 사단법인 유스투게더(대표 박상호)가 15일 오후 4시 시청 접견실에서 서청주청소년상담복지센터 민간 위탁운영을 위한 협약을 체결했다. </p>
+                    <hr class="notiline">
+                    <ul class="lsBox">
+                        <li><a href="" class="lstTit">시민정보화교육 야간반 개설</a><span class="date">2018-06-15</span></li>
+                        <li><a href="" class="lstTit">찾아가는 서비스 '책나래.책바다'</a><span class="date">2018-06-15</span></li>
+                        <li><a href="" class="lstTit">하반기 중소기업 경영안정자금 300억 융자 추천신청</a><span class="date">2018-06-15</span></li>
+                    </ul>
+                </div>
+                <div class="noti" id="day">
+                    <h2 class="secTit">행사일정</h2>
+                    <a href="" class="more2"></a>
+                    <h3 class="notiTit">제56회 옥포대첩기념제전</h3>
+                    <p class="notiCom">일자 : 2018-06-15 ~ 2018-06-16<br/>시간 : 10:00 ~ 15:00</p>
+                    <hr class="notiline">
+                    <ul class="lsBox">
+                        <li><a href="" class="lstTit">[옥포대첩기념 주간 문화예술 공연]경..</a><span class="date">2018-06-18</span></li>
+                        <li><a href="" class="lstTit">[옥포대첩기념 주간 문화예술 공연]옥..</a><span class="date">2018-06-17</span></li>
+                        <li><a href="" class="lstTit">[옥포대첩기념 주간 문화예술 공연]시..</a><span class="date">2018-06-14</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer#ft>div.ft_wrap>(nav#fnb>ul>li*5>a)+p.copyright+(a.wa>img)  -->
+        <footer id="ft">
+            <div class="ft_wrap">
+                <nav id="fnb">
+                    <ul>
+                        <li class="first"><a href="" class="imp">저작권보호정책</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="">뷰어다운로드</a></li>
+                        <li class="last"><a href="">촬영전화번호부</a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">우)28542 충청북도 청주시 상당구 상당로 155 (북문로3가) 청주시청 대표전화 043-201-0001 <br>Copyright ⓒ 2017 Cheongju City. All Rights Reserved.</p>
+                <a href="" class="wa"><img src="./img/web_acc.png" alt="웹접근성인증"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
