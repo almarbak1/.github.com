@@ -1,340 +1,878 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/start/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-latest.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <title>국가정보원에 오신것을 환영합니다</title>
-  <style>
-  *{margin: 0 auto; padding: 0;}
-  body, html {width: 100%; height: 100%;}
-  li {list-style: none;}
-  a {text-decoration:  none; color:#000;}
-  </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>::: 국정원에 오신 것을 환영합니다. :::</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./favicon.png">
+    <meta name="author" content="Smart Service Web Interective Class">
+    <meta name="Keywords" content="subway Homepage">
+    <meta name="Description" content="subway">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE9">
 
-  <style>
-    .wrap {width: 360px; height: 2367px;}
-    header {width: 100%; height: 61px; background: #f1f1f1; margin: 0 auto;}
-    .fas {font-size: 2em; padding-left: 10px;}
-    .logo {margin: 0 auto;}
-    .logo>img {width: 70%;height: 60%; margin-top: 10px;}
-    #hd>span {float: right; margin-right: 10px; margin-top: 4px;}
-    .page {width: 100%; height: 100%;}
-    .sidenav {
-    height: 100%;width: 0;position: fixed;
-    z-index: 1;top: 0;right: 0;
-    background-color: #f1f1f1;overflow-x: hidden;
-    transition: 0.5s;padding-top: 160px;}
-    .sidenav a {padding: 8px 8px 18px 32px;
-    text-decoration: none;font-size: 2em;
-    color: #818181;display: block;transition: 0.3s;}
-    .sidenav a:active {color: #f1f1f1;}
-    .sidenav .closebtn {position: absolute;
-    top: 0;right: 25px;font-size: 36px;
-    margin-left: 50px;}
-    .sub {display: none;}
+    <!-- SNS LINK -->
+    <meta content="website" property="og:type">
+    <meta content="SUBWAY KOREA" property="og:title">
+    <meta content="http://m.subway.co.kr/" property="og:url">
+    <meta content="http://m.subway.co.kr/images/common/subway_og.png" property="og:image">
+    <meta content="image/png" property="og:image:type">
+    <meta content="200" property="og:image:width">
+    <meta content="200" property="og:image:height">
+    <meta content="신선하고 건강한 글로벌 NO.1 샌드위치 브랜드, 써브웨이" property="og:description">
+	<link href="subway_favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<script type="application/ld+json">
+  	{
+  		"@context": "http://schema.org",
+  		"@type": "Person",
+  		"name": "신선하고 건강한 글로벌 NO.1 샌드위치 브랜드, 써브웨이",
+  		"url": "http://m.subway.co.kr",
+  		"sameAs": [
+  			"https://www.facebook.com/Subwaykr",
+  			"https://www.youtube.com/user/Subwaykr"
+  		]
+  	}
+	</script>
+	<!-- 페이스북 픽셀 코드 -->
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+	<script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '825983077607831');
+        fbq('track', 'PageView');
+	</script>
+	<link rel="stylesheet" href="meyerReset.css">
+	<style>
+    body, html { width:100%; height:100%; }
+    button { background-color:transparent;
+        outline:0; border:0; }
+    .y1 { color:#ffce32; }
+    .g1 { color:#009223; }
+    .y2 { background-color:#ffce32; }
+    .g2 { background-color:#009223; }
+     #header { clear:both; width:100%; height:58px;
+        border-top:4px solid #374b8e; border-bottom:1px solid #ccc; }
+    .hdCon { width:90%; height:62px; margin:0 auto;
+        position:relative; }
+    .hdCon .left, .hdCon .right { position:absolute;
+        display:block; width:55px; height:55px; top:1px;
+        background-position:center center; background-size:50%;  text-indent:-9999px;
+        background-repeat:no-repeat;  z-index:30; }
+    .searchStore { left:0; background-image:url("./img/facebook.png"); }
+    .sideCall { right:0; background-image:url("./img/icon_sidemenu.png"); }
+    .logo { line-height:55px; text-align:center; }
+    .logo a { display:block; height:55px; margin:0 auto;
+    background-position:center center; background-image:url("./img/h1-logo.png"); background-repeat:no-repeat; background-size:40%; text-indent:-9999px; }
+
+    #vs { position:relative; width:100%; overflow:hidden; }
+    .vsConBox { width:500%; }
+    .vsConBox li { width:20%; float:left; height:auto; }
+    .vsConBox li img { display:block; width:100%; height:auto; }
+    .lrBtnBox { position:absolute; bottom:47%; width:100%;
+        height:30px; left:0; z-index:10; }
+    .lrBtnBox li { width:15px; height:27px; position:relative; padding:10px;  background:rgba(0,0,0,0.4); border-radius:3px; }
+    .lrBtnBox li.left { float:left; margin-left:0; }
+    .lrBtnBox li.right { float:right; margin-right:0; }
+    .lrBtnBox li button { display:block; width:15px; height: 27px; border-radius:3px; text-indent:-9999px;
+        background-image:url("./img/btn_swiper_arr.png");
+        background-size:30px 27px; }
+    .lrBtnBox li.left button { background-position:left center; }
+    .lrBtnBox li.right button {  background-position:right center; }
+
+    .qLink div { width:50%; float:left; line-height:46px;
+        background-position:15px center; background-repeat:no-repeat; background-size:28px auto;
+        box-shadow:0px -1px 3px #555; }
+    .qLink div a { display:block; text-align:center; font-size:0.95rem; font-weight:700; }
+    .store { background-image:url("./img/icon_map.png");
+         }
+    .store a { color:#333;}
+    .franchise { background-image:url("./img/icon_franchise.png");   }
+    .franchise a { color:#fff; text-indent:15px; }
+
+    .subwayMenuWrap { clear:both; padding-top:20px; }
+    .hd, .whats_new { clear:both; padding:10px 0px; text-align:center; }
+    .subwayTit { display: inline-block;
+    color: #292929;      font-size: 22px;
+    font-weight: bold;    letter-spacing: -0.01em;
+     padding: 8px 0 6px 15px; }
+    .subwaySlider { clear:both; display:none; width:100%; }
+    .subwaySlider.active { display:block; }
+    .tab { clear:both; width:90%; margin:10px auto; }
+    .tab li { padding:10px; float:left;  }
+    .tab li a { display:block; color:#374b8e; text-align:center; font-size:0.8rem; font-weight:700; border:0; padding-bottom:5px; }
+    .tab li.active a { color:#374b8e; border-bottom:5px double #374b8e; }
+    .subwayItem { width:100%; }
+    .itemWrapper { width:1000%; }
+    .itemWrapper li { float:left; width:10%; }
+    .itemWrapper .item a { display:block; text-align:center; }
+    .itemWrapper li .img { width:85%; margin:0 auto; }
+    .itemWrapper li .img img { display:block; width:100%; }
+    .itemWrapper li .title { color:#292929;  font-weight: bold; font-size: 22px; text-align:center; line-height:40px; width:100%; }
+    .itemWrapper li p { color:#999999;  font-size:13px;
+    line-height:21px; margin-top:9px; padding:15px 30px; }
+    .pagingBox { clear:both; padding-left:140px; padding-top:30px; }
+    .pagingBox span { display:inline-block; width:10px;
+        height:10px; margin-right:5px; border-radius:6px;
+        background-color:#999; transition:0.5s; }
+    .pagingBox span.on { background-color:#364b8e;
+        width:30px; }
+
+    .secSubway { clear:both; margin-top:25px;
+        padding-top:30px;  background-color: #f2f2f2; }
+    .utilization {border-right: 1px solid #ccc; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;background-image: url(./img/event-bnn02.gif);position:relative;    margin-right:30px;
+    background-color: #01a5e2;  border-radius: 0 30px 30px 0;
+    height:220px;  text-align:center;  margin-bottom: 30px; }
+    .util {padding-top: 63px;}
+    .utilization p { color: #fff; font-size: 22px;
+    line-height: 32px; font-weight: bold;  padding-top: 33px;
+    position:relative;  z-index:5; letter-spacing:-0.04em; }
+    .history { padding-bottom: 140px;  position: relative;
+    background-color:#fff; }
+    .history .wrap {  background-image: url("./img/event-bnn03.gif");  position: absolute; border-left: 1px solid #ccc; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;
+        height: 200px;     bottom: 0;     left: 15px;
+        right: 0;     text-align: center;
+        background-color: #ff8300;    text-align: center;
+        border-radius: 30px 0 0 30px;    }
+    .history .wrap p { color: #fff; font-size: 22px;
+    font-weight: bold;   letter-spacing: -0.03em;
+    line-height: 32px;    padding-top: 33px; }
+
+          /* news-area */
+      .news-area {padding:0 3.75% 7.45%;}
+      .news-area h3 {margin:0 0 3.2%;padding:9.45% 0 5%;border-bottom:1px solid #e5e5e5;}
+      .news-area h3 img {width:18.42%;}
+      .news-area ul {}
+      .news-area ul li {overflow:hidden;width:100%;padding:2.2% 0;}
+      .news-area ul li span.flow {width:72%;vertical-align:middle;}
+      .news-area ul li span.flow a,
+      .news-area ul li span.flow img {display:inline-block;vertical-align:middle;}
+      .news-area ul li span.flow a {overflow:hidden;padding:0.4% 0;max-width:78%;white-space:nowrap;word-break:break-all;text-overflow:ellipsis;}
+      .news-area ul li span.flow img.ico-new {width:5%;margin:0 0 0 2%;}
+      .news-area ul li span.flow img.ico-news {width:11.1%;margin:0 2% 0 0;vertical-align:middle;}
+      .news-area ul li span.reverse {width:27%;padding:0.6% 1% 0 0;color:#b2b2b2;text-align:right;}
+
+    .qMenu { background-color:#f2f2f2; padding: 15px 15px 10px 10px; box-sizing:border-box; height:160px; }
+    .qMenu ul { clear:both; box-sizing:border-box;  }
+    .qMenu ul li {  float: left;   width: 50%; }
+    .qMenu ul li a { display: block; margin: 0 0 5px 5px;
+    padding-left: 41px;  height: 60px; line-height: 60px;
+    background-color: #fff;  text-align: center;
+        position: relative; }
+    .fas {vertical-align: middle;    width: 30px;
+        height: 30px;    position: absolute;    left: 15px;
+        top: 15px; color:#000; }
+
+    .qMenu ul li strong { color: #000000; font-size:14px;
+        font-weight:700;    }
+    #footer p {   font-size: 12px;
+        letter-spacing: -0.015em; display:inline-block;
+            line-height:18px; padding:0px 10px;
+            font-weight:700; }
+        .fnb ul {text-align: center; padding: 5.4% 0 0;}
+        .fnb ul li  {display: inline-block;
+        width: 33%;
+        margin: 0 1%;
+        height: 33px;
+        line-height: 31px;
+        color: #a6a7aa;
+        text-align: center;
+        border: 1px solid #d9d9d9;
+        box-sizing: border-box;
+        background-color: #f5f6f6;}
+          .fnb ul li:first-child {margin-left: 0;}
+    #footer {  text-align: center;   padding-bottom: 14px; color:#666; border-top: 1px solid #b2b2b2;}
+    .fnb {
+    margin-bottom: 25px; }
+    .fnb ul {    text-align: center; }
+    .fnb ul li:first-child { padding-left:0; margin-left:0;}
+    .fnb ul li a { color: #999999;  font-size:12px;
+        display: inline-block;
+        text-align: center;  letter-spacing: -0.03em;  padding:2px;  }
+    .fnb ul li a strong {  color: #dddddd; font-weight:800; }
+    .snsGroup ul { width:130px; margin:0 auto; }
+    .snsGroup ul li { float:left; margin:10px; }
+    .snsGroup ul li a {  display: block;  overflow: hidden;
+    text-indent: -9999px;  font-size: 0;  width: 45px;
+    height: 45px; }
+    .snsGroup ul li a.fb {
+    background: url("./img/icon_f_sns_fb.png") 0 0 no-repeat;     background-size: 100%;}
+    .snsGroup ul li a.ig {
+    background: url("./images/icon_f_sns_ig.png") 0 0 no-repeat;     background-size: 100%;}
 
     </style>
-    <!-- 이미지슬라이드 -->
     <style>
-      #pg1 {height: 382px; background: darkorchid;}
-      .imgs {width: 100%; height: 100%; position: relative;overflow: hidden;}
-      .imgs>img {width: 100%; height: 100%;}
+    #sideWrap { position:fixed; top:0; right:-100%; width:100%;
+        height:100%; z-index:999; transition:0.8s; }
+    #sideWrap.on { right:0px; }
+    #sideWrap .sideMenu { background-color:#fff;        position: relative;   height: 100%;    width:80%;
+        float:right;   }
+    #sideWrap .hd {  background-color: #374b8e;
+    height: 50px;  position: relative;
+    width: 100%;    }
+    #sideWrap .hd .logoSide { position: absolute;
+    left: 39%;  top: 12px;  width: 50px;
+    height: 64px;
+    background:url("./img/innderlogo.png") 0 0 no-repeat;
+    background-size: 100%;}
+    #sideWrap .hd h2 {  font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #fff;
+    position: absolute;
+    left: 33px;
+    top: 92px;
+    letter-spacing: 0.045em;}
+    #sideWrap .sideClose {
+    display:block;      width: 50px;   height: 64px;
+    background: url("./img/icon_sidemenu_close.png") 50% 50% no-repeat;    z-index:99;
+    background-size: 20px;    position: absolute;
+    right: 0;    top: 0;    overflow: hidden;
+    text-indent:-9999px;  font-size:0;  cursor:pointer; }
+    #gnb ul > li { line-height:60px; overflow:hidden;
+        border-top:1px solid #e9e9e9; }
+    #gnb ul > li .dp1 {  position: relative;
+    height: 59px;  color: #292929; font-size:15px;
+    font-weight:700;  line-height: 59px;  display: block;
+    padding-left: 50px;  border-bottom: 1px solid #e5e5e5; }
+    #gnb ul >li .dp1 .icon {    position: absolute;
+    left: 25px;    top: 17px;    width: 26px;
+    height: 26px;  display:block; }
+    #gnb ul >li .dp1:after {
+        content: '';
+        background-image: url("./img/icon_gnb_arr.png");
+        background-position:0px 0px;
+        background-repeat:no-repeat;
+        background-size: 12px 16px;
+        width: 12px;
+        height: 8px;
+        position: absolute;
+        right: 20px;
+        top: 26px;
+    }
+    #gnb ul >li .dp1.on:after {
+        background-position:0px -8px;
+    }
+    #gnb ul >li:nth-child(1) .dp1 .icon {    background-position: 0 0; }
+    #gnb ul >li:nth-child(2) .dp1 .icon {    background-position: -26px 0; }
+    #gnb ul >li:nth-child(3) .dp1 .icon {    background-position: -52px 0; }
+    #gnb ul >li:nth-child(4) .dp1 .icon {    background-position: -78px 0; }
+    #gnb ul >li:nth-child(5) .dp1 .icon {    background-position: -104px 0; }
+    #gnb ul >li:nth-child(6) .dp1 .icon {    background-position: -130px 0; }
+    #gnb ul >li:nth-child(1) .dp1.on .icon {    background-position: 0 -26px; }
+    #gnb ul >li:nth-child(2) .dp1.on .icon {    background-position: -26px -26px; }
+    #gnb ul >li:nth-child(3) .dp1.on .icon {    background-position: -52px -26px; }
+    #gnb ul >li:nth-child(4) .dp1.on .icon {    background-position: -78px -26px; }
+    #gnb ul >li:nth-child(5) .dp1.on .icon {    background-position: -104px -26px; }
+    #gnb ul >li:nth-child(6) .dp1.on .icon {    background-position: -130px -26px; }
+    #gnb ul > li .dp2 { height:0px; transition:0.8s; }
+    #gnb ul > li .dp2.on { height:auto; }
+    #gnb ul > li .dp2 li { line-height:40px; }
+    #gnb ul > li .dp2 li a { font-size:12px; font-weight:600; display:block; text-indent:50px; color:#999; line-height: 40px; }
     </style>
-    <!-- 링크메뉴 -->
-    <style>
-      #pg2 {height: 60px; background:#f2f2f2;border-bottom: 1px solid #000;}
-      .linkMenu {width: 100%; height: 100%;}
-      .linkMenu>li {float: left; width: 49%;height: 100%;line-height:1.9;}
-      .linkMenu>li>h2 {font-size: 1em; text-align: center;}
-      .linkTxt>span {float: right; margin-right: 10px;}
-      .linkTxt b {color: darkblue;}
-      .linkMenu>li:nth-child(1) {border-right: 1px solid #000;}
-    </style>
-    <!-- 센터소개 -->
-    <style>
-      #pg3 {height: 505px; background: #inherit;border-bottom: 1px solid #000;}
-      #pg3>h2 {text-align: center;padding-top: 10px; font-size: 1.8em; padding-top: 20px; padding-bottom: 25px;border-bottom: 1px solid #000;}
-      .btnBox {width: 100%; height: 60px;margin-top: 10px; text-align: center;border-bottom: 1px solid #000;}
-      .btnBox button {width: 80px; height: 50px;background: inherit; border: none;}
-      .btnBox button:active {border-bottom: 1px solid blue;}
-      .centerBox {width: 100%;}
-      .centerBox>h3 {text-align: center;margin-top: 20px;}
-      .centerBox img {margin-top: 10px;margin-left: 40px;width: 75%; border-radius: 20px;}
-      .centerBox span {text-align: center; display: block; margin-top: 20px; font-size: 1.4em;font-weight: bold;}
-      .buttonBox {top: -200px; position: relative;}
-      .buttonBox button {width: 10%; border: none; background: none; font-size: 70px; font-weight: bold; color: #333;}
-      .next {left: 280px; position: relative;}
-      .mySlides {display: none;}
-      #tb2, #tb3, #tb4 {display:none;}
-					#tb1:target,
-          #tb2:target, #tb3:target, #tb4:target {display:block;}
-    </style>
-      <!-- 111신고하기  -->
-    <style>
-      #pg4 {height: 220px; background-image: url(./img/111pic.jpg); background-size: 100% 80%; border-bottom: 1px solid #000; background-repeat: no-repeat;}
-        .box {width: 35%; height: 10%; border: 2px solid #f00; border-radius: 20px; position: relative; top: 185px; background: #f1f1f1; color: #000; text-align: center;}
-        .box span {}
-    </style>
-    <!-- 추리퀴즈 -->
-    <style>
-      #pg5 {height: 338px; border-bottom: 1px solid #111;}
-      #pg5 img {width: 100%; height: 40%;}
-      .keyBox {width: 90%; height: 60%; border: 1px solid #000; border-radius: 20px;margin-top: -30px; z-index: 33; background: #F2f2f2; position: relative; text-align: center; line-height: 3; background-image: url(./img/quizimg.jpg);  background-size: 50% 50%;background-repeat: repeat-x; background-position: bottom;}
-      .keyBox button {width: 100px;height: 30px; margin-top: 20px; background: #000; border: none; border-radius: 30px; font-weight: bold; color: #fff;}
-    </style>
-    <!-- 최신뉴스 -->
-    <style>
-      #pg6 {height: 282px; background: #F2F2F2;}
-      .news-area {padding: 0 3.75% 7.45%;}
-      .news-area h3 {padding: 5.45% 0 1%;
-      border-bottom: 1px solid #e5e5e5;}
-      .news-area h3 img {width: 18.42%;}
-      .news-area ul li {overflow: hidden;width: 100%;
-      padding: 1% 0;}
-      .news-area ul li span.flow {width: 72%;
-          vertical-align: middle; overflow: hidden;}
-      .news-area ul li span.flow img.ico-news {
-          width: 11.1%;
-          margin: 5% 0 0;
-          vertical-align: middle;}
-      .news-area ul li span.flow a { font-size: 0.8em;
-      overflow: hidden;padding: 0.4% 0; width: 20%;
-      max-width: 38%;white-space: nowrap;
-      word-break: break-all;text-overflow: ellipsis;}
-      .news-area ul li span.reverse {
-      width: 27%; font-size: 0.8em;
-      padding: 0.6% 1% 0 0;
-      color: #b2b2b2;
-      text-align: right;}
-    </style>
-    <!-- 링크박스 -->
-    <style>
-    #pg7 {height: 155px;border-top: 1px solid #c11;margin: 0 auto;}
-    .linkBox {width: 150px; height: 60px; border: 1px solid #111; margin: 5px; float: left; text-align: center; line-height: 3; margin-left: 20px;}
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            var idx;
+            var wd=parseInt($("#vs").width());
+            var intv=setInterval(function(){ lAni(); }, 2500);
+            $(".lrBtnBox button.rightBtn").click(function(){
+                clearInterval(intv);
+                lAni();
+                intv=setInterval(function(){ lAni(); }, 2500);
+            });
+            $(".lrBtnBox button.leftBtn").click(function(){
+                clearInterval(intv);
+                rAni();
+                intv=setInterval(function(){ lAni(); }, 2500);
+            });
+            function lAni(){
+                $(".vsConBox").not(":animated").animate({"margin-left":-wd+"px"}, 600, function(){
+                    $(".vsConBox li").eq(0).appendTo($(".vsConBox"));
+                    $(".vsConBox").css("margin-left", "0px");
+                });
+            };
+            function rAni(){
+                $(".vsConBox").css("margin-left", -wd+"px");
+                $(".vsConBox li:last-child").prependTo($(".vsConBox"));
 
-    footer {height: 247px; background: #191919;}
-    .fnb {text-align: center;}
-    .fnb button {width: 100px; height: 40px; text-align: center; line-height: 2; margin-top: 15px;}
-  </style>
+                $(".vsConBox").not(":animated").animate({"margin-left":"0px"}, 600);
+            };
+        });
+    </script>
+    <script>
+      $(document).ready(function(){
+         var wwd=parseInt($(window).width());
+         $(".tab li a").removeAttr("href");
+         $(".tab li").click(function(){
+            var num = $(this).index();
+            $(".tab li").removeClass("active");
+            $(this).addClass("active");
+            $(".subwaySlider").removeClass("active");
+            $(".subwaySlider").eq(num).addClass("active");
+         });
+
+          $(".pagingBox .btn").click(function(){
+              var cnt=$(this).index();
+              $(this).addClass("on");
+              $(this).siblings().removeClass("on");
+              $(this).parents(".subwayItem").find(".itemWrapper").animate({"margin-left":wwd*cnt*-1+"px"}, 800);
+          });
+
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+          $(".dp1").removeAttr("href");
+          $("#header .sideCall").click(function(){
+              $("#sideWrap").addClass("on");
+          });
+          $("#sideWrap .sideClose").click(function(){
+              $("#sideWrap").removeClass("on");
+          });
+          $("#gnb li").click(function(){
+              $(this).find(".dp1").addClass("on");
+              $(this).find(".dp2").addClass("on");
+              $(this).siblings().find(".dp1")
+                  .removeClass("on");
+              $(this).siblings().find(".dp2")
+                  .removeClass("on");
+          });
+      });
+    </script>
 </head>
 <body>
-  <div class="wrap">
-    <header id="hd">
-      <i class="fas fa-search"></i>
-      <a href="index.html" class="logo">
-        <img src="./img/h1-logo.png" alt="">
-      </a>
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
-      <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#gnb01" class="menu">든든한 안보
-         <li class="sub"><a href="">대공수사</a></li>
-         <li class="sub"><a href="">대북정보</a></li>
-         <li class="sub"><a href="">해외정보</a></li></a>
-        <a href="#gnb02">국민과 함께</a>
-        <a href="#gnb03">국가정보원</a>
-        </div>
-         <script>
-           $(document).ready(function(){
-             $(".menu").click(function(){
-               $(".sub").slideToggle(300)
-             })
-           })
-         </script>
-                <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-        </script>
-    </header>
-  <!-- 이미지슬라이드 -->
-    <section class="page" id="pg1">
-      <div class="imgs">
-        <img src="./img/gookjungwon_final.png" alt=""></div>
-    </section>
-    <!-- 링크메뉴 -->
-    <section class="page" id="pg2">
-      <ul class="linkMenu">
-        <li class="linkTxt">
-          <h2><b>사이버</b> 경보단계</h2>
-          <span>정상</span>
+<header id="header">
+	<div class="hdCon">
+	    <h1 class="logo"><a href="index.html">국가정보원</a></h1>
+	    <a class="left searchStore" href="#">위치찾기</a>
+	    <button class="right sideCall" type="button">사이드메뉴</button>
+	</div>
+</header>
+<figure id="vs">
+    <ul class="vsConBox">
+        <li sl-val="0">
+            <img src="./img/slide1.png" alt="슬라이더1">
         </li>
-        <li class="linkTxt">
-          <h2><b>국내테러</b> 경보단계</h2>
-          <span>주의</span>
+        <li sl-val="1">
+            <img src="./img/slide2.png" alt="슬라이더2">
+        </li>
+        <li sl-val="2">
+            <img src="./img/slide3.png" alt="슬라이더3">
+        </li>
+    </ul>
+    <ul class="lrBtnBox">
+        <li sl-val="0" class="left">
+            <button class="leftBtn">&lt;</button>
+        </li>
+        <li sl-val="1" class="right">
+            <button class="rightBtn">&gt;</button>
+        </li>
+    </ul>
+</figure>
+<!-- <div class="qLink">
+    <div class="store y2">
+        <a href="#"><strong>매장찾기</strong></a>
+    </div>
+    <div class="franchise g2">
+        <a href="#"><strong>가맹신청ㆍ문의</strong></a>
+    </div>
+</div> -->
+<div class="subwayMenuWrap">
+    <div class="hd">
+        <h2 class="subwayTit">센터 소개</h2>
+        <div class="tab">
+            <ul>
+                <li class="active"><a href="">국가사이버<br>안전센터</a></li>
+                <li><a href="">산업기밀<br>보호센터</a></li>
+                <li><a href="">국제정보<br>보호센터</a></li>
+                <li><a href="">테러정보<br>통합센터</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="subwaySlider active" id="sandwich_cl">
+        <div class="subwayItem">
+            <ul class="itemWrapper">
+                <li class="item">
+                    <a href="#">
+                      <h1>주요업무</h1>
+                        <div class="wrap">
+                            <div class="img">
+                            <img alt="주요업무" src="./img/centerImg1-1.png"></div>
+                            <strong class="title">국가사이버안전 정책 총괄</strong>
+                            <p>
+                              국가사이버안전 정책기획ㆍ조율<br>
+                              국가사이버안전 관련 제도ㆍ지침 수립<br>
+                              국가사이버안전 대책회의 운영<br>
+                              民ㆍ官ㆍ軍 정보공유체계 구축ㆍ운영
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img">
+                                <img alt="주요업무" src="./img/centerImg1-2.png"></div>
+                            <strong class="title">사이버위기 예방활동</strong>
+                            <p>
+                              각급기관 전산망 보안컨설팅 및 안전측정<br>
+                              보안적합성ㆍ암호모듈 검증<br>
+                              사이버위기 대응훈련  <br>
+                              정보보안 관리실태 평가<br>
+                              정보보안 공공분야 주요정보통신 기반시설 보안관리
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img">
+                                <img alt="주요업무" src="./img/centerImg1-3.png"></div>
+                            <strong class="title">사이버공격 탐지활동</strong>
+                            <p>
+                              24시간 365일 각급기관 보안관제<br>
+                              단계별 사이버위기 경보발령<br>
+                              각급기관 보안관제센터 운영 및 교육 지원  <br>
+                              신종 해킹 탐지기술 개발ㆍ지원<br>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img">
+                                <img alt="햄" src="./img/centerImg1-4.png"></div>
+                            <strong class="title">사고조사 및 위협정보 분석</strong>
+                            <p>
+                              해킹사고 발생 시 사고조사 및 원인규명<br>
+                              사이버위협정보 및 취약점 분석<br>
+                              국내외 유관기관과 협력체계 구축  <br>
+                              유가치 사이버위협 신고 포상 및 보안권고문 배포<br>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="pagingBox" id="pagingBox1">
+                <span class="btn on"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="prevBtn" id="prevBtn1"></div>
+            <div class="nextBtn" id="nextBtn1"></div>
+        </div>
+    </div>
+    <div class="subwaySlider" id="sandwich_fl">
+        <div class="subwayItem">
+            <ul class="itemWrapper">
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img">
+                                <img alt="주요업무" src="./img/centerImg2-1.png"></div>
+                            <strong class="title">첨단기술 해외유출 차단활동</strong>
+                            <p>세계적 경쟁력을 가진 우리의 첨단기술과 기업의 영업비밀 등을 해외로 불법 유출하려는 산업스파이를 적발함으로써 국부유출을 차단하고 있습니다. <br>기술유출과 관련된 정보를 사안에 따라 해당업체 또는 검찰/경찰 등 수사기관에 지원하고 있고, 가용한 모든 수단을 동원하여 우리의 기술이 유출되지 않도록 최선의 보호조치를 취하고 있습니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg2-2.png"></div>
+                            <strong class="title">산업보안 교육/컨설팅 및 설명회 개최</strong>
+                            <p>기업ㆍ연구소 등을 대상으로 산업보안 교육 및 진단을 실시하고 있으며, 중기청ㆍ특허청 등 유관기관 합동으로 기업체 대상「산업보안 설명회」를 개최하는 등 기업체의 보안의식 확산과 자율보안시스템 구축을 지원하는데 주력하고 있습니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg2-3.png"></div>
+                            <strong class="title">방산기술ㆍ전략물자 불법 수출 차단활동</strong>
+                            <p>산업부ㆍ방사청 등 유관기관과 협조, 전략물자의 불법 수출과 방산ㆍ군사기술의
+                            해외 유출 차단활동 등 새로운 경제안보침해행위에 대한 예방ㆍ색출활동도 강화하고 있습니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="써브웨이 클럽" src="./img/centerImg2-4.png"></div>
+                            <strong class="title">지식재산권 침해 관련 대응 활동</strong>
+                            <p>우리기업의 해외 현지에서 특허ㆍ상표ㆍ디자인ㆍ저작권 등 지식재산권 피해 발생 시,
+                            특허청ㆍKOTRA(IP-desk : 해외지식재산센터)ㆍ외교부ㆍ문화부(해외저작권센터)등과 공조, 대응활동을 지원하고 있습니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg2-5.png"></div>
+                            <strong class="title">외국의 경제질서 교란 차단활동</strong>
+                            <p>외국과 연계된 투기자본 등에 의한 경제안보 침해행위와 인수합병(M&A)을 가장한 기술유출 등 위법행위에 대한 정보활동에도 주력하고 있습니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg2-6.png"></div>
+                            <strong class="title">산업스파이 신고상담소 운영</strong>
+                            <p>전화(국번없이 111번), 홈페이지(111 신고하기) 및 모바일 홈페이지를 통해 24시간 신고ㆍ상담을 받고 있으며 신고자의 신원은 어떠한 경우에도 철저히 보호됩니다.</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="pagingBox" id="pagingBox2">
+                <span class="btn on"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="prevBtn" id="prevBtn2"></div>
+            <div class="nextBtn" id="nextBtn2"></div>
+        </div>
+    </div>
+    <div class="subwaySlider" id="sandwich_pm">
+        <div class="subwayItem">
+            <ul class="itemWrapper">
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg3-1.png"></div>
+                            <p>국제범죄에 관한 정보를 수집,분석하여 국내 침투 및 확산을 차단하고 있습니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg3-2.png"></div>
+                            <p>세계 각국의 국제범죄 대응실태 및 국내 위해 요소 등을 분석하여 정부의 국제범죄 대응정책 수립을 뒷받침합니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg3-3.png"></div>
+                            <p>국제기구 및 해외 정보ㆍ수사기관과 국제범죄 색출ㆍ차단 및 대응정책 수립을 위한 협력을 실시하고 있습니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg3-4.png"></div>
+                            <p>전화(국번없이 111번), 홈페이지(111 신고하기) 및 모바일 홈페이지를 통해 24시간 국제범죄 관련 신고ㆍ상담을 받고 있으며 다양한 매체를 통한 대국민 국제범죄 피해예방 활동을 하고 있습니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg3-5.png"></div>
+                            <p>민ㆍ관 등 외부기관의 요청에 따라 마약ㆍ위폐 등 국제범죄 대응교육을 실시하고 있습니다.</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="pagingBox" id="pagingBox3">
+                <span class="btn on"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="prevBtn" id="prevBtn3"></div>
+            <div class="nextBtn" id="nextBtn3"></div>
+        </div>
+    </div>
+    <div class="subwaySlider" id="sandwich_bf">
+        <div class="subwayItem">
+            <ul class="itemWrapper">
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg4-1.png"></div>
+                            <p>국내외 테러 관련 정보의 수집·분석·작성 및 배포</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg4-2.png"></div>
+                            <p>국내외 테러 관련 정보 통합관리 24시간 상황 처리체제의 유지</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg4-3.png"></div>
+                            <p>국내침투 테러분자·조직 및 국제테러조직 색출</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img"><img alt="주요업무" src="./img/centerImg4-4.png"></div>
+                            <p>대테러센터, 軍·警 특공대 등 대테러 관계기관 협력·지원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img">
+                            <img alt="주요업무" src="./img/centerImg4-5.png"></div>
+                            <p>외국 정보수사기관과의 정보협력</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <div class="wrap">
+                            <div class="img">
+                            <img alt="주요업무" src="./img/centerImg4-6.png"></div>
+                            <p>주요 국제행사 대테러·안전대책 수립 지원</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="pagingBox" id="pagingBox4">
+                <span class="btn on"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="prevBtn" id="prevBtn4"></div>
+            <div class="nextBtn" id="nextBtn4"></div>
+        </div>
+    </div>
+</div>
+<div class="secSubway">
+    <div class="utilization">
+        <p>테러안전 가이드</p>
+        <ul class="util">
+          <li><a href="">
+            <img src="./img/event-bnn02-link01.gif" alt=""></a></li>
+          <li><a href="">
+            <img src="./img/event-bnn02-link02.gif" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="history">
+        <div class="wrap">
+            <p>산업보안 안전수칙</p>
+            <ul class="util">
+              <li><a href="">
+                <img src="./img/event-bnn03-link01.gif" alt=""></a></li>
+              <li><a href="">
+                <img src="./img/event-bnn03-link02.gif" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="news-area">
+        <h3 class="img-title">
+          <img src="./img/h3-main-news.png" alt="최근소식">
+        </h3>
+        <ul>
+          <li>
+            <span class="flow">
+              <img src="./img/ico-m-rec.png" class="ico-news" alt="채용">
+              	<!-- 채용사이트 채용공고-->
+              <a href="https://career.nis.go.kr:4017/info/notice/view.html?noticeNum=1285" target="_blank">2018년도 임기제 직원 채용 공고
+              </a>
+            </span>
+            <span class="reverse">2018-08-31</span>
+        </li>
+        <li>
+          <span class="flow">
+            <img src="./img/ico-m-not01.png" class="ico-news" alt="보도">
+              <a href="javascript:void(0);" onclick="$.view(1,158)">서훈 원장, "제2기 국정원의 새 이정표 만들어 갈 것"</a>
+          </span>
+          <span class="reverse">2018-06-11</span>
+        </li>
+        <li>
+          <span class="flow">
+            <img src="./img/ico-m-not01.png" class="ico-news" alt="보도">
+              <a href="javascript:void(0);" onclick="$.view(1,157)">국정원, 「러시아 월드컵 안전정보 핸드북」 제작ㆍ배포</a>
+          </span>
+          <span class="reverse">2018-06-01</span>
+        </li>
+        <li>
+          <span class="flow">
+            <img src="./img/ico-m-not02.png" class="ico-news" alt="공지">
+              <a href="javascript:void(0);" onclick="$.view(0,264)">인권보호관 모집공고문</a>
+          </span>
+          <span class="reverse">2018-02-20</span>
+        </li>
+        <li>
+          <span class="flow">
+            <img src="./img/ico-m-not01.png" class="ico-news" alt="보도">
+              <a href="javascript:void(0);" onclick="$.view(1,156)">국정원, 「해외진출기업 對테러협의회」 개최</a>
+          </span>
+          <span class="reverse">2018-01-25</span>
         </li>
       </ul>
     </section>
-    <!-- 센터소개 -->
-    <section class="page" id="pg3">
-      <h2>센터소개</h2>
-      <div id="tabs">
-        <ul class="btnBox">
-          <li><a href="#tabs-1">국가사이버 안전센터</a></li>
-          <li><a href="#tabs-2">산업기밀 보호센터</a></li>
-          <li><a href="#tabs-3">국제범죄 보호센터</a></li>
-          <li><a href="#tabs-4">테러정보 통합센터</a></li>
+</div>
+<div class="qMenu">
+    <ul>
+        <li class="qm01">
+            <a href="#">
+                <i class="fas fa-bullhorn"></i>
+                <strong>공지사항</strong>
+            </a>
+        </li>
+        <li class="qm02">
+            <a href="#">
+                <i class="fas fa-phone-volume"></i>
+                <strong>간첩신고</strong>
+            </a>
+        </li>
+        <li class="qm03">
+            <a href="#">
+                <i class="fas fa-address-card"></i>
+                <strong>채용안내</strong>
+            </a>
+        </li>
+        <li class="qm04">
+            <a href="#">
+                <i class="fas fa-building"></i>
+                <strong>견학신청</strong>
+            </a>
+        </li>
+    </ul>
+</div>
+<footer id="footer">
+    <nav class="fnb">
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">PC버전</a></li>
         </ul>
-          <div id="tabs-1">
-            <h3>주요업무</h3>
-            <li class="mySlides">
-              <img src="./img/centerImg1.png">
-            <span>국가 사이버안전 정책 총괄</span></li>
-            <li class="mySlides">
-              <img src="./img/centerImg2.png">
-                <span>사이버위기 예방활동</span>
-            </li>
-            <li class="mySlides">
-              <img src="./img/centerImg3.png">
-                <span>사이버공격 탐지활동</span>
-            </li>
-            <li class="mySlides">
-              <img src="./img/centerImg3.png">
-                <span>사이버공격 탐지활동</span>
-            </li>
-            <li class="mySlides">
-              <img src="./img/centerImg4.png">
-                <span>사고조사 및 위협정보 분석</span>
-            </li>
-          </div>
-          <!-- 국가사이버 안전센터 end -->
-          <div id="tabs-2">
-
-          </div>
-          <!-- 산업기밀 보호센터 end -->
-          <div id="tabs-3">
-
-          </div>
-          <!-- 국제범죄 보호센터 end -->
-          <div id="tabs-4">
-
-          </div>
-          <!-- 테러정보 통합센터 end -->
-      </div>
-
-
-        <script>
-          $("#tabs").tabs();
-        </script>
-
-        <div class="buttonBox">
-          <button class="prev" onclick="plusDivs(-1)">&#8249;</button>
-          <button class="next" onclick="plusDivs(1)">&#8250;</button>
+    </nav>
+    <p class="copyright">Copyright© 2015. National Intelligence Service, <br>ALL RIGHTS RESERVED.</p>
+</footer>
+<div id="sideWrap">
+    <div class="sideMenu">
+        <div class="hd">
+            <div class="logoSide"></div>
         </div>
-        <!-- <script>
-          var slideIndex = 1;
-          showDivs(slideIndex);
-
-          function plusDivs(n) {
-            showDivs(slideIndex += n);
-          }
-
-          function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-               x[i].style.display = "none";
-            }
-            x[slideIndex-1].style.display = "block";
-          }
-        </script> -->
-    </section>
-    <!-- 111신고하기 -->
-    <section class="page" id="pg4">
-      <div class="box">
-        <span>111 신고하기</span>
-      </div>
-    </section>
-    <!-- 추리퀴즈 -->
-    <section class="page" id="pg5">
-      <img src="./img/key.png" alt="">
-      <div class="keyBox">
-        <h3>제 41회 추리퀴즈</h3>
-        <span>-보물섬-</span><br>
-        <button>퀴즈풀기</button>
-      </div>
-    </section>
-    <!-- 최신뉴스 -->
-    <section class="page" id="pg6">
-      <section class="news-area">
-        <h3 class="img-title">
-          <img src="./img/h3-main-news.png" alt="최근소식"></h3>
-          <ul>
-            <li>
-              <span class="flow">
-                <img src="./img/ico-m-rec.png" class="ico-news" alt="채용">
-                <!-- 채용사이트 채용공고-->
-                  <a href="https://career.nis.go.kr:4017/info/notice/view.html?noticeNum=1285" target="_blank">2018년도 임기제 직원 채용 공고&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              </span>
-              <span class="reverse">2018-08-31</span>
-            </li>
-	          <li>
-              <span class="flow">
-                <img src="./img/ico-m-not01.png" class="ico-news" alt="보도">
-                  <a href="javascript:void(0);" onclick="$.view(1,158)">서훈 원장, "제2기 국정원의 새 이...</a>
-              </span>
-              <span class="reverse">2018-06-11</span>
-            </li>
-	          <li>
-              <span class="flow">
-                <img src="./img/ico-m-not01.png" class="ico-news" alt="보도">
-                  <a href="javascript:void(0);" onclick="$.view(1,157)">국정원, 「러시아 월드컵 안전정보...</a>
-              </span>
-              <span class="reverse">2018-06-01</span>
-            </li>
-	          <li>
-              <span class="flow">
-                <img src="./img/ico-m-not02.png" class="ico-news" alt="공지">
-                  <a href="javascript:void(0);" onclick="$.view(0,264)">인권보호관 모집공고문&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              </span>
-              <span class="reverse">2018-02-20</span>
-            </li>
-	          <li>
-              <span class="flow">
-                <img src="./img/ico-m-not01.png" class="ico-news" alt="보도">
-                  <a href="javascript:void(0);" onclick="$.view(1,156)">국정원, 「해외진출기업 對테러협....</a>
-              </span>
-              <span class="reverse">2018-01-25</span>
-            </li>
-          </ul>
-            </section>
-    </section>
-    <!-- 링크박스 -->
-    <section class="page" id="pg7">
-      <div class="linkBox" id="box1">
-        <a href="notice.html">공지사항</a>
-      </div>
-      <div class="linkBox" id="box2">
-        <a href="spy.html">간첩신고</a>
-      </div>
-      <div class="linkBox" id="box3">
-        <a href="recruit.html">채용안내</a>
-      </div>
-      <div class="linkBox" id="box4">
-        <a href="visit.html">
-          견학신청</a>
-      </div>
-    </section>
-
-    <!-- 푸터 -->
-    <footer id="ft">
-      <div class="fnb">
-        <button><a href="faq.html">FAQ</a></button>
-        <button><a href="index.html">PC버전</a></button>
-      </div>
-    </footer>
-  </div>
+        <nav id="gnb">
+            <div class="gnbFrame">
+                <ul>
+                    <li>
+                        <a class="dp1" href="#">
+                            <span class="icon"></span>
+                            든든한 안보
+                        </a>
+                        <div class="dp2">
+                            <ul>
+                                <li>
+                                    <a href="#">대공수사</a>
+                                </li>
+                                <li>
+                                    <a href="#">대북정보</a>
+                                </li>
+                                <li>
+                                    <a href="#">해외정보</a>
+                                </li>
+                                <li>
+                                    <a href="#">방첩</a>
+                                </li>
+                                <li>
+                                    <a href="#">산업보안</a>
+                                </li>
+                                <li>
+                                    <a href="#">대테러</a>
+                                </li>
+                                <li>
+                                  <a href="#">사이버안보</a>
+                                </li>
+                                <li>
+                                  <a href="#">국제범죄</a>
+                                </li>
+                                <li>
+                                  <a href="#">국가보안</a>
+                                </li>
+                                <li><a href="#">북한이탈 주민보호</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="dp1" href="#">
+                            <span class="icon"></span>
+                            국민과 함께
+                        </a>
+                        <div class="dp2">
+                            <ul>
+                                <li>
+                                    <a href="#">견학신청</a>
+                                </li>
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="#">보도자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">111 신고하기</a>
+                                </li>
+                                <li>
+                                    <a href="#">추리퀴즈</a>
+                                </li>
+                                <li>
+                                    <a href="#">NEWS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="dp1" href="#">
+                            <span class="icon"></span>
+                            국가정보원
+                        </a>
+                        <div class="dp2">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                    직무
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                      원훈
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">직원헌장</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <button class="sideClose" type="button"></button>
+    </div>
+</div>
 </body>
 </html>
