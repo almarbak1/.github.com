@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <title>한국원자력안전기술원에 오신것 환영합니다.</title>
+  <script>
+    $(document).ready(function(){  //페이지네이션에 페이지수 만큼 버튼 추가
+        var ht = parseInt($(window).height());
+        var n = $(".page").length;
+        var btnHtml;
+        for(var i=0;i<n;i++){
+            btnHtml = "<button data-rel='"+i+"' class='btn'></button>";
+            $("#pageNation").append(btnHtml);
+            $("#pageNation button").eq(i).append("<span></span>");
+            var txt = $(".page").eq(i).find(".pageTitle").text();
+            $("#pageNation button").eq(i).find("span").text(txt);
+        }
+        $("#pageNation button").eq(0).addClass("on");
+        $(window).scroll(function(){
+            var sct = parseInt($(window).scrollTop());
+            var eq = parseInt(sct/ht);
+            $("#pageNation button").removeClass("on");
+            $("#pageNation button").eq(eq).addClass("on");
+        });
+        $("#pageNation button").click(function(){
+            var th = parseInt($(this).attr("data-rel"));
+            $("body, html").not(":animated").animate({scrollTop:th*ht+"px"}, 800);
+        });
+    });
+    </script>
+    <script>
+    $(document).ready(function(){
+        var ht = parseInt($(window).height());
+        var wd = parseInt($(window).width());
+        var pageCnt = parseInt($(".page").length)-1;
+        var rt = wd/ht/pageCnt;
+        //메뉴의 스크롤 모션
+        $(window).scroll(function(){
+            var sct = $(window).scrollTop();
+            var pageNum = parseInt(sct/ht)+1;
+            $("#pageCnt").text(pageNum);
+            $(".gage").width(parseInt(rt*sct));
+            $("#gageBar").css("left", parseInt(rt*sct)-10+"px");
+            $("#gageNum").text(pageNum).css("left", parseInt(rt*sct)-12+"px");
+
+            if(sct>=500){
+                $("#hd").css("position", "fixed");
+                $("#hd").not(":animated").slideDown(800);
+                $("#toTop").fadeIn(400);
+            } else if(sct>=100) {
+                $("#hd").css("display", "none");
+            } else {
+                $("#hd").css("position", "absolute");
+                $("#hd").not(":animated").slideDown(800);
+                $("#toTop").fadeOut(400);
+            }
+        });
+    });
+    </script>
+  <style>
+    *{margin: 0;padding: 0; color:#000;}
+    header {position: relative;}
+    li {list-style: none;}
+    a {text-decoration: none;}
+
+    #hd {width: 100%; height: 71px; z-index: 99; border-bottom: 1px solid #fff;}
+    .logo {position: absolute; top: 5px;left: 40px;z-index: 10;}
+    .logo img{display: block;}
+    .menuFrame {position: relative; width: 100%;margin: 0 auto; }
+    .menu {width: 1000px; margin: 0 auto; height: 70px; overflow: hidden;}
+    .menu li {float: left; width: 120px; margin: 10px;}
+    .menu a {color: #fff; font-weight: bold; font-size: 1.2em;}
+    .tnb {position: absolute; top: 0; right:112px;padding-top: 29px;}
+    .tnb li { display: block; float: left;position: relative;padding-right: 14px;font-size: 15px;}
+    .tnb li a {color: #fff;}
+    .tnb li:nth-child(1) a:after {display: block;
+    content: "";width: 1px;height: 22px;
+    background: #dadada;opacity: 0.5;
+    position: absolute;right: 6px;top: 0;}
+    .menuBtn {position: absolute;top: 0;right: 0;display: block;width: 70px;height: 70px;background: url(./img/menu.png) no-repeat 50% 50%;}
+    #page1 {width: 100%; height: 939px;  top: 0; left: 0; overflow: hidden;}
+    .mv {position: absolute; width: 1903px;height: auto; overflow: hidden;}
+    .submenu {height: 390px;top:72px;position: absolute; width: 50%; background: #f9f9f9; display: none; opacity: 0.5;}
+    .submenu li {float: none; width: 200px;}
+    .submenu li a{color: #000;}
+    .subTitle {font-weight: 700; font-size: 1.2em;}
+    .submenu .subTitle {float: left;}
+    #submenu1 li {height: 50%;}
+    #submenu2 {height: 390px; top: 72px; position: absolute;width: 50%; background: #f9f9f9; left: 24%; opacity: 0.5;}
+    #submenu2 .subTitle {float: left; left: 0; width: 22%;}
+    .subTitle>ul {font-size: 0.8em;}
+    #submenu2 .subTitle:nth-child(5), #submenu2 .subTitle:nth-child(6) {margin-top: 172px;}
+      #submenu2 li {width: 160px;}
+      #submenu3 {height: 390px; top: 72px; position: absolute;width: 50%; background: #f9f9f9; left: 24%;}
+      #submenu3 .subTitle {float: left; left: 0; width: 22%;}
+      #submenu3 li {width: 210px;}
+      #submenu4 li {height: 50%;}
+
+
+        /* pagenation */
+        #pageNation { width:40px; height:auto; position:fixed;
+           right:40px; top:30%; z-index:80;  }
+       #pageNation button { clear:both; outline:0; border:0;  display:block; width:14px; height:14px; background:#999; margin:6px auto;
+           border-radius:10px; cursor:pointer; position:relative; }
+       #pageNation button.on { background:red; }
+       #pageNation button span { position:absolute; right:20px; top:0;
+           display:block; height:14px; border-radius:8px; line-height:14px;
+           font-size:8px; color:#fff; background:rgba(0,0,0,0.85); width: 120px; display:none; }
+       #pageNation button.on span { display:block; }
+
+
+
+  </style>
+
+    <style media="screen">
+      #page2 {width: 100%;height: 100%;background-image: url("./img/main2.jpg");background-size: cover; background-repeat: no-repeat; position: relative;}
+    .txtDiv {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+        }
+
+      .txtDiv .txt2 {font-size: 33px; color: #fff;
+          position: absolute;
+          top: 363px;
+          left: 0;
+          width: 100%;
+          opacity: 0;
+          z-index: 11;
+      }
+      .txtDiv .txt3 {font-size: 33px;
+          position: absolute;
+          top: 363px;
+          left: 0;
+          width: 100%;
+          opacity: 0;
+          z-index: 11;
+      }
+          .list {margin-top: 25%; margin-left: 25%;}
+          .list li {float: left; margin: 0 15px; }
+    </style>
+
+    <style>
+      #page4 {width: 100%;height: 100%;background-image: url("./img/atom.jpg"); background-size: cover; background-repeat: no-repeat; background-position: 100%;}
+    </style>
+</head>
+<body>
+  <div class="wrap">
+    <header id="hd">
+      <a href="index.html" class="logo">
+        <img src="./img/logo.png" alt="로고">
+      </a>
+      <div class="menuFrame">
+        <ul class="menu">
+          <!-- KINS 소개 -->
+          <li><a href="">KINS 소개</a>
+            <ul class="submenu" id="submenu1">
+              <li class="subTitle"><a href="">인사말</a></li>
+              <li class="subTitle"><a href="">설립목적 및 비전</a></li>
+              <li class="subTitle"><a href="">연혁 및 역대 원장</a></li>
+              <li class="subTitle"><a href="">기관 임무</a></li>
+              <li class="subTitle"><a href="">조직과 기능</a></li>
+              <li class="subTitle"><a href="">CI 소개</a></li>
+              <li class="subTitle"><a href="">찾아오시는 길</a></li>
+            </ul>
+          </li>
+          <!-- 열린 경영 -->
+          <li><a href="">열린 경영</a>
+            <ul class="submenu" id="submenu2">
+              <li class="subTitle"><a href="">경영공시</a>
+                <ul style="width:144px; height:15px;">
+                  <li><a href="">통합경영공시</a></li>
+                  <li><a href="">기타정보공개</a></li>
+                </ul>
+              </li>
+              <li class="subTitle"><a href="">고객만족경영</a>
+                <ul style="width:144px; height:15px;">
+                  <li><a href="">고객만족 경영체계</a></li>
+                  <li><a href="">고객 헌장 및 이행표준</a></li>
+                </ul>
+              </li>
+              <li class="subTitle"><a href="">윤리경영</a>
+                <ul style="width:144px; height:15px;">
+                  <li><a href="">KINS 윤리경영</a></li>
+                  <li><a href="">청렴옴부즈만</a></li>
+                  <li><a href="">KINS 신고센터</a></li>
+                  <li><a href="">행정심판</a></li>
+                  <li><a href="">내부감사결과</a></li>
+                  <li><a href="">반부패 청렴활동</a></li>
+                  <li><a href="">부패방지 시책평가 결과</a></li>
+                </ul>
+              </li>
+              <li class="subTitle"><a href="">내부규정</a>
+                <ul style="width:144px; height:15px;">
+                  <li><a href="">내부규정목록</a></li>
+                  <li><a href="">재.개정예고</a></li>
+                </ul>
+              </li>
+              <li class="subTitle"><a href="">사회공헌</a>
+                <ul style="width:144px; height:15px;">
+                  <li><a href="">사회공헌 소개</a></li>
+                  <li><a href="">사회공헌 활동</a></li>
+                </ul></li>
+              <li class="subTitle"><a href="">채용정보</a></li>
+            </ul>
+          </li>
+          <!-- 고객 참여 -->
+          <li><a href="">고객 참여</a>
+            <ul class="submenu" id="submenu3">
+              <li class="subTitle"><a href="">묻고 답하기</a>
+                <ul>
+                  <li><a href="">자주하는 질문 </a></li>
+                  <li><a href="">질의 응답</a></li>
+                </ul>
+              </li>
+              <li class="subTitle"><a href="">민원신청</a></li>
+              <li class="subTitle"><a href="">신청하기</a></li>
+              <li class="subTitle"><a href="">의견 및 토론</a>
+                <ul>
+                  <li><a href="">110화상(수화)/채팅상담</a></li>
+                  <li><a href="">Cyber 정책토론</a></li>
+                  <li><a href="">Cyber 설문조사</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- 알림 마당 -->
+          <li><a href="">알림 마당</a>
+            <ul class="submenu" id="submenu4" style="left:24%">
+              <li class="subTitle"><a href="">KINS 소식</a></li>
+              <li class="subTitle"><a href="">공지사항</a></li>
+              <li class="subTitle"><a href="">규제결과</a></li>
+              <li class="subTitle"><a href="">보도자료</a></li>
+              <li class="subTitle"><a href="">입찰공고</a></li>
+              <li class="subTitle"><a href="">알림판</a></li>
+            </ul></li>
+          <!-- 정보 마당 -->
+          <li><a href="">정보 마당</a>
+            <ul class="submenu" id="submenu5" style="left:24%;">
+              <li class="subTitle"><a href="">간행물</a>
+                <ul>
+                  <li><a href="">KINS 이야기</a></li>
+                  <li><a href="">안전규제 바로알기(콘텐츠)</a></li>
+                  <li><a href="">원자력 안전연감</a></li>
+                  <li><a href="">연구보고서</a></li>
+                </ul></li>
+              <li class="subTitle"><a href="">영상물</a>
+                <ul>
+                  <li><a href="">홍보영상</a></li>
+                  <li><a href="">안전규제 바로알기(동영상)</a></li>
+                  <li><a href="">어린이/교사용 홈페이지</a></li>
+                </ul></li>
+              <li class="subTitle"><a href="">원클릭 정보</a></li>
+              <li class="subTitle"><a href="">열린 회의실</a></li>
+              <li class="subTitle"><a href="">법령 및 기준</a></li>
+              <li class="subTitle"><a href="">원자력안전 시설위치</a></li>
+              <li class="subTitle"><a href="">안전포커스</a>
+                <ul>
+                  <li><a href="">후쿠시마 원전사고 후속조치</a></li>
+                  <li><a href="">과거자료</a></li>
+                </ul>
+              </li>
+              <li class="subTitle"><a href="">원자력안전용어</a></li>
+            </ul>
+          </li>
+          <!-- 원자력안전정보공개센터 -->
+          <li><a href="">원자력안전<br>정보공개센터</a></li>
+          <!-- 정보공개제도 -->
+          <li><a href="">정보공개제도</a>
+            </li>
+        </ul>
+      </div>
+      <div class="tnb">
+        <li><a href="">Contact</a></li>
+        <li><a href="">ENG</a></li>
+      </div>
+      <a href="" class="menuBtn"></a>
+    </header>
+    <script>
+          $(document).ready(function(){
+       $(".menu li, .menu li a").hover(function(){
+           $(this).find(".submenu").stop().slideDown(700);
+       });
+       $(".menu li").mouseleave(function(){
+           $(this).find(".submenu").stop().slideUp(100);
+       });
+      });
+    </script>
+    <section id="page1" class="page">
+      <div class="mv">
+        <video src="./img/KINS.mp4" width="100%" height="100%" autoplay></video>
+      </div>
+    </section>
+    <section id="page2" class="page" style="height:889px; top:0px">
+      <div class="txtDiv">
+				<p class="txt2" style="opacity: 1; top: 263px;">원클릭 정보</p>
+        <div class="list">
+          <li><a href=""><img src="./img/img1_off.gif" alt=""></a></li>
+          <li><a href=""><img src="./img/img3_off.gif" alt=""></a></li>
+          <li><a href=""><img src="./img/img4_off.gif" alt=""></a></li>
+          <li><a href=""><img src="./img/img5_on.gif" alt=""></a></li>
+        </div>
+			</div>
+    </section>
+
+    <section id="page3" class="page" style="height:889px; top:0px">
+      <div class="news">
+        <p class="txt3">NEWS</p>
+      </div>
+    </section>
+
+    <section id="page4" class="page" style="height:889px; top:0px">
+
+    </section>
+
+    <!-- <section id="pageNation">
+      <button data-rel="0" class="btn on">
+        <span>MAIN</span>
+      </button>
+      <button data-rel="1" class="btn">
+        <span>원클릭 정보</span>
+      </button>
+      <button data-rel="2" class="btn">
+        <span>KINS NEWS</span>
+      </button>
+      <button data-rel="3" class="btn">
+        <span>정보마당</span>
+      </button>
+    </section> -->
+
+    <div id="pageNation">
+      <a href="" data-rel="0" class="btn"><span>메인</span></a>
+      <a href="" data-rel="1" class="btn"></a>
+      <a href="" data-rel="2" class="btn"></a>
+      <a href="" data-rel="3" class="btn"></a>
+    </div>
+  </div>
+</body>
+</html>
