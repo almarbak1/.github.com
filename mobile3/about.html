@@ -27,16 +27,41 @@
       .nav {position: absolute; top: 25px;right: 10px;}
       .pg {width: 100%;height: 100%;background-image: url(img/bg.jpg);background-size: 100% 100%; background-repeat: no-repeat;overflow: hidden}
       .pg ul {overflow: hidden;width: 100%;padding: 13px 0 0; margin-top: 200px;}
-      .pg ul img {padding-left: 20px;display: block; width: 50%;}
+      .pg ul img {display: block; width: 50%;}
       .pg li {float: left;width: 33.3%; margin-bottom: 20px;text-align: center;}
-
+      
+      #content {background: #fff;  width: 100%; height: 74%;margin-top: 105px;}
+      .pgTitle {height: 39px;padding: 0 10px; background: #681b5c;}
+      .pgTitle h2 {color: #fff; line-height: 39px; font-size: 18px; font-weight: bold;}
+      .visual {width: 100%; height: 354px; position: relative;font-size: 2.777vw;}
+      .visual>img {width: 100%;height: 100%;display: block}
+      .visual .intro {position: absolute; left: 0;top: 0;background-color: rgba(0,0,0,0.4); width: 85%;height: 100%;color: #fff; padding: 2.7em;}
+      .visual .content {    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 83.5%;
+    border: .3em solid #fff;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+      .visual_logo {width: 9.6em; height: 3.9em; display: block}
+      .message {font-size: 1em; line-height: 1.53; margin-top: 3em;text-align: center;}
+      .txt01 {margin-bottom: 12px;font-size: 19px;font-weight: bold;color: #242424; letter-spacing: -0.05em;}
+      
+      
       footer {position: relative;width: 100%;height: 59px;background-color: #333; margin-top: -59px;clear: both;}
       .fnb {width: 300px;-ms-text-align-last: auto;
-      text-align-last: auto;margin: 0 auto; padding-top: 9px; color: #fff;}
+      text-align-last: auto;margin: 0 auto; padding-top: 9px;}
       .fnb ul {overflow: hidden}
       .fnb li {display: inline; margin-right: 30px; text-align: center; line-height: 19px;}
       .fnb li a {font-size: 13px;color: #fff; font-weight: bold;}
-      .copyright {width: 300px; margin: 0 auto; font-size: 13px; line-height: 19px; }
+      .copyright {width: 300px; margin: 0 auto; font-size: 13px; line-height: 19px;color: #fff; }
   </style>
   <script src="http://code.jqeury.com/jquery-latest.js"></script>
 
@@ -48,16 +73,27 @@
         <div class="nav"><a href="">전체메뉴</a></div>
     </header>
     <section class="pg">
-        <ul class="pgWrap">
-            <li><a href="about.html"><img src="./img/logoB.png" alt="">제이에스티나</a></li>
-            <li><a href=""><img src="./img/product.png" alt="">제품소개</a></li>
-            <li><a href=""><img src="./img/location.png" alt="">매장검색</a></li>
-            <li><a href=""><img src="./img/icon.png" alt="">고객의 소리</a></li>
-            <li><a href=""><img src="./img/notice.png" alt="">공지사항</a></li>
-            <li><a href=""><img src="./img/event.png" alt="">이벤트</a></li>
-            <li><a href=""><img src="./img/membership.png" alt="">멤버십 혜택</a></li>
-        </ul>
+        <article id="content">
+        <hgroup class="pgTitle">
+            <h2>제이에스티나 소개</h2>
+        </hgroup>
+        <figure class="visual">
+            <img src="./img/visual.jpg" alt="">
+            <flgcaption class="intro">
+                <div class="content">
+                    <img src="./img/logo.png" alt="" class="visual_logo">
+                </div>
+                <p class="message"></p>
+            </flgcaption>
+        </figure>
+        <h3 class="txt01">
+            주얼리 문화의 새로운 장을 열다
+        </h3>
+        <h3 class="txt02">최초의 브릿지 주얼리</h3>
+        <span class="txt03">품격있는 20대가 누리는 주얼리의 미학<br>신 프린세스를 꿈꾸는<br>여성들의 로망, 매스티지 주얼리 브랜드</span>
+    </article>
     </section>
+    
     <footer id="ft">
         <div class="fnb">
             <ul>
