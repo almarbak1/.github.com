@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>홈플러스에 오신 것을 환영합니다.</title>
+    <style>
+        .sidenav {
+    height: 100%;width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;}
+
+        *{margin: 0; padding: 0;}
+
+        .wrap {width: 100%; height: 100%;}
+        li {list-style: none}
+        a {text-decoration: none;}
+        header {position: fixed;}
+        #hd {position: fixed; width: 100%; height: 56px;top: 0;left: 0; border-bottom: 1px solid #000; background: #fff;}
+        .logo {height: 24px;position: absolute;top: 23%;left: 36%;}
+        .logo img {width: 107px; height: auto;display: block}
+        .search {top: 13px;right: 20px; position: absolute;width: 30px;height: 30px;}
+        .menuIcon {margin-left: 20px;}
+
+        .page {width: 100%;height: 100%;}
+        #pg1 {width: 100%; height:300px;padding-top: 50px;}
+        .imgs { }
+        .imgs img {width: 100%;height: 100%;}
+        .slide {display: none;}
+
+        #pg2 {width: 100%; padding-top: 70px;}
+        .homBox {vertical-align: top; display: inline-block; border-bottom: 1px solid #c0c0c0;}
+        .homBox>li {width: 33.33%; box-sizing: border-box; margin-bottom: 10px;}
+        .homBox li {float: left;padding: 0 5px; }
+        .homBox li a {display: block; line-height: 34px; text-align: center;color: #333; background-color: #fff; border: 1px solid #c0c0c0; border-radius: 18px; font-size: 15px;}
+    </style>
+
+    <!-- footer -->
+    <style>
+      footer {width: 100%;height: auto;}
+        #fnb {text-align: center;     border-top: 1px solid #777;
+    padding: 15px 0; display: inline-block;}
+        #fnb li {float: left; }
+        #fnb > li {padding: 0 6px; position: relative;}
+        #fnb > li a {display: block;line-height: 40px;font-size: 12px;}
+        #fnb > li:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background-color: #333;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;}
+    .copyright p {margin: 5px 0; font-size: 10px;line-height: 15px;color: #777; text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header id="hd">
+           <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#">브랜드</a>
+              <a href="#">카테고리</a>
+              <a href="#">고객센터</a>
+              <a href="#">주문 배송</a>
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="menuIcon">&#9776;</span>
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+            <a href="index.html" class="logo">
+                <img src="./img/logo.png" alt="">
+            </a>
+            <a href="" class="search"><i class="fas fa-search"></i></a>
+        </header>
+        <section id="pg1" class="page">
+            <div class="imgs">
+                <img src="img/slide1.jpg" alt="" class="slide">
+                <img src="./img/slide2.jpg" alt="" class="slide">
+                <img src="./img/slide3.jpg" alt="" class="slide">
+                <img src="img/slide4.jpg" alt="" class="slide">
+                <img src="img/slide5.jpg" alt="" class="slide">
+            </div>
+            <script>
+              var myIndex = 0;
+                  carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("slide");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}
+                    x[myIndex-1].style.display = "block";
+                    setTimeout(carousel, 2000);
+                }
+            </script>
+        </section>
+        <section id="pg2" class="page">
+            <ul class="homBox">
+                <li><a href="">금주의 혜택</a></li>
+                <li><a href="">마트전단</a></li>
+                <li><a href="">싸데이</a></li>
+                <li><a href="">전문관</a></li>
+                <li><a href="">기획전</a></li>
+                <li><a href="">브랜드샵</a></li>
+                <li><a href="">이벤트.쿠폰</a></li>
+            </ul>
+            <img src="./img/img01.jpg" style="width: 100%;" alt="">
+        </section>
+        <section id="pg3" class="page">
+            <h2>
+                Homeplus Sale
+            </h2>
+        </section>
+
+    <footer id="ft">
+      <nab id="fnb">
+        <li><a href="">PC버전</a></li>
+        <li><a href="">고객센터</a></li>
+        <li><a href="">최근 본 상품</a></li>
+        <li><a href="">이용약관</a></li>
+        <li><a href="">개인정보처리방침</a></li>
+      </nab>
+      <div class="copyright">
+        <p>
+		      <strong class="f-tit">홈플러스(주)</strong>
+        		대표이사 : 임일순 <i class="split">|</i>
+        		사업자등록번호 : 220-81-60348<br>
+        		통신판매신고번호 : 2016-서울강서-0451호
+				<a href="javascript:communicationViewPopup('2208160348')" class="licensee">사업자정보확인</a><br>
+      		주소 : 서울특별시 강서구 화곡로 398(등촌동)<br>
+      		개인정보 및 청소년 보호책임자 : 송승선 <i class="split"></i>
+      		호스팅 제공자 :홈플러스(주)
+      	</p>
+      </div>
+    </footer>
+    </div>
+</body>
+</html>
