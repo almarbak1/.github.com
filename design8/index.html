@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="홈플러스, 유통, 식품">
+  <meta name="Description" content"">
+  <title>Welcome to Homplus</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="icon" size="16x16 32x32 48x48 64x64 72x72 96x96 114x114 128x128" href="./img/favicon.ico" tyle="image/x-icon"/>
+  <link rel="aplle-touch-icon-precomposed" href="./img/favicon.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./img/favicon.png">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family-Noto+Sans+KR">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <link rel="stylesheet" href="https://code.jquery.com/resources/demos/style.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script>
+ $( function() {
+   $( "#tabs" ).tabs();
+ } );
+ </script>
+
+  <style>
+    *{margin: 0;padding: 0;}
+    body, html {width: 100%;height: 100%;}
+    ul, li {list-style: none;}
+    a { text-decoration: none; color: #000;}
+    img {border: 0;}
+    button, label, input, a {outline: 0; border: 0; background: transparent;}
+
+
+    @media screen and (max-width:767px) {
+
+    }
+    @media screen and (min-width:768px) and (max-width:959px){
+
+    }
+    @media screen and (min-width:960px) and (max-width:1280px){
+
+    }
+    @media screen and (mind-width:1280px) {
+
+    }
+  </style>
+  <style>
+    .wrap {width: 100%;height: 100%;}
+    header {position: relative; top: 0;left: 0;width: 100%; background-color: #fff;z-index: 9999;}
+    #header_wrap {text-align: center;background: #fff;}
+    #header_top {height: 40px; width: 100%; background: #ccc;}
+    #logo {margin: 0 auto; top: 63px; vertical-align: top; display: inline-block; position: absolute;}
+    #logo img {}
+    .hd_top {position: absolute;right: 0;top: 0;white-space: nowrap; }
+    #topMenu {padding-top: 10px; height: 40px; float: right; margin-right: 20px;}
+    #topMenu li {padding-left: 30px;margin-left: 0;background: 0; position: relative; float: left;}
+    #topMenu li:after {content: ''; width: 1px;height: 10px;color: #000; position: absolute; top: 30%; background-color:#333;right: -16px;}
+    #topMenu li:last-child:after {content: none;}
+    #header_inner {margin: 0 auto; border-bottom: 1px solid #e0e0e0;  padding: 90px 0 32px; }
+    #search {bottom: 18px;right: 340px; z-index: 2; float: right;}
+    .sc {position: relative;display: inline-block;zoom: 1;display: inline;height: 40px;}
+    #scBox {width: 200px; height: 30px; border-radius: 30px;border: 1px solid #ccc; text-align: center;}
+    #header_menu {background: #fff;width: 100%;}
+    #menu_wrap {width: 63.9%;margin: 0 auto; background-color: #fff; height: 78px;}
+    #menu_wrap>ul {zoom:1; }
+    #menu_wrap>ul>li {float: left;}
+    #menu_wrap li a {display: block;padding: 0 46px; font-size: 23px;letter-spacing: -.25px;font-weight: 700;line-height: 78px;}
+    .hdMenu {position: relative;}
+  </style>
+  <style>
+    #content{width: 100%;}
+    #visual {opacity: 1;}
+    #visual_inner {position: relative;display: block;overflow: hidden;
+    margin: 0;padding: 0;}
+    #imgs {height: 655px;}
+    #imgs img {width: 100%;height: 100%; width: 70%;margin: 0 auto;}
+    #visual_banner {width: 1000px;margin: 0px auto;}
+  </style>
+  <style>
+    #category{position: relative;padding-top: 50px; background-color: #fff; border-bottom: 1px solid #c1c1c1;}
+    #pg2Tit {text-align: center;margin-bottom: 40px;}
+    #pg2Tit p {font-size: 20px;line-height: 30px; margin-top: 23px;color: #666;}
+    #ctBox {text-align: center !important;}
+    .btnBox {margin-bottom: 36px;position: relative;z-index: 90;}
+    #ctBtn {display: inline-block;vertical-align: top;}
+    #ctBtn > li {float: left; width: 230px;padding: 0 5px;}
+    #ctBtn > li a {display: block;line-height: 34px;text-align: center; color: #666; background-color: #fff; border: 1px solid #dcdcdc; border-radius: 18px; font-size: 15px;}
+    #prslide {width: 1240px;margin: 0 auto;position: relative;overflow: hidden;margin-top: 70px;height: 200px;z-index: 6;}
+    #prWrap {opacity: 1; padding: 0 48px; overflow: hidden;}
+    .product {position: relative;display: block;overflow: hidden;margin: 0;padding: 0;}
+    .product>img {overflow: hidden; width: 200px;height: 250px; float: left;}
+  </style>
+
+  <style>
+    .pg3 {height: auto;}
+    #banner {width: 1200px; margin: 0 auto; margin-top: 5px;}
+    #banner img {width: 100%; margin-top: 20px;}
+  </style>
+
+  <style>
+    .pg4{padding-top: 30px;width: 1200px;margin: 0 auto; padding-bottom: 230px; position: relative;}
+      #event {width: 100%;height: 30%; margin: 0 auto;}
+    #event>li {float: left; width: 50%;}
+    #event>li>h2 {border-bottom: 1px solid #999; width: 90%;}
+    #notice {margin-top: 321px;}
+    #notice .more{background-image: url("./img/more.png"); width: 35px;height: 35px;position: absolute;right: 0;top: 0;background-repeat: no-repeat;}
+    #noticeBox {position: relative;background-color: #999;}
+      #notice h2 {font-size: 26px;line-height: 35px;}
+      .ntTitle {margin-bottom: 9px;position: relative;}
+    #noticeBox a {display: block;padding: 0 158px 0 35px;position: relative; color: #fff;}
+    #noticeBox p {font-size: 24px;line-height: 104px;text-overflow: ellipsis;white-space: nowrap;word-wrap: normal;overflow: hidden;}
+    #noticeBox span {position: absolute;right: 35px;top: 50%;margin-top: -9px;font-size: 18px;line-height: 18px;}
+
+    #column {margin-top: 30px;}
+    #column h2 {border-bottom: 1px solid #ccc; width: 90%;}
+      #column img {padding-top: 6px; align:center;}
+    #column>div {float: left; width: 33.3333%;}
+    .btinner {width: 1008px;margin: 0 auto;}
+        .bottomBanner img {}
+
+  </style>
+  <style>
+    footer {width: 100%; }
+
+    #ft_top {background: #444;border-top:1px solid #777; padding: 15px 0;}
+    #ft_top .ft_inner {padding-right: 225px;box-sizing: border-box;}
+    .ft_inner {width: 1100px;margin: 0 auto;position: relative;}
+    .ftNav {float: left;}
+    .ftNav > li {float: left;padding: 0 26px; position: relative;}
+    .ftNav > li:first-child {padding-left: 0;}
+    .ftNav > li a {display: block;line-height: 49px;}
+    .ftNav > li:after {content: "";position: absolute;width: 1px;height: 12px;background-color: #333;right: 0;top: 50%;margin-top: -6px;}
+    .family {position: absolute;width: 180px;border:1px solid #dcdcdc; right: 0;top: 50%;margin-top: -25px;box-sizing: border-box;background-color: #fff;}
+    .family > a {display: block;font-size: 18px;line-height: 50px;padding: 0 18px; background-repeat: no-repeat;background-position: right center; background-origin: content-box;background-image: url("./img/family_arrow.png");}
+    .family ul {display: none;position: absolute;width: 100%;border: 1px solid #dcdcdc;border-bottom: none;bottom: 51px;left: -1px;padding: 15px 0; background-color: #fff;}
+    .family ul li a {display: block;padding: 0 18px; line-height: 40px;}
+    #ft_bottom{border-bottom: 1px solid #e0e0e0;padding: 30px 0;}
+    #ft_bottom > .ft_inner {position: relative; padding-right: 390px;box-sizing: border-box;}
+    #ft_bottom .custom {position: absolute;right: 0;top: 0;color: #555;}
+    #ft_bottom .custom > strong {display: block;left: 0;font-size: 20px;line-height: 27px;}
+    #ft_bottom .custom > * {margin-bottom: 5px;}
+    #ft_bottom .custom p {font-size: 20px;line-height: 27px;}
+    .footerinfo li:first-child {padding-left: 0;width: 100%;padding-right: 0;}
+    .footerinfo li {float: left;padding: 0 15px;margin-bottom: 5px;}
+    .footerinfo li:nth-child(2) {padding-left: 0;}
+    .footerinfo li:last-child {padding-right: 0;}
+    #ft_bottom p.copy {font-size: 14px;line-height: 28px; color: #555;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header id="header_wrap">
+      <div id="header_inner">
+          <nav id="logo">
+            <a href="index.html">
+              <img src="./img/logo.gif" alt="">
+            </a>
+          </nav>
+          <nav id="header_top" class="hd_top">
+            <ul id="topMenu">
+              <li><a href="">로그인</a></li>
+              <li><a href="">회원가입</a></li>
+              <li><a href="">장바구니</a></li>
+              <li><a href="">나의 홈플러스</a></li>
+              <li><a href="">고객센터</a></li>
+            </ul>
+          </nav>
+          <nav id="search" class="sc">
+            <div id="scBox">
+              <input type="search" value="유산균은 필수니까!">
+              <i class="fas fa-search"></i>
+            </div>
+          </nav>
+      </div>
+      <div id="header_menu" class="hdMenu">
+        <div id="menu_wrap">
+          <ul>
+            <li><a href="">카테고리</a></li>
+            <li><a href="">마트전단</a></li>
+            <li><a href="">싸데이</a></li>
+            <li><a href="">베스트</a></li>
+            <li><a href="">기획전샵</a></li>
+            <li><a href="">브랜드샵</a></li>
+            <li><a href="">장보기</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section id="content" class="main">
+      <div id="visual" class="pg1">
+        <div id="visual_inner">
+          <div id="imgs" style="opacity:1;">
+            <img src="./img/sl1.jpg" alt="" class="slide">
+            <img src="./img/sl2.jpg" alt="" class="slide">
+            <img src="./img/sl3.jpg" alt="" class="slide">
+            <img src="./img/sl4.jpg" alt="" class="slide">
+          </div>
+          <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("slide");
+              for ( i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}
+              x[myIndex-1].style.display = "block";
+              setTimeout(carousel, 2000);
+            }
+          </script>
+        </div>
+        <div id="visual_banner">
+          <img src="./img/pms22.jpg" alt="">
+        </div>
+      </div>
+        <!-- 금주의 전단쇼핑  -->
+      <div id="category" class="pg2">
+        <div id="pg2Tit">
+          <h2><img src="./img/shopping.jpg" alt=""></h2>
+          <p>2018.10.03(수) ~ 2018.10.10(수) 24:00까지</p>
+        </div>
+        <div id="ctBox" class="btnBox">
+          <ul id="ctBtn">
+            <li onclick="openProduct('pr1')"><a>과일/채소/쌀/정육/계란/수산</a></li>
+            <li onclick="openProduct('pr2')"><a>유제품/냉장・냉동/반찬</a></li>
+            <li onclick="openProduct('pr3')"><a>과자/음료/가공식품/건강</a></li>
+            <li onclick="openProduct('pr4')"><a>세제/제지/헤어/바디/화장품</a></li><br><br>
+            <li onclick="openProduct('pr5')"><a>주방/일회용품/욕실/인테리어</a></li>
+            <li onclick="openProduct('pr6')"><a>자동차/스포츠/문구/완구/애완</a></li>
+            <li onclick="openProduct('pr7')"><a>가전/디지털/의류/잡화</a></li>
+            <li onclick="openProduct('pr8')"><a>출산/유아동</a></li>
+          </ul>
+
+          <div id="prslide">
+            <div id="prWrap" style="width:1400px;">
+              <!-- 과일/채소/쌀/정육/계란/수산 -->
+              <div id="pr1" class="product">
+                  <img src="./img/pr11.jpg" alt="">
+                  <img src="./img/pr12.jpg" alt="" >
+                  <img src="./img/pr13.jpg" alt="" >
+                  <img src="./img/pr14.jpg" alt="" >
+                  <img src="./img/pr15.jpg" alt="">
+                  <img src="./img/pr16.jpg" alt="">
+                  <img src="./img/pr17.jpg" alt="">
+                  <img src="./img/pr18.jpg" alt="">
+                  <img src="./img/pr19.jpg" alt="" >
+                  <img src="./img/pr20.jpg" alt="">
+              </div>
+                <!-- 유제품/냉장·냉동/반찬 -->
+              <div id="pr2" style="display:none;" class="product">
+                  <img src="./img/pr21.jpg" alt="">
+                  <img src="./img/pr22.jpg" alt="">
+                  <img src="./img/pr23.jpg" alt="">
+                  <img src="./img/pr24.jpg" alt="">
+                  <img src="./img/pr25.jpg" alt="">
+                  <img src="./img/pr26.jpg" alt="">
+                  <img src="./img/pr27.jpg" alt="">
+                  <img src="./img/pr28.jpg" alt="">
+                  <img src="./img/pr29.jpg" alt="">
+                  <img src="./img/pr30.jpg" alt="">
+              </div>
+                <!-- 과자/음료/가공식품/건강 -->
+              <div id="pr3" style="display:none;" class="product">
+                  <img src="./img/pr31.jpg" alt="">
+                  <img src="./img/pr32.jpg" alt="">
+                  <img src="./img/pr33.jpg" alt="">
+                  <img src="./img/pr34.jpg" alt="">
+                  <img src="./img/pr35.jpg" alt="">
+                  <img src="./img/pr36.jpg" alt="">
+                  <img src="./img/pr37.jpg" alt="">
+                  <img src="./img/pr38.jpg" alt="">
+                  <img src="./img/pr39.jpg" alt="">
+                  <img src="./img/pr40.jpg" alt="">
+              </div>
+                <!-- 세제/제지/헤어/바디/화장품 -->
+              <div id="pr4" style="display:none;" class="product">
+                  <img src="./img/pr41.jpg" alt="">
+                  <img src="./img/pr42.jpg" alt="">
+                  <img src="./img/pr43.jpg" alt="">
+                  <img src="./img/pr44.jpg" alt="">
+                  <img src="./img/pr45.jpg" alt="">
+                  <img src="./img/pr46.jpg" alt="">
+                  <img src="./img/pr47.jpg" alt="">
+                  <img src="./img/pr48.jpg" alt="">
+                  <img src="./img/pr49.jpg" alt="">
+                  <img src="./img/pr50.jpg" alt="">
+              </div>
+                <!-- 주방/일회용품/욕실/인테리어 -->
+              <div id="pr5" style="display:none;" class="product">
+                  <img src="./img/pr51.jpg" alt="">
+                  <img src="./img/pr52.jpg" alt="">
+                  <img src="./img/pr53.jpg" alt="">
+                  <img src="./img/pr54.jpg" alt="">
+                  <img src="./img/pr55.jpg" alt="">
+                  <img src="./img/pr56.jpg" alt="">
+                  <img src="./img/pr57.jpg" alt="">
+                  <img src="./img/pr58.jpg" alt="">
+                  <img src="./img/pr59.jpg" alt="">
+                  <img src="./img/pr60.jpg" alt="">
+              </div>
+                <!-- 자동차/스포츠/문구/완구/애완 -->
+              <div id="pr6" style="display:none;" class="product">
+                <img src="./img/pr51.jpg" alt="">
+                <img src="./img/pr52.jpg" alt="">
+                <img src="./img/pr53.jpg" alt="">
+                <img src="./img/pr54.jpg" alt="">
+                <img src="./img/pr55.jpg" alt="">
+                <img src="./img/pr56.jpg" alt="">
+                <img src="./img/pr57.jpg" alt="">
+                <img src="./img/pr58.jpg" alt="">
+                <img src="./img/pr59.jpg" alt="">
+                <img src="./img/pr60.jpg" alt="">
+              </div>
+                <!-- 가전/디지털/의류/잡화 -->
+              <div id="pr7" style="display:none;" class="product">
+                  <img src="./img/pr71.jpg" alt="">
+                  <img src="./img/pr72.jpg" alt="">
+                  <img src="./img/pr73.jpg" alt="">
+                  <img src="./img/pr74.jpg" alt="">
+                  <img src="./img/pr75.jpg" alt="">
+                  <img src="./img/pr76.jpg" alt="">
+                  <img src="./img/pr77.jpg" alt="">
+                  <img src="./img/pr78.jpg" alt="">
+                  <img src="./img/pr79.jpg" alt="">
+                  <img src="./img/pr80.jpg" alt="">
+              </div>
+                <!-- 출산/유아동 -->
+              <div id="pr8" style="display:none;" class="product">
+                  <img src="./img/pr81.jpg" alt="">
+                  <img src="./img/pr82.jpg" alt="">
+                  <img src="./img/pr83.jpg" alt="">
+                  <img src="./img/pr84.jpg" alt="">
+                  <img src="./img/pr85.jpg" alt="">
+                  <img src="./img/pr86.jpg" alt="">
+                  <img src="./img/pr87.jpg" alt="">
+                  <img src="./img/pr88.jpg" alt="">
+                  <img src="./img/pr89.jpg" alt="">
+                  <img src="./img/pr90.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          function openProduct(prName) {
+              var i;
+              var x = document.getElementsByClassName("product");
+              for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";
+              }
+              document.getElementById(prName).style.display = "block";
+          }
+        </script>
+      </div>
+          <!-- pg2 end -->
+      <div class="pg3">
+        <div id="banner">
+          <a href=""><img src="./img/spot.jpg" alt=""></a>
+          <a href="">
+            <img src="./img/banner1.png" alt=""></a>
+            <a href=""><img src="./img/banner2.jpg" alt=""></a>
+            <a href=""><img src="./img/sale.jpg" alt=""></a>
+          </div>
+      </div>
+      <!-- pg3 end -->
+
+    <div class="pg4">
+      <ul id="event">
+        <li>
+          <h2><img src="./img/shoppingTit.jpg" alt="홈플러스쇼핑앱"></h2>
+          <img src="./img/event1.jpg" alt="">
+        </li>
+        <li>
+          <h2><img src="./img/familyTit.jpg" alt="패밀리"></h2>
+          <img src="./img/event2.jpg" alt="">
+        </li>
+      </ul>
+      <div id="notice">
+        <div class="ntTitle">
+          <h2><img src="./img/eventTit.jpg" alt="공지사항"></h2>
+          <a href="" class="more"></a>
+        </div>
+        <div id="noticeBox">
+          <a href="">
+            <p>[공지사항][농협카드]10월 청구할인</p>
+            <span>2018.10.01</span>
+          </a>
+        </div>
+        <div id="column">
+          <div id="promis">
+            <h2><img src="./img/promiseTit.png" alt=""></h2>
+            <img src="./img/promise.jpg" alt="" style="vertical-align:middle;">
+          </div>
+          <div id="service">
+            <h2><img src="./img/serviceTit.jpg" alt=""></h2>
+            <img src="./img/service.jpg" alt="">
+          </div>
+          <div id="online">
+            <h2><img src="./img/onlineTit.jpg" alt=""></h2>
+            <img src="./img/online.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <footer>
+      <div class="bottomBanner" style="background-color: #f5f5f5;">
+        <div class="btinner">
+          <img src="./img/btbanner.jpg" alt="">
+        </div>
+        <div id="ft_top">
+          <div class="ft_inner">
+            <ul class="ftNav">
+              <li><a href="">회사소개</a></li>
+              <li><a href="">광고제휴문의</a></li>
+              <li><a href="">이용약관</a></li>
+              <li><a href="">개인정보처리방침</a></li>
+              <li><a href="">청소년보호정책</a></li>
+            </ul>
+            <div class="family">
+              <a href="">Family Site</a>
+              <ul class="fam_sub"style="display:none;">
+                <li><a href="">공식 홈페이지</a></li>
+                <li><a href="">마이 홈플러스</a></li>
+                <li><a href="">상품권몰</a></li>
+                <li><a href="">홈플러스 문화센터</a></li>
+                <li><a href="">서비스 상품몰</a></li>
+                <li><a href="">아카데미</a></li>
+                <li><a href="">공식 블로그</a></li>
+                <li><a href="">올바웃푸드</a></li>
+                <li><a href="">임직원(가족) 할인카드 신청</a></li>
+              </ul>
+            </div>
+            <script>
+              $(document).ready(function(){
+                $(".family").hover(function(){
+                  $(this).find(".fam_sub").slideToggle()
+                })
+              })
+            </script>
+          </div>
+        </div>
+        <div id="ft_bottom">
+          <div class="ft_inner">
+            <div class="custom">
+              <strong>고객센터</strong>
+              <p><strong>1577-3355</strong></p>
+              <p>09~22시 (명절당일 휴무)</p>
+            </div>
+            <ul class="footerinfo">
+              <li>주소 : 서울특별시 강서구 화곡로 398(등촌동)</li>
+              <li>대표이사 : 임일순</li>
+              <li>사업자등록번호 : 220-81-60348</li>
+            </ul>
+            <p class="copy">Copyright &copy; Home Plus Co., LTD. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </footer>
+
+  </div>
+</body>
+</html>
