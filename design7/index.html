@@ -6,86 +6,173 @@
     <title>한미약품에 오신 것을 환영합니다.</title>
     <style>
         *{margin: 0; padding: 0;}
-        body, html {width: 100%; height: 100%;}
+        body, html {width: 100%; height: 100%; border: 0;}
+        body {box-sizing: border-box;}
         li {list-style: none;}
-        a {text-decoration: none; color: #000;}
+        a {text-decoration: none; color: #444;}
+        legend, caption {position: absolute;top: -3000px;visibility: hidden;
+          width: 0;height: 0;font-size: 0;line-height: 0;}
         .wrap {width: 100%; height: 100%;}
-        header {position: absolute;z-index: 99;}
-        .page {width: 100%;height: 100%; overflow: hidden}
-        #pg1 {width: 100%;height: 100%;overflow-y: visible}
-        .logo img {display: block; top: 30px; left: 40px; position: absolute;}
-        .mv {position: relative;width: 1903px;height: 100%; left: 0px;top: 0px; overflow-y: visible}
-        .mv video {position: absolute; overflow-y: visible; opacity: 0.5;}
-
-        .sidenav {height: 100%; height: 100%; width: 0;position: fixed;top: 0;right: 0;background-color: #f1f1f1; overflow-x: hidden; transition: 0.5s; padding-top: 60px;}
-        .sidenav a {padding:20px 9px 65px 59px; text-decoration: none; font-size: 25px;color: #818181; display: block; transition: 0.3s;}
+        header {position: absolute;z-index: 99;left: 0;top: 0;padding: 55px 60px 0;}
+        header h1 {max-width: 130px;}
+        header nav {position: fixed;right: 0;top: 0;z-index: 900;transition: background-color .3s;}
+          header > span {position: absolute;right: 40px;top: 33px;}
+        .sidenav {height: 100%; height: 100%; width: 0;position: fixed;top: 0;right: 0;background-color: #040404; overflow-x: hidden; transition: 0.5s; padding-top: 60px;}
+        .sidenav a {padding:20px 9px 90px 59px; text-decoration: none; font-size: 25px;color: #f9f9f9; display: block; transition: 0.3s;}
         .sidenav a:fover {color: #f1f1f1;}
-        .sidenav .closebtn {position: absolute;top: 0;right: 190px;font-size: 36px;margin-left: 50px;}
+        .sidenav .closebtn {position: absolute;right: 50px;top: 0;font-size: 36px;}
         #hd>span {top: 30px;position: relative;
             left: 1830px;
             width: 50px; text-align: center;
             height: 50px;
             background: #000;}
-        .title {padding: 150px 0 0 60px; text-align: left; letter-spacing: 0; transform: translate3d(0, -50%, 0)}
-        .title p.tit {font-weight: 300;letter-spacing: 5px;}
-        #pg1 .title {position: absolute; left: 0; top: 40%; z-index: 20;width: 100%; box-sizing: border-box; padding: 0 30px; text-align: center;color: #fff; letter-spacing: 5px; transform: translate3d(0, 20%, 0)}
-        .title p {position: relative;z-index: 1;margin-bottom: 30px; font-weight: 400;font-size: 56px;color: #fff; line-height: 110%; text-shadow: 4px 5px #000;}
-        .title p span {display: block;}
-        .title p.small {font-size: 18px;}
+            .logo img {width: 100%;display: block; top: 30px; left: 40px; position: absolute;}
+    </style>
 
-        #pg2 {height: 898px;background-attachment: fixed;}
+      <!-- main -->
+      <style>
+        .page {overflow: hidden;}
+          .top_section {height: 100%;background: none;}
+        #pg1 {overflow: hidden;left: 0;top: 0;z-index: -1;width: 100%;}
+        #pg1>article {padding: 150px 0 0 60px; text-align: left; letter-spacing: 0; transform: translate3d(0, -50%, 0)}
+        .top_section .title {position: absolute; left: 0; top: 40%; z-index: 20;width: 100%; box-sizing: border-box; padding: 0 30px; text-align: center;color: #fff; letter-spacing: 5px; transform: translate3d(0, 20%, 0)}
+        .top_section .video {position: absolute;left: 50%;top: 50%;z-index: 0;width: 100vh;height: 100vh;max-width: none;transform: translate3d(-50%, -50%, 0);}
+        section>div {overflow: hidden;max-width: 1400px;margin: 0 auto;}
+        .top_section .video video {width: 100%;height: 100%;}
+        .top_section .video::after {position: absolute;  left: 0;right: 0;top: 0;
+          bottom: 0;z-index: 1;width: 100%;height: 100%;
+          background: rgba(0,0,0,.4);content: "";}
+          .title p.tit {font-weight: 300;letter-spacing: 5px;}
+          .title p {position: relative;z-index: 1;margin-bottom: 30px; font-weight: 400;font-size: 56px;color: #fff; line-height: 110%; text-shadow: 4px 5px #000;}
+          .title p span {display: block;}
+          .title p.small {font-size: 18px;}
+      </style>
+      <!-- pg2 -->
+      <style>
+        #pg2 {padding: 0;height: 898px;}
+        .content {padding: 0 0 50px; background: #fff;}
         #pg2 img { width: 100%;height: 100%; }
-
-        #pg3 {height: 890px; width: 100%;}
+      </style>
+      <!-- pg3 -->
+      <style>
+        #pg3 {height: 100%; width: 100%;}
           /* #pg2 grid */
-        .grid {width: 100%;height: 100%;}
-        .grid li {background: #f2f2f2; float: left;}
-        .grid li:nth-child(1) {width: 632px; height: 624px; background: #f8f8f8; border: 1px solid #c1c1c1;}
-        .grid li:nth-child(1) .commonButton {height: 54px;border-bottom: 1px solid #ec9aef; font-weight: 800; background-color: #efefef;}
-        .grid li:nth-child(1) .commonButton h3 {text-align: center; float: left;}
-        .grid li:nth-child(1) .commonButton div {float: left; right: 0;}
-        .grid li:nth-child(1) .commonButton .cobtn {cursor: pointer;float: right; font-size: 32px;}
-        .common {}
-        .grid li:nth-child(2) {width: 632px;height: 624px;border: 1px solid #c1c1c1;}
-        .grid li:nth-child(2) h3 {height: 54px;border-bottom: 1px solid #ec9aef; font-weight: 800; background: #efefef; text-align: center; line-height: 3;}
-        .grid li:nth-child(2) img {width: 100%;height: 100%;}
-
-        .grid li:nth-child(3) {width: 634px;height: 180px; background-image: url(img/task.PNG); background-repeat: no-repeat; background-size: 100% 100%;}
-        .grid li:nth-child(4) {width: 317px; height: 447px; background-image: url(img/pal.jpg)}
-        .grid li:nth-child(4) h3 {height: 54px; background: #c4c7c7; text-align: center; line-height: 3;opacity: 0.6;}
-        .grid li:nth-child(5) {width: 317px;height: 447px; background-image: url(img/pyung.jpg)}
-        .grid li:nth-child(5) h3 {height: 54px; background: #c4c7c7; text-align: center; line-height: 3;opacity: 0.6;}
-/*        제품검색*/
-        .grid li:nth-child(6) {text-align: center;width: 634px;height: 317px; background: #c7c7c7}
-        .grid li:nth-child(6) h3 {height: 34px; text-align: center;line-height: 3;}
-        .grid li:nth-child(6) .searchBox {width: 80%; height: 90%; margin-left: 40px; }
-        .grid li:nth-child(6) .searchBox li {float: left; width: 23%;height: 60%; background: #fff; border: 1px solid #001; line-height: 10;text-align: center; margin-left: 5px;}
-        .grid li:nth-child(7) {width: 634px;height: 317px;top: 0;border-right: 1px solid #ccc; text-align: center; padding-top: 20px;}
-        .grid li:nth-child(8) {    background-repeat: no-repeat;
-          width: 634px;
-          height: 317px;
-          top: 0;
-          text-align: center;
-          padding-top: 20px;
-          background-image: url(./img/info.jpg);
-          background-size: contain;}
-
-        #pg4 {height: 890px; width: 100%; background-image: url(img/medi.jpg); background-size: 100%;}
+        #pg3 .grid {position: relative;z-index: 10; }
+        #pg3 .grid .grid-item {overflow: hidden;position: absolute;}
+        #pg3 .grid a {overflow: hidden;display: block;}
+        .grid>li {background: #f2f2f2; float: left;}
+        /* 일반의약품 */
+        #pg3 .grid .grid-item:nth-child(1) {width: 633px; height: 634px; border-right: 1px solid #adbbce;border-bottom: 1px solid #b6c5d9; position: relative;}
+        .grid>li .grid-item:nth-child(1) .commonButton {height: 54px;border-bottom: 1px solid #ec9aef; font-weight: 800; background-color: #efefef; }
+        .grid>li .commonButton h3 {width: 100%;height: 54px; border-bottom: 1px solid #b5c4d7;background-color: #c9daef;padding-left: 20px; float: left;}
+        .grid>li .commonButton h3 strong {overflow: hidden;display: block;width: 150px;
+          height: 54px;line-height: 54px;padding-right: 10px;color: #323232;
+          font-size: 19px;letter-spacing: -0.05em;font-weight: 700;}
+        .grid>li .commonButton div {float: left; right: 0;}
+        .grid>li .commonButton .cobtn {cursor: pointer;float: right; font-size: 32px;}
+        .grid>li .common {background-color: #d4e6fc;height: 100%;}
+        .commonImg {width: 80%;height: 70%;padding-top: 50px;}
+        /* 전문의약품 */
+        .grid>li:nth-child(2) {width: 634px;height: 634px;border-right: 1px solid #adbbce;border-bottom: 1px solid #b6c5d9; position: relative;}
+        .grid>li:nth-child(2) h3 {height: 54px; border-bottom: 1px solid #b5c4d7;background-color: #c9daef;padding-left: 20px;}
+        .special h3 strong {overflow: hidden;display: block;width: 150px;
+          height: 54px;line-height: 54px;padding-right: 10px;color: #323232;
+          font-size: 19px;letter-spacing: -0.05em;font-weight: 700;}
+        .grid>li:nth-child(2) img {width: 100%;height: 100%;}
+        .grid>li:nth-child(2) .special1 {background-color: #d4e6fc;height: 91%}
+        /* 제품뉴스 */
+        .grid>li:nth-child(3) {width: 634px;height: 180px;background-color:#676767; }
+        .grid>li:nth-child(3) .product_news  {top: 175px;position:relative; width:100%; height:105px; background-color:#676767; padding:10px 20px; bottom: 0px;}
+        .product_news h3{ position:absolute; top:-171px; left:0; width:100%; height:54px;background-color:#5d5d5d; border-bottom:1px solid #757575;  }
+        .product_news h3 span {float: left;overflow: hidden;display: block;
+          width: 20px;height: 54px;text-indent: -1000em;
+          background: url(./img/icon_more.png) no-repeat;
+          background-position: 0 0;}
+        .product_news h3 strong  { float:left; overflow:hidden; display:block; height:54px; line-height:54px; padding-right:10px; margin-left:20px; color:#fff; font-size:19px; letter-spacing:-0.05em; font-weight:600  }
+        .product_news ul li { overflow:hidden; height:30px; padding-left:10px; margin-top:-4px;}
+        .product_news ul li a  { font-size:12px; line-height:20px;color:#d0d0d1; }
+        .product_news ul li a:hover { color:#fff; }
+        /* 팔단공단 */
+        .grid>li:nth-child(4) {width: 317px; height: 317px; background-image: url("img/pal.jpg");background-position: center;}
+        .grid>li:nth-child(4) h3 {height: 54px; background: #c4c7c7; text-align: center; line-height: 3;opacity: 0.7;}
+        /* 평택공단 */
+        .grid>li:nth-child(5) {width: 317px;height: 447px; background-image: url("img/pyung.jpg"); background-position: center;}
+        .grid>li:nth-child(5) h3 {height: 54px; background: #c4c7c7; text-align: center; line-height: 3;opacity: 0.7;}
+        /*        제품검색*/
+        .grid>li:nth-child(6) {width: 634px;height: 317px; background: #b4d3fa;}
+        .product_search {float: left;position: relative;width: 333px;height: 229px;background-color: #b4d3fa;border-right: 1px solid #92accc;
+          border-bottom: 1px solid #9ab4d6;}
+        .product_search h3 {height: 54px; border-bottom: 1px solid #9ab4d6;background-color: #abc8ed;padding-left: 20px;}
+        .product_search h3 strong {
+          overflow: hidden;display: block;width: 150px;  height: 54px;
+          line-height: 54px;padding-right: 10px;
+          color: #323232;font-size: 19px;
+          letter-spacing: -0.05em;font-weight: 700;}
+        .product_search div {padding: 25px 20px 0 20px;}
+        .product_search fieldset {position: relative;display: block;
+          width: 49% ; height: 37px;border: none;}
+        .product_search legend {position: absolute;top: -3000px;visibility: hidden;width: 0;height: 0;font-size: 0;line-height: 0;}
+        .product_search fieldset input {
+            width: 256px;height: 37px;border: none;font-size: 13px;line-height: 37px;}
+        .product_search fieldset .btn_search {position: absolute;top: 0;right: 0;}
+        .product_search .btn_search {background-image: url(./img/btn_search.gif); width: 37px;height: 37px; border: 0;overflow: hidden;cursor: pointer;top: 1px;}
+        .searchBox {overflow: auto;display: block;width: 100%;padding-top: 15px;}
+        .searchBox li {float: left; width: 25%;height: 90px;}
+        .searchBox li a {width: 100%; height: auto;}
+        .searchBox .menu1 span {background-position: 0 0;}
+        .searchBox .menu1 {background-color: #236dce;}
+        .searchBox .menu2 {background-color: #1c57a5;;}
+        .searchBox .menu2 span {background-position: 0 -74px;}
+        .searchBox .menu3 {background-color: #174a8c;}
+        .searchBox .menu3 span {background-position: 0 -148px;}
+        .searchBox .menu4 {background-color: #123b6f;}
+        .searchBox .menu4 span {background-position: 0 -222px;}
+        .searchBox li span {display: block;overflow: hidden;width: 73px;height: 74px;margin: 0 auto; background-image: url("./img/category.jpg"); background-repeat: no-repeat;background-position: bottom; text-indent: -1000em;cursor: pointer;}
+        /* 제품별 판매약국 */
+        .grid>li:nth-child(7) {width: 633.8px;height: 317px;background-color: #b4d3fa; border-left: 1px solid #adbbce;}
+        .pharmacy_search {float: left;position: relative;width: 333px;height: 178px;background-color: #b4d3fa;border-right: 1px solid #92accc;border-bottom: 1px solid #9ab4d6;}
+        .pharmacy_search h3 {height: 54px;border-bottom: 1px solid #9ab4d6;background-color: #abc8ed;padding-left: 20px;}
+        .pharmacy_search h3 strong {overflow: hidden;display: block;width: 150px;height: 54px;line-height: 54px;padding-right: 10px;color: #323232; font-size: 19px;letter-spacing: -0.05em;font-weight: 700;}
+        .pharmacy_search .pharmacy_wrap {padding: 25px 20px 0 20px;}
+        .pharmacy_search p {font-size: 13px;padding-bottom: 10px;letter-spacing: -0.02em;color: #323232;}
+        .pharmacy_search p em {color: #236dce;}
+        .pharmacy_search fieldset {position: relative;display: block;width: 100%;height: 37px;margin-top: 40px;border: none;}
+        .pharmacy_search fieldset .wrap_fieldset { display:block; width:auto; height:37px;  padding-right:37px; }
+        .pharmacy_search fieldset .box_fieldset { width:100%; height:37px; overflow:hidden }
+        .pharmacy_search fieldset .box_fieldset div{ float:left; display:block; width:50%; height:37px; padding:0; margin:0; }
+        .pharmacy_search fieldset input { display:block; float:inherit; width:100%; height:37px; font-size:13px; line-height:37px; text-indent:10px;margin:0; border:none; border-left:2px solid #b4d3fa; }
+        .pharmacy_search fieldset input.first   { border-left:none; }
+        .pharmacy_search fieldset .btn_search  { position:absolute; top:0; right:0; *top:1px; }
+        .pharmacy_search .btn_search {background-image: url(./img/btn_search.gif); width: 37px;height: 37px; border: 0;overflow: hidden;cursor: pointer;top: 1px;}
+        .pharmacy_search .btn_search span {position: absolute;top: -3000em;left: -3000em;visibility: hidden;}
+        /* 신약개발 쉽게 알아보기 */
+        .grid>li:nth-child(8) {width:317px;height: 317px; background: #fff;top: 0;background-image: url(./img/info1.jpg); background-repeat: no-repeat;background-position:center bottom;}
+        .info1 h3 {overflow: hidden;display: block;width: 100%;padding-bottom: 20px;color: #323232;font-size: 19px;}
+        .info1 h3, p {padding: 12px;}
+        .info1 p {padding-bottom: 10px;}
+        /* 신약 파이프현황 */
+          .grid>li:nth-child(9) {border-left: 1px solid #d9d9d9;width: 317px; height: 317px;background: #fff;top: 0;background-image: url(./img/info2.jpg); background-repeat: no-repeat;background-position:center bottom;}
+          .info2 h3 {overflow: hidden;display: block;width: 100%;padding-bottom: 20px;color: #323232;font-size: 19px;}
+          .info2 h3, p {padding: 12px;}
+      </style>
+    <!-- pg4       -->
+    <style>
+        #pg4 {height: 890px; width: 100%; background-image: url("img/medi.jpg"); background-size: 100%;}
         #pg4 h2 {text-align: center; margin-top: 60px; font-size: 32px;}
         .grid2 {width: 80%; height: 70%; margin-top: 20px; margin-left: 10%; text-align: center; }
         .grid2>li {float: left; width: 19%;height: 100%; border: 1px solid #001;margin: 3px;background: #fff; opacity: 0.9;}
-        .grid2>li a {font-size: 24px;}
+        .grid2>li a {font-size: 24px; line-height: 830px;}
         .grid2>li:nth-child(1) {background-image: url(img/company1.jpg); background-position: top; background-repeat: no-repeat;}
         .grid2>li:nth-child(2) {background-image: url(img/company2.jpg); background-position: top; background-repeat: no-repeat;}
         .grid2 li:nth-child(3) {background-image: url(img/company3.jpg); background-position: top; background-repeat: no-repeat;}
         .grid2 li:nth-child(4) {background-image: url(img/company4.jpg); background-position: top; background-repeat: no-repeat;}
         .grid2 li:nth-child(5) {background-image: url(img/company5.jpg); background-position: top; background-repeat: no-repeat;}
-        .commonImg {width: 100%;height: 100%;}
+
         .detail_company        { background-color:#f3f3f3; border-top:1px solid #d5d5d5; padding:3%;}
-.detail_company strong { display:block; color:#000;  }
-.detail_company ul     {}
-.detail_company ul li  { position:relative; padding: 2px 0 2px 70px; font-size:13px;  }
-.detail_company ul li strong { position:absolute; left:0; top:3px; width:50px; color:#424242; background:url(../img/company/bul_company.gif) no-repeat 0 10px; padding:0 0 0 10px;  }
+        .detail_company strong { display:block; color:#000;  }
+        .detail_company ul     {}
+        .detail_company ul li  { position:relative; padding: 2px 0 2px 70px; font-size:13px;  }
+        .detail_company ul li strong { position:absolute; left:0; top:3px; width:50px; color:#424242; background:url(../img/company/bul_company.gif) no-repeat 0 10px; padding:0 0 0 10px;  }
 
         #pg5 {height: 447px; width: 100%; border-top: 1px solid #002;}
         .grid3 {width: 100%; height: 100%;overflow: hidden}
@@ -109,98 +196,122 @@
             background-size: 100%;
                     left: 0; opacity: 0.5;}
 
-        footer{padding: 50px 60px; background: #fff; border-top: 1px solid #ccc;box-sizing: border-box}
-        footer div {position: relative; max-width: 1400px;margin: 0 auto; font-weight: 700;color: #666; text-align: center;}
+        footer{padding: 50px 60px; background: #ebebeb; border-top: 1px solid #ccc;box-sizing: border-box}
+        footer div {position: relative; max-width: 1400px;margin: 0 auto; font-weight: 700;color: #333; text-align: center;}
+        footer .address  {text-align: left;}
+          footer .copyright {text-align: left;}
+          #family {position: absolute;  right: 0;top: 0;
+          padding: 10px 30px 9px;
+          font-size: 12px; background: #f00;}
+          #family a {color: #fff;}
+          #family ul  { position:absolute; top:-315px; left:0; width:168px; background-color:#ed1c24; display: none;}
+          #family ul li  { height:34px; border-bottom:1px solid #f33a3f; }
+          #family ul li a { font-size:13px; line-height:35px; color:#f8bbbc;  }
 
+    </style>
 
+    <style>
+    @media (min-width: 1440px){
+      .grid .grid-width2 {
+    width: 33.32%;}
+    }
+    .grid .grid-item {width: 16.66%;}
     </style>
 </head>
 <body>
     <div class="wrap">
         <header id="hd">
+          <h1>
             <a href="" class="logo">
                 <img src="./img/logo.png" alt="">
             </a>
-
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="">ABOUT</a>
-                <a href="">PRODUCT</a>
-                <a href="">RESEARCH</a>
-                <a href="">CONTACT</a>
-            </div>
+          </h1>
+            <nav>
+              <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="">ABOUT</a>
+                  <a href="">PRODUCT</a>
+                  <a href="">RESEARCH</a>
+                  <a href="">CONTACT</a>
+              </div>
+            </nav>
                 <span class="menuIcon" style="color:#fff; font-size:30px; float: right; cursor: pointer; position: fixed;" onclick="openNav()">&#9776;</span>
 
             <script>
                 function openNav() {
-                    document.getElementById("mySidenav").style.width="250px";
+                    document.getElementById("mySidenav").style.width="400px";
                 }
                 function closeNav(){document.getElementById("mySidenav").style.width = "0";
                                    }
             </script>
         </header>
-        <section id="pg1" class="page">
-            <div class="mv" style="width: 1920px; height: 100%;">
+        <section id="pg1" class="page top_section"
+             style="transform:translate3d(0px, 0px, 0px)">
+          <article class="title" style="opacity: initial;">
+             <p class="tit" style="opacity: 2">
+                <span>Contribute to Human  Health</span>
+             </p>
+             <p class="small">
+              <span>인류 건강증진에 기여하는</span>
+              <span>건강한 기업</span>
+             </p>
+          </article>
+            <div class="video" style="width: 1920px; height: 1080px;">
                 <video src="./img/hanmi.mp4" width="1903px" height="100%" style="overflow-y: hidden" autoplay muted loop></video>
             </div>
-            <article class="title" style="opacity: initial;">
-               <p class="tit" style="opacity: 2">
-                  <span>Contribute to Human  Health</span>
-               </p>
-               <p class="small">
-                <span>인류 건강증진에 기여하는</span>
-                <span>건강한 기업</span>
-               </p>
-            </article>
         </section>
-        <section id="pg2" class="page">
+        <section id="pg2" class="page content">
             <img src="./img/pg201.jpg" alt="">
         </section>
         <section id="pg3" class="page">
-            <ul class="grid">
-                <li class="item it1">
+            <ul class="grid" style="position:relative;height:951px;">
+                <!-- 일반의약품 -->
+              <li class="grid-item item-width2"
+                  style="height:634px;position:absolute;left:0px;top:0px;">
                 <div class="commonButton">
-                   <h3>일반의약품</h3>
+                    <h3><strong>일반의약품</strong></h3>
                     <div class="cobtn">
-                        <div class="left cobtn"  style="float: left;"onclick="plusDivs(-1)">&#10094;</div>
-                    <div class="right cobtn" onclick="plusDivs(1)">&#10095;</div>
+                      <div class="left cobtn"  style="float: left;"onclick="plusDivs(-1)">&#10094;</div>
+                      <div class="right cobtn" onclick="plusDivs(1)">&#10095;</div>
+                      </div>
+                </div>
+                    <div class="common" style="">
+                        <img src="./img/otc01.png" alt="" class="commonImg">
+                        <img src="./img/otc00.png" alt="" class="commonImg">
+                        <img src="./img/otc02.png" alt="" class="commonImg">
                     </div>
-                </div>
-                <div class="common" style="">
-                    <img src="./img/otc01.png" alt="" class="commonImg">
-                    <img src="./img/otc00.png" alt="" class="commonImg">
-                    <img src="./img/otc02.png" alt="" class="commonImg">
-                </div>
-                <script>
-                    var slideIndex = 1;
-                    showDivs(slideIndex);
+                      <script>
+                          var slideIndex = 1;
+                          showDivs(slideIndex);
 
-                    function plusDivs(n) {
-                      showDivs(slideIndex += n);
-                    }
+                          function plusDivs(n) {
+                            showDivs(slideIndex += n);
+                          }
 
-                    function currentDiv(n) {
-                      showDivs(slideIndex = n);
-                    }
+                          function currentDiv(n) {
+                            showDivs(slideIndex = n);
+                          }
 
-                    function showDivs(n) {
-                      var i;
-                      var x = document.getElementsByClassName("commonImg");
-                      var dots = document.getElementsByClassName("demo");
-                      if (n > x.length) {slideIndex = 1}
-                      if (n < 1) {slideIndex = x.length}
-                      for (i = 0; i < x.length; i++) {
-                         x[i].style.display = "none";
-                      }
+                          function showDivs(n) {
+                            var i;
+                            var x = document.getElementsByClassName("commonImg");
+                            var dots = document.getElementsByClassName("demo");
+                            if (n > x.length) {slideIndex = 1}
+                            if (n < 1) {slideIndex = x.length}
+                            for (i = 0; i < x.length; i++) {
+                               x[i].style.display = "none";
+                            }
 
-                      x[slideIndex-1].style.display = "block";
-                      dots[slideIndex-1].className += " w3-white";
-                    }
+                            x[slideIndex-1].style.display = "block";
+                            dots[slideIndex-1].className += " w3-white";
+                          }
                   </script>
-                </li>
-                <li class="item it1">
-                    <h3>전문의약품</h3>
-                    <div class="spe">
+              </li>
+                <!-- 전문의약품 -->
+              <li class="grid-item special"
+                  style="height:634px;position:absolute;left:634px;top:0px;">
+                    <h3><strong>전문의약품</strong></h3>
+                    <div class="special1">
                         <img src="./img/etc01.png" alt="" class="speImg">
                         <img src="./img/etc02.png" alt="" class="speImg">
                         <img src="./img/etc03.png" alt="" class="speImg">
@@ -220,39 +331,84 @@
                             x[myIndex-1].style.display = "block";
                             setTimeout(carousel, 2000); // Change image every 2 seconds
                         }
-</script>
-                </li>
-                <li class="item">
-                    <h3>과제</h3>
-                </li>
-                <li class="item">
+                      </script>
+              </li>
+                <!-- 제품뉴스 -->
+              <li class="grid-item"
+                   style="height:317px;position:absolute;right:0px;top:0px;">
+                  <article class="product_news  m_con_off">
+                    <h3 class="m_tab_off"><a href=""><strong>제품소식</strong><span>자세히</span></a> </h3>
+                   <ul style="margin-top:-115px;">
+                     <li><a href="/hanmi/handler/Product-NewsList?mainHanmiNewsDtlSeq=90053591&amp;pageNo=0">아모잘탄플러스의 성상이 변경 공지</a></li>
+                     <li><a href="/hanmi/handler/Product-NewsList?mainHanmiNewsDtlSeq=90053588&amp;pageNo=0">아모디핀정, 아모잘탄정 3용량, 아모잘탄큐정 6용량, 아모잘탄플러스정 3용량 - 사용상의 주의사항 변경</a></li>
+                     <li><a href="/hanmi/handler/Product-NewsList?mainHanmiNewsDtlSeq=90053466&amp;pageNo=0">클래리정250mg, 클래리정500mg, 클래리건조시럽125mg/5mL - 사용상의 주의사항 변경</a></li>
+                     <li><a href="/hanmi/handler/Product-NewsList?mainHanmiNewsDtlSeq=90053465&amp;pageNo=0">피나트라정, 피나테드정 - 사용상의 주의사항 변경</a></li>
+                     <li><a href="/hanmi/handler/Product-NewsList?mainHanmiNewsDtlSeq=90053290&amp;pageNo=0">유박탐주사750mg, 1.5g - 사용상의 주의사항 변경</a></li>
+                     <li><a href="/hanmi/handler/Product-NewsList?mainHanmiNewsDtlSeq=90053290&amp;pageNo=0">실타졸정 - 사용상의 주의사항 변경</a></li>
+                     <li><a href="/hanmi/handler/Product-NewsList?mainHanmiNewsDtlSeq=90053290&amp;pageNo=0">데잘탄정8mg, 16mg, 데잘탄플러스정16/12.5mg - 사용상의 주의사항 변경</a></li>
+                     <li><a href="/hanmi/handler/Product-NewsList?mainHanmiNewsDtlSeq=90053290&amp;pageNo=0">록세미신정 - 사용상의 주의사항 변경</a></li>
+                     <li><a href="/hanmi/handler/Product-NewsList?mainHanmiNewsDtlSeq=90053290&amp;pageNo=0">아모잘탄 플러스정 병 사이즈 변경 공지</a></li>
+                 </ul>
+                 </article>
+              </li>
+                <!-- 팔단공단 -->
+                <li class="grid-item" style="height:317px; position:absolute;right:317px; top:317px;">
                     <h3><span>팔단공단</span></h3>
                 </li>
-                <li class="item">
+                <!-- 평택공단 -->
+                <li class="grid-item" style="height:317px; position:absolute;right:0px; top:317px;">
                     <h3>평택공단</h3>
                 </li>
 <!--                제품검색-->
-                <li class="item2">
-                    <h3>제품검색</h3>
-                    <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-               <ul class="searchBox">
-                   <li class="menu1"><a href="">전문의약품</a></li>
-                   <li class="menu2"><a href="">일반의약품</a></li>
-                   <li class="menu3"><a href="">건강기능식품</a></li>
-                   <li class="menu4"><a href="">의료기기</a></li>
-               </ul>
+                <li class="gird-item product_search" style="height:317px;
+                   position:absolute;right:634px; bottom:0px">
+                    <h3><strong>제품검색</strong></h3>
+                    <div>
+                      <fieldset>
+                        <legend>제품검색</legend>
+                        <span><input type="text" title="제품명입력" value="제품명 입력" maxlength="10" name="search"></span>
+                          <button type="button" class="btn_search"></button>
+                      </fieldset>
+                       <ul class="searchBox">
+                           <li class="menu1"><a href=""><span>전문의약품</span></a></li>
+                           <li class="menu2"><a href=""><span>일반의약품</span></a></li>
+                           <li class="menu3"><a href=""><span>건강기능식품</span></a></li>
+                           <li class="menu4"><a href=""><span>의료기기</span></a></li>
+                       </ul>
+                    </div>
                 </li>
 <!--                제품별 판매약국-->
-                <li class="item2">
-                    <h3>제품별 판매약국</h3>
-                    <p>일반의약품, 건강기능식품, 의약외품만 검색 가능하며, 고객과 가장 가까운 곳의 약국을 찾아드립니다.</p>
-                    <input type="text" placeholder="제품명 입력">
-                    <input type="text" placeholder="지역명 입력"><button type="submit"><i class="fa fa-search"></i></button>
+                <li class="gird-item pharmacy_search" style="height:317px;
+                   position:absolute;right:0px; top:634px;">
+                    <h3><strong>제품별 판매약국</strong></h3>
+                    <div class="pharmacy_wrap">
+                      <p><em>일반의약품, 건강기능식품, 의약외품만</em> "검색 가능하며, 고객과 가장 가까운 곳의 약국을 찾아드립니다."</p>
+                      <fieldset>
+                        <legend>제품검색</legend>
+                        <div class="wrap_fieldset">
+                          <div class="box_fieldset">
+                            <div>
+                              <input type="text" title="제품명 입력" value="제품명 입력" id="pName" class="first" maxlength="10">
+                            </div>
+                            <div>
+                              <input type="text" title="지역명 입력" value="지역명 입력" id="rName" maxlength="10">
+                            </div>
+                          </div>
+                          </div>
+                          <button type="button" class="btn btn_search" onclick="searchPharm();"><span>검색</span></button>
+                      </fieldset>
+                    </div>
                 </li>
-                <li class="item2">
+                <!-- 신약개발 쉽게 알아보기 -->
+                <li class="gird-item info1" style="height:256px;
+                  position:absolute;left:0px; top:634px;">
                     <h3>신약개발 쉽게 알아보기</h3>
-                    <p style="text-align:center; padding:5px">한미약품 신약개발에 대한 <span>언론기사나 증권가 보고서</span> 등에 등장하는 생소한 용어들을 상세하고 쉽게 설명해 드립니다.</p>
+                    <p>한미약품 신약개발에 대한 <span>언론기사나 증권가 보고서</span> 등에 등장하는 생소한 용어들을 상세하고 쉽게 설명해 드립니다.</p>
+                </li>
+                <li class="gird-item info2" style="height:256px;
+                 position:absolute;left:317px; top:634px;">
+                    <h3>2018 신약파이프라인 현황</h3>
+                    <p>한미약품에서 진행중인 <span>신약개발 최신 현황</span>을 보실 수 있습니다.</p>
                 </li>
             </ul>
         </section>
@@ -260,7 +416,6 @@
            <h2>관계사</h2>
             <ul class="grid2">
                 <li><a href="">북경한미약품</a>
-                  
                 </li>
                 <li><a href="">한미정밀화학(주)</a></li>
                 <li><a href="">한미헬스케어(주)</a></li>
@@ -284,13 +439,33 @@
             <div class="fnb">
                 <p class="address">
                     주소:서울특별시 송파구 위례성대로 14 <br>
-                    대표번호:02-410-9114 <br>
-                    소비자상담실:080-916-9000 <br>
-                    투자문의:02-410-0404
+                    대표번호:02-410-9114
+                    소비자상담실:080-916-9000
+                    투자문의:02-410-0404 <br><br>
+                    <span class="copyright">©Hanmi Pharm.Co.,Ltd. All Rights Reserved.</span>
+                    <nav id="family">
+                      <h2><a href="" class="faT">FAMILY SITE</a></h2>
+                      <ul class="family_sub">
+                    	  <li><a href="http://www.hanmiscience.co.kr" target="_blank">한미사이언스</a></li>
+                        <li><a href="http://www.bjhanmi.com.cn" target="_blank">북경한미유한공사</a></li>
+                        <li><a href="http://www.hanmifc.co.kr" target="_blank">한미정밀화학(주)</a></li>
+                        <li><a href="http://www.hanmihealthcare.co.kr/home/main.hm" target="_blank">한미헬스케어(주)</a></li>
+                        <li><a href="http://www.online-pharm.co.kr" target="_blank">온라인팜(주)</a></li>
+                        <li><a href="http://www.hanmiprocalm.com/customer/home/index.html" target="_blank">한미약품 화장품 프로캄</a></li>
+              		  		<li><a href="http://www.myjvm.com" target="_blank">JVM</a></li>
+                        <li><a href="http://www.photomuseum.or.kr" target="_blank">한미사진미술관</a></li>
+                        <li><a href="http://www.ofmom.com" target="_blank">오브맘컴퍼니</a></li>
+                      </ul>
+                    </nav>
+                    <script>
+                      $(document).ready(function() {
+                        $("#family").hover(function(){
+                          $(this).find(".family_sub").slideUp()
+                        });
+                      });
+                    </script>
                 </p>
-                <span>
-                    <copyright>©Hanmi Pharm.Co.,Ltd. All Rights Reserved.</copyright>
-                </span>
+
             </div>
         </footer>
     </div>
