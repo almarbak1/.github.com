@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <title>한국원자력안전기술원에 오신것 환영합니다.</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="./css/common.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <script>
+      $(document).ready(function(){
+          var ht = parseInt($(window).height());
+          var wd = parseInt($(window).width());
+          var pageCnt = parseInt($(".page").length)-1;
+          var rt = wd/ht/pageCnt;
+        //메뉴의 스크롤 모션
+        $(window).scroll(function(){
+            var sct = $(window).scrollTop();
+            var pageNum = parseInt(sct/ht)+1;
+            $("#pageCnt").text(pageNum);
+            $(".gage").width(parseInt(rt*sct));
+            $("#gageBar").css("left", parseInt(rt*sct)-10+"px");
+            $("#gageNum").text(pageNum).css("left", parseInt(rt*sct)-12+"px");
+
+            if(sct>=500){
+                $("#hd").css("position", "fixed");
+                $("#hd").css("background", "rgba(0,0,0,0.6)");
+                $("#hd").not(":animated").slideDown(800);
+                $("#toTop").fadeIn(400);
+            } else if(sct>=100) {
+                $("#hd").css("display", "none");
+            } else {
+                $("#hd").css("position", "absolute");
+                $("#hd").not(":animated").slideDown(800);
+                $("#toTop").fadeOut(400);
+            }
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $(".lstBtn").click(function(){
+           $("#pnb").addClass("on");
+        });
+        $(".closeBtn").click(function(){
+           $("#pnb").removeClass("on");
+        });
+        $(".iconLst li").mouseover(function(){
+            var idx=$(this).index()+1;
+            var src="url(./images/tech_bg"+idx+".jpg)";
+            $("#page1").css("background-image",src);
+        });
+        $(".iconLst li").mouseout(function(){
+            var src="url(./images/tech_bg0.jpg)";
+            $("#page1").css("background-image",src);
+        });
+          $(window).resize(function(){
+              var wdx=parseInt($(window).width());
+              var sw = [true, true, true, true, true, true];
+              if(wdx<=767){
+                  $("#pnb .logo1 img").attr("src", "./img/logo.png");
+                  $("#pnb li .after").text("+");
+
+                  $("#pnb .menuGroup li.menuTit").click(function(){
+                      var idx=$(this).parents(".menuGroup").index();
+                      if(sw[idx]==true) {
+                          $(this).find(".after").text("-");
+                          $(this).siblings("li").animate({"line-height":"40px"}, 500);
+                          $(this).siblings("li").find("li").animate({"line-height":"40px"}, 500);
+                          $(this).parents(".menuGroup").siblings().find("li").not(".menuTit").animate({"line-height": "0px"}, 500);
+                          $(this).parents(".menuGroup").siblings().find("li").not(".menuTit").find("li").animate({"line-height": "0px"}, 500);
+                          $(this).parents(".menuGroup").siblings().find(".after").text("+");
+                      } else {
+                          $(this).find(".after").text("+");
+                          $(this).siblings("li").animate({"line-height":"0px"}, 500);
+                      }
+                      sw[idx]= !sw[idx];
+                  });
+                  $("#vsBox li#vdoBox1").css("display","none");
+                  $("#vsBox li").each(function(index){
+                      var sc1="./images/mainVis"+index+"_m.jpg";
+                      $(this).find(".pic.item").attr("src", sc1);
+                  });
+                  $(".controlBox li").eq(0).css("display", "none");
+                  $(".controlBox li").eq(1).addClass("on");
+                  $(".iconBox").each(function(index){
+                      var sc1="./images/tech_list"+(index+2)+"_m.png";
+                      $(this).find("img").attr("src", sc1);
+                  });
+                  $(".picFrame img").attr("src", "./images/mobile.png");
+              } else if(wdx>=768){
+                  $("#pnb .logo1 img").attr("src", "./img/logo.png");
+                  $("#pnb li .after").text("");
+                  $("#vsBox li#vdoBox1").css("display","block");
+                  $(".controlBox li").eq(0).css("display", "block");
+                  $(".controlBox li").eq(1).removeClass("on");
+                  $("#vsBox li").each(function(index){
+                      var sc1="./images/mainVis"+index+".jpg";
+                      $(this).find(".pic.item").attr("src", sc1);
+                  });
+                  $(".iconBox").each(function(index){
+                      var sc1="./images/tech_list"+(index+2)+".png";
+                      $(this).find("img").attr("src", sc1);
+                  });
+                  $(".picFrame img").attr("src", "./images/desktop.png");
+              }
+          }).resize();
+      });
+    </script>
+  <style>
+      /* 서브페이지 */
+      table { border-collapse:collapse;}
+    #subBody {position: relative;width: 100%;}
+    #visual {width: 100%;height: 300px;position: relative; background: url(./img/visual1.jpg) no-repeat center center; background-size: 100% 100%;}
+    #visual::after {position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 1;width: 100%;height: 100%;background: rgba(0,0,0,.2); content: "";}
+    #visualTxt {z-index: 33;width: 1180px; margin: 0 auto;padding-top: 162px;text-align: center;}
+
+    #subBody .location{box-sizing:border-box; width:100%; height:62px; border-bottom:1px solid #d9d9d9; padding:0 40px; background:#fff; z-index:100; position:absolute; top:300px; left:0;}
+    #subBody .location .home{display:block; float:left; width:62px; height:61px; border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; background:url("./img/location_home.png") no-repeat center center;}
+    #subBody .location .oneD{position:relative; float:left; width:270px; height:61px; border-right:1px solid #d9d9d9;}
+    #subBody .location .oneD > a{display:block; box-sizing:border-box; width:270px; height:61px; padding:23px 30px; font-size:16px; color:#555;}
+    #subBody .location .oneD > a span{background:url("./img/location_arrow.png") no-repeat right center; display:block;}
+    #subBody .location .oneD > a.current{color:#00448d; font-family:'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif;}
+    #subBody .location .oneD .twoD{display:none; position:absolute; top:61px; left:-1px; padding:20px 0 25px; width:100%; border:1px solid #d9d9d9; border-top:0; background:#fff;}
+    #subBody .location .oneD .twoD2{display:none; position:absolute; top:61px; left:-1px; padding:20px 0 25px; width:100%; border:1px solid #d9d9d9; border-top:0; background:#fff;}
+    #subBody .location .oneD .twoD3{display:none; position:absolute; top:61px; left:-1px; padding:20px 0 25px; width:100%; border:1px solid #d9d9d9; border-top:0; background:#fff;}
+    #subBody .location .oneD .twoD a{display:block; padding-left:30px; font-size:16px; color:#555; line-height:28px; margin-top:10px;}
+    #subBody .location .oneD .twoD2 a{display:block; padding-left:30px; font-size:16px; color:#555; line-height:28px; margin-top:10px;}
+    #subBody .location .oneD .twoD3 a{display:block; padding-left:30px; font-size:16px; color:#555; line-height:28px; margin-top:10px;}
+    #subBody .location .oneD .twoD a.link{background:url('/common/images/icon/twoD_link.gif') no-repeat left 100px top 50%}
+    #subBody .location .oneD .twoD a:first-child{margin-top:0;}
+    #subBody .location .oneD .twoD a.current{color:#00448d;}
+    .subWrap{margin-top:62px; padding-bottom:150px; overflow-x:hidden}
+    .subWrap.grayBg{background:#f7f8fa;}
+    .content{margin-top:80px;}
+
+    #subWrap {margin-top: 62px;padding-bottom: 150px;overflow-x: hidden;}
+    #subWrap h2 {  font-family: 'Noto Sans KR', sans-serif;
+      font-size: 40px;
+      color: #000;
+      text-align: center;
+      padding-top: 98px; margin-bottom: 50px;}
+      .content {margin-top: 80px; width: 700px; margin: 0 auto;}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header id="hd">
+      <h1><a href="index.html" class="logo"></a></h1>
+      <div class="menuFrame">
+        <div class="menuinner" style="height:70px;">
+          <ul class="menu">
+            <!-- KINS 소개 -->
+            <li><a href="about.html" target="_self">KINS 소개</a>
+              <div class="submenu">
+                <a href="about.html" target="_self">인사말</a>
+                <a href="about2.html" target="_self">설립목적 및 비전</a>
+                <a href="about3.html" target="_self">연혁 및 역대 원장</a>
+                <a href="about4.html" target="_self">기관 임무</a>
+                <a href="about5.html" target="_self">조직과 기능</a>
+                <a href="about6.html" target="_self">CI 소개</a>
+                <a href="about7.html" target="_self">찾아오시는 길</a>
+              </div>
+            </li>
+            <!-- 열린 경영 -->
+            <li><a href="open.html" target="_self">열린 경영</a>
+              <div class="submenu">
+              <a href="open.html">경영공시</a>
+              <a href="open2.html">고객만족경영</a>
+              <a href="open3.html">윤리경영</a>
+              <a href="open4.html">내부규정</a>
+              <a href="open5.html">사회공헌</a>
+              <a href="open6.html">채용정보</a>
+              </div>
+            </li>
+            <!-- 고객 참여 -->
+            <li><a href="custom.html">고객 참여</a>
+              <div class="submenu">
+                <a href="custom.html">묻고 답하기</a>
+                <a href="custom2.html">민원신청</a>
+                <a href="custom3.html">신청하기</a>
+                <a href="custom4.html">의견 및 토론</a>
+              </div>
+            </li>
+            <!-- 알림 마당 -->
+            <li><a href="notice.html">알림 마당</a>
+              <div class="submenu">
+                <a href="notice.html">KINS 소식</a>
+                <a href="notice2.html">공지사항</a>
+                <a href="notice3.html">규제결과</a>
+                <a href="notice4.html">보도자료</a>
+                <a href="notice5.html">입찰공고</a>
+                <a href="notice6.html">알림판</a>
+              </div>
+            </li>
+            <!-- 정보 마당 -->
+            <li><a href="info.html">정보 마당</a>
+              <div class="submenu">
+                <a href="info.html">간행물</a>
+                <a href="info2.html">영상물</a>
+                <a href="info3.html">원클릭 정보</a>
+                <a href="info4.html">열린 회의실</a>
+                <a href="info5.html">법령 및 기준</a>
+                <a href="info6.html">원자력안전 시설위치</a>
+                <a href="info7.html">안전포커스</a>
+                <a href="info8.html">원자력안전용어</a>
+              </div>
+            </li>
+            <!-- 원자력안전정보공개센터 -->
+            <li>
+              <a href="http://nsic.nssc.go.kr" style="line-height:30px" target="_blank">원자력안전<br>정보공개센터</a>
+            </li>
+            <!-- 정보공개제도 -->
+            <li><a href="public.html">정보공개제도</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tnb">
+        <a href="">Contact</a>
+        <a href="">ENG</a>
+      </div>
+      <a href="" id="menu" class="lstBtn" onclick="openNav()"></a>
+    </header>
+    <div id="allMenu" class="sidenav" style="height:889px; min-height:889px">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="all1">
+        <a href="#">KINS 소개
+          <div class="all2">
+            <li><a href="">인사말</a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </div></a>
+        <a href="#">열린경영</a>
+        <a href="#">고객참여</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <script>
+      function openNav() {
+          document.getElementById("allMenu").style.width = "100%";
+      }
+
+      function closeNav() {
+          document.getElementById("allMenu").style.width = "0";
+      }
+    </script>
+    <script>
+          $(document).ready(function(){
+       $(".menu li, .menu li a").hover(function(){
+           $(this).find(".submenu").stop().slideDown(700);
+       });
+       $(".menu li").mouseleave(function(){
+           $(this).find(".submenu").stop().slideUp(100);
+       });
+      });
+    </script>
+
+    <section id="subBody">
+      <div id="visual">
+        <div id="visualTxt">
+          <p class="img">
+            <img src="./img/visual1_txt1.png" alt="">
+          </p>
+        </div>
+      </div>
+      <div class="location">
+					<a href="index.html" class="home"></a>
+						<div class="oneD one" style="width: 270px;">
+							<a href="custom.html"><span id="locationMenuName0">고객참여</span></a>
+							<div class="twoD" id="locationMenuContainer0">
+                <a href="about.html" target="_self" id="locationMenu_32" >KINS 소개</a>
+								<a href="open.html" target="_self" id="locationMenu_32" >열린경영</a>
+									<a href="custom.html" target="_self" id="locationMenu_33" class="current">고객참여</a>
+									<a href="notice.html" target="_self" id="locationMenu_34">알림마당</a>
+									<a href="info.html" target="_self" id="locationMenu_35">정보마당</a>
+									<a href="http://nsic.nssc.go.kr" target="_blank" id="locationMenu_36">원자력안전정보공개센터</a>
+									<a href="public.html" target="_self" id="locationMenu_37">정보공개제도</a>
+							</div>
+                <script>
+                  $(document).ready(function(){
+                    $(".one").mouseover(function(){
+                      $("#subBody .location .twoD").slideToggle(300);
+                    })
+                  })
+                </script>
+                <script>
+                  $(document).ready(function(){
+                    $(".two").hover(function(){
+                      $("#subBody .location .twoD2").slideToggle(300);
+                    })
+                  })
+                </script>
+                <script>
+                  $(document).ready(function(){
+                    $(".thr").hover(function(){
+                      $("#subBody .location .twoD3").slideToggle(300);
+                    })
+                  })
+                </script>
+  						</div>
+  						<div class="oneD two" style="width: 270px;">
+  							<a href="custom4.html" class="current">
+                  <span id="locationMenuName1">의견 및 토론</span></a>
+  							<div class="twoD2" id="locationMenuContainer1">
+                  <a href="custom.html" target="_self" id="locationMenu_38" class="">묻고 답하기</a>
+                  <a href="custom2.html" target="_self" id="locationMenu_38" class="">민원신청</a>
+                  <a href="custom3.html" target="_self" class="current">신청하기</a>
+                  <a href="custom4.html" target="_self" id="locationMenu_40" class="">의견 및 토론</a>
+                </div>
+  						</div>
+              <div class="oneD thr" style="width: 270px;">
+  							<a href="custom4.html"><span>110수화(화상)/채팅상담</span></a>
+  							<div class="twoD3" id="locationMenuContainer2">
+                  <a href="custom4.html" target="_self">110수화(화상)/채팅상담</a>
+                  <a href="custom42.html" target="_self">Cyber 정책토론 (국민신문고)</a>
+                  <a href="custom43.html" target="_self">Cyber 설문조사</a>
+                </div>
+  						</div>
+			</div>
+      <div id="subWrap">
+        <h2>110수화(화상)/채팅상담</h2>
+        <div class="content">
+          <img src="./img/110.png" alt="110수화(화상)/채팅상담">
+			  </div>
+
+			</div>
+      </div>
+
+    </section>
+
+    <footer id="footer" style="bottom:0px;">
+      <div id="ft_top">
+        <p class="left">
+          <a href="">개인정보처리방침</a>
+          <a href="">저작권 보호정책</a>
+          <a href="">시각장애인 이용안내</a>
+          <a href="">영상정보처리기기 운영·관리방침</a>
+        </p>
+        <p class="right">
+          <span>34142 대전광역시 유성구 과학로 62 한국원자력안전기술원 </span><br>
+          <span>대표전화 : 042-868-0000 (주간) | 868-0402 (야간)</span>
+        </p>
+      </div>
+      <div id="ft_bottom">
+        <p class="copy">COPYLIGHT ⓒ 2010 KOREA INSTITUTE OF NUCLEAR SAFETY. ALL RIGHT RESERVED.</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+body{
+
+}
+
+#holder
+{
+    width:753px;
+    height:510px;
+ margin:30px auto;
+    background:#111;
+    border:1px solid #555;
+    box-shadow:0px 0px 12px #000;
+    padding:10px;
+    border-radius:5px;
+}
