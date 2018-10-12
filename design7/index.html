@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <title>한미약품에 오신 것을 환영합니다.</title>
     <style>
         *{margin: 0; padding: 0; box-sizing: border-box;}
@@ -50,8 +51,34 @@
       <!-- pg2 -->
       <style>
         #pg2 {padding: 0;height: 898px;}
+        #sec02 {height: 100%;}
+        #pg2>div {max-width: 100%;}
         .content {padding: 0 0 50px; background: #fff;}
+        #pg2 .inner {width: 100%;height: 100%;}
         #pg2 img { width: 100%;height: 100%; }
+        /* 컨텐츠 공통 영역*/
+.superCustom .inner{width:100%;}
+.superCustom .inner .except{padding-bottom:0!important;}
+.superCustom .inner .innerWrap{width:960px; margin:0px auto; text-align:center; padding:108px 0 87px 0;}
+.superCustom#sec06 .inner .innerWrap{padding:108px 0 0 0}
+.superCustom .inner .innerWrap h2{font-size:50px; letter-spacing:-2px; color:#31363b;}
+/* 기업문화 */
+ul.culture_area{display:block; overflow:hidden; width:100%;}
+ul.culture_area li{width:205px; height:127px; padding-left:115px; display:block; overflow:hidden; text-align:left; float:left; margin-bottom:30px; color:#fff}
+.culture_area .culture_001{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0 0; }
+.culture_area .culture_002{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -519px; }
+.culture_area .culture_003{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -1039px; }
+.culture_area .culture_004{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -129px; }
+.culture_area .culture_005{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -649px; }
+.culture_area .culture_006{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -1169px; }
+.culture_area .culture_007{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -258px; }
+.culture_area .culture_008{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -779px; }
+.culture_area .culture_009{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -1299px; }
+.culture_area .culture_010{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -388px; }
+.culture_area .culture_011{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -909px; }
+.culture_area .culture_012{background:url("http://file1.jobkorea.co.kr/Super/171/3248/culture.png") no-repeat; background-position:0px -1429px; }
+.culture_area{font-size:15px; line-height:20px; letter-spacing:-1px; }
+.culture_area .title{font-size:18px; font-weight:bold;line-height:18px; letter-spacing:-1px; display:block; margin-top:20px; margin-bottom:10px; color:#fff;}
       </style>
       <!-- pg3 -->
       <style>
@@ -187,24 +214,24 @@
             width: 100%;
             height: 100%;
             background-size: 100%;
-                    left: 0; opacity: 0.5;}
+                    left: 0; opacity: 0.7;}
                 .grid3 .bg1 {    top: 0;
             position: absolute;
             background-image: url(img/consultpic.jpg);
             width: 100%;
             height: 100%;
             background-size: 100%;
-                    left: 0; opacity: 0.5;}
+                    left: 0; opacity: 0.7;}
 
         footer{padding: 50px 60px; background: #ebebeb; border-top: 1px solid #ccc;box-sizing: border-box}
         footer div {position: relative; max-width: 1400px;margin: 0 auto; font-weight: 700;color: #333; text-align: center;}
         footer .address  {text-align: left;}
           footer .copyright {text-align: left;}
           #family {position: absolute;  right: 0;top: 0;
-          padding: 10px 30px 9px;
+          padding: 10px 30px 9px;margin-top: -25px;box-sizing: border-box;
           font-size: 12px; background: #f00;}
-          #family a {color: #fff;}
-          #family ul  { position:absolute; top:-315px; left:0; width:168px; background-color:#ed1c24; display: none;}
+          #family a {color: #fff; display: block;}
+          #family ul  { position:absolute; top:-315px;bottom: 0;left:0; width:168px; background-color:#ed1c24; display: none;}
           #family ul li  { height:34px; border-bottom:1px solid #f33a3f; }
           #family ul li a { font-size:13px; line-height:35px; color:#f8bbbc;  }
 
@@ -260,8 +287,119 @@
                 <video src="./img/hanmi.mp4" width="1903px" height="100%" style="overflow-y: hidden" autoplay muted loop></video>
             </div>
         </section>
+
+        <!-- page2 -->
         <section id="pg2" class="page content">
-            <img src="./img/pg201.jpg" alt="">
+            <!-- <img src="./img/pg201.jpg" alt=""> -->
+            <div class="superCustom" id="sec02">
+
+    <!-- 기업문화 -->
+    <div class="inner" style="background-color:#ed1c24;">
+	<div class="innerWrap">
+		<h2 style="color:#fff;">기업문화</h2>
+		<h3 class="sub_title" style="color:#fff;">“Work &amp; Life Balance 지켜주는 안정적인 기업문화”</h3>
+		<div class="s_cont" style="margin-top:60px;">
+			<ul class="culture_area">
+				<li class="culture_001"><span class="title">온라인 복지몰 운영</span>건강, 식품, 음료 등의 제품을<br>저렴한 가격에 구매 가능</li>
+				<li class="culture_002"><span class="title">아침 굶지 마세요!</span>활기찬 하루를 시작할 수<br>있도록 조식을 제공해요.</li>
+				<li class="culture_003"><span class="title">기념일 축하 포인트</span>직원 기념일도 회사가 함께<br>축하해줘요! </li>
+				<li class="culture_004"><span class="title">직원 학자금 지원</span>석,박사 과정을 밟는 우수인재에게 학자금을 100% 지원해요.</li>
+				<li class="culture_005"><span class="title">출산 축하 선물 지원</span>자녀 출산 시, 전임직원에게<br>출산 축하 선물을 지급해요. </li>
+				<li class="culture_006"><span class="title">건강검진 지원</span>연 1회 건강검진을 지원 및<br>독감백신을 지원해요.  </li>
+				<li class="culture_007"><span class="title">사내 중식당 </span>한미약품 본사에 위치한 고급<br>중식당 50% 할인된 가격으로 이<br>용 가능해요.</li>
+				<li class="culture_008"><span class="title">경조사 지원</span>직원의 기쁜 일과 슬픈 일을<br>함께해요. </li>
+				<li class="culture_009"><span class="title">해외연수 지원</span>더 발전하는 한미인을 위해!<br>해외연수를 지원해요</li>
+				<li class="culture_010"><span class="title">자녀 학자금 지원</span>고등학생과 대학생 자녀를 둔<br>직원에게 학자금을 지원해요. </li>
+				<li class="culture_011"><span class="title">Refresh 휴가 </span>일과 삶의 밸런스를 위해<br> Refresh 휴가제도를 운영해요.</li>
+				<li class="culture_012"><span class="title">셔틀버스 운영</span>연구센터, 평택/팔탄공단은<br>출퇴근 셔틀버스를 운영해요. </li>
+			</ul>
+			<div style="clear:both;"> </div>
+		</div>
+	</div>
+</div>
+
+    <!-- 근무환경 -->
+    <div class="inner" style="background-color:#fff;">
+	<div class="innerWrap" style="padding-bottom:30px;">
+		<h2>근무환경</h2>
+		<div class="s_cont" style="margin-top:50px;">
+			<ul class="office_area">
+				<li class="office_001">
+					<div>
+						<a href="#btnMap" name="btn" border="0" usemap="#btnMap" id="btn1"><img src="http://file1.jobkorea.co.kr/Super/171/3237/photo01.png" alt="아래 설명 참조"></a>
+					</div>
+					<div class="popup1" style="display: none; position: absolute; left: 55px; top: 30px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+					   <img src="http://file1.jobkorea.co.kr/Super/171/3237/view01.png" alt="이미지확대" name="popup1" width="830" height="535" border="0" id="popup1" style="cursor:pointer;">
+					</div>
+					<span class="title">한미약품 본사 </span>
+					<span class="info">송파에 위치한 한미약품 본사. 영업본부 등의 부서가 근무하고 있다. </span>
+				</li>
+				<li class="office_002">
+					<div>
+						<a href="#btnMap" name="btn" border="0" usemap="#btnMap" id="btn2"><img src="http://file1.jobkorea.co.kr/Super/171/3237/photo02.png" alt="아래 설명 참조"></a>
+					</div>
+					<div class="popup2" style="display: none; position: absolute; left: 55px; top: 30px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+					   <img src="http://file1.jobkorea.co.kr/Super/171/3237/view02.png" alt="이미지확대" name="popup2" width="830" height="535" border="0" id="popup2" style="cursor:pointer;">
+					</div>
+					<span class="title">실험실  </span>
+					<span class="info">신약개발이 진행되는 랩실. </span>
+				</li>
+				<li class="office_003">
+					<div>
+						<a href="#btnMap" name="btn" border="0" usemap="#btnMap" id="btn3"><img src="http://file1.jobkorea.co.kr/Super/171/3237/photo08.png" alt="아래 설명 참조"></a>
+					</div>
+					<div class="popup3" style="display: none; position: absolute; left: 55px; top: 180px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+					   <img src="http://file1.jobkorea.co.kr/Super/171/3237/view08.png" alt="이미지확대" name="popup3" width="830" height="535" border="0" id="popup3" style="cursor:pointer;">
+					</div>
+					<span class="title">한미 바이오플랜트</span>
+					<span class="info">평택에 위치한 바이오플랜트!</span>
+				</li>
+				<li class="office_004">
+					<div>
+						<a href="#btnMap" name="btn" border="0" usemap="#btnMap" id="btn4"><img src="http://file1.jobkorea.co.kr/Super/171/3237/photo03.png" alt="아래 설명 참조"></a>
+					</div>
+					<div class="popup4" style="display: none; position: absolute; left: 55px; top: 180px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+					   <img src="http://file1.jobkorea.co.kr/Super/171/3237/view03.png" alt="이미지확대" name="popup4" width="830" height="535" border="0" id="popup4" style="cursor:pointer;">
+					</div>
+					<span class="title">구내식당 </span>
+					<span class="info">직원들을 위해 마련된 맛좋고, 건강한 음식을 즐길 수 있다. </span>
+				</li>
+				<li class="office_005">
+					<div>
+						<a href="#btnMap" name="btn" border="0" usemap="#btnMap" id="btn5"><img src="http://file1.jobkorea.co.kr/Super/171/3237/photo05.png" alt="아래 설명 참조"></a>
+					</div>
+					<div class="popup5" style="display: none; position: absolute; left: 55px; top: 470px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+					   <img src="http://file1.jobkorea.co.kr/Super/171/3237/view05.png" alt="이미지확대" name="popup5" width="830" height="535" border="0" id="popup5" style="cursor:pointer;">
+					</div>
+					<span class="title">에스프레소 머신</span>
+					<span class="info">곳곳에 위치해 있는 에스프레소 머신. </span>
+				</li>
+				<li class="office_006">
+					<div>
+						<a href="#btnMap" name="btn" border="0" usemap="#btnMap" id="btn6"><img src="http://file1.jobkorea.co.kr/Super/171/3237/photo06.png" alt="아래 설명 참조"></a>
+					</div>
+					<div class="popup6" style="display: none; position: absolute; left: 55px; top: 470px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+					   <img src="http://file1.jobkorea.co.kr/Super/171/3237/view06.png" alt="이미지확대" name="popup6" width="830" height="535" border="0" id="popup6" style="cursor:pointer;">
+					</div>
+					<span class="title">사내 카페테리아</span>
+					<span class="info">본사에 마련된 사내 카페테리아 공간. 갤러리 못지 않은 예쁨을 자랑한다. </span>
+				</li>
+				<li class="office_007">
+					<div>
+						<a href="#btnMap" name="btn" border="0" usemap="#btnMap" id="btn7"><img src="http://file1.jobkorea.co.kr/Super/171/3237/photo09.png" alt="아래 설명 참조"></a>
+					</div>
+					<div class="popup7" style="display: none; position: absolute; left: 55px; top: 770px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+					   <img src="http://file1.jobkorea.co.kr/Super/171/3237/view07.png" alt="이미지확대" name="popup7" width="830" height="535" border="0" id="popup7" style="cursor:pointer;">
+					</div>
+					<span class="title">지금은 회의 중!</span>
+					<span class="info">글로벌 제약회사와의 계약이 늘어남에 따라 컨퍼런스 콜 등의 업무도 많아졌다. </span>
+				</li>
+			</ul>
+		<div style="clear:both;"> </div>
+		</div>
+	</div>
+</div>
+</div>
         </section>
         <section id="pg3" class="page">
             <ul class="grid" style="position:relative;height:951px;">
@@ -443,7 +581,7 @@
                     소비자상담실:080-916-9000
                     투자문의:02-410-0404 <br><br>
                     <span class="copyright">©Hanmi Pharm.Co.,Ltd. All Rights Reserved.</span>
-                    <nav id="family">
+                    <nav id="family" class="family">
                       <h2><a href="" class="faT">FAMILY SITE</a></h2>
                       <ul class="family_sub">
                     	  <li><a href="http://www.hanmiscience.co.kr" target="_blank">한미사이언스</a></li>
@@ -458,11 +596,11 @@
                       </ul>
                     </nav>
                     <script>
-                      $(document).ready(function() {
-                        $("#family").hover(function(){
-                          $(this).find(".family_sub").slideUp()
-                        });
-                      });
+                    $(document).ready(function(){
+                      $(".family").hover(function(){
+                        $(this).find(".family_sub").slideToggle()
+                      })
+                    })
                     </script>
                 </p>
 
