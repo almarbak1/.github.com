@@ -180,18 +180,18 @@ ul.culture_area li{width:250px; height:127px; padding-left:110px; display:block;
 .grid3 li > a {position: absolute;top: 50%; z-index: 10;padding-top: 60px; font-size: 28px; color: #fff; font-weight: bold; text-shadow: 3px 3px #555;}
 .grid3 .bg {    top: 0;
     position: absolute;
-    background-image: url(../img/newspic.jpg);
+    background-image: url(../img/newspic.jpg); background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-size: 100%;
+    background-size: 100% 100%;
             left: 0; opacity: 0.7;}
         .grid3 .bg1 {    top: 0;
     position: absolute;
-    background-image: url(../img/consultpic.jpg);
+    background-image: url(../img/consultpic.jpg);background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-size: 100%;
+    background-size: 100% 100%;
             left: 0; opacity: 0.7;}
-  .grid3 .bg:hover {background-image: url(../img/newspic.jpg); opacity: 1;}
-    .grid3 .bg1:hover {background-image: url(../img/consultpic.jpg); opacity: 1;}
+  .grid3 .bg:hover {background-image: url(../img/newspic.jpg); opacity: 1; background-size: 110%;}
+    .grid3 .bg1:hover {background-image: url(../img/consultpic.jpg); opacity: 1;background-size: 110%;}
 /* pg5 end */
