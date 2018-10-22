@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트3-유효성검사</title>
+  <script>
+    function validateForm() {
+      var x=document.forms["myForm"]["fname"].value;
+      if(x=="" || x==null) {
+        alert("이름을 입력해주세요");
+        //document.forms["myForm"]["fname"].focusin;
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <form action="demo_form.php" name="myForm" onsubmit="return validateForm()" method="post">
+    <label for="fname">이름 : </label>
+    <input type="text" name="fname" id="fname">
+    <br><br>
+    <input type="submit" value="보내기">
+  </form>
+</body>
+</html>
