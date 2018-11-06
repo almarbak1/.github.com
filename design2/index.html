@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>청주에 오신 것을 환영합니다.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ft.css">
+    <style>
+
+
+/*        공동 서버 부분*/
+    </style>
+
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+
+//좌표 값을 바꿔서 입력 36.3491563,127.3776857
+
+function initialize() {
+  var myLatlng = new google.maps.LatLng(36.3491563,127.3776857);
+  var mapOptions = {
+    zoom: 17,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: '그린컴퓨터아트학원'	  //레이블을 바꿔서 입력
+  });
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+ </script>
+</head>
+<body>
+        <div class="wrap">
+        <header class="hd">
+            <div class="hdwrap">
+                <!-- nav.top>(ul.left>li*4>a)+(ul.right>li*3>a) -->
+                <nav class="top">
+                    <ul class="left">
+                        <li><a href="http://www.cheongju.go.kr/" target="_blank">시청</a></li>
+                        <li><a href="http://council.cheongju.go.kr/" target="_blank">시의회</a></li>
+                        <li><a href="https://tour.geoje.go.kr/board/download.geoje?boardId=BBS_0000548&dataSid=305940387&fileSid=138526" target="_blank">청주시기구표</a></li>
+                        <li><a href="https://tour.geoje.go.kr/board/download.geoje?boardId=BBS_0000548&dataSid=305941522&fileSid=139147" target="_blank">행정전화번호부</a></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="join.html">회원가입</a></li>
+                        <li><a href="" class="pkpro">즐겨찾기</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hdwrap">
+                <!-- (a.logo>img)+(nav.gnb>li.menu*6>a+(div.sub>(aside.left>h2.menuTit+p.menuCon+img)+(section.right>ul*8>(li.subTit>a)+(li*7>a))))+input[type=checkbox]#ck+(label[for=ck].lstBtn>span.line*3)+(nav#collapse>(ul.item*8>li*10>a)+label[for=ck]#close) -->
+                <a href="index.html" class="logo">
+                    <img src="./img/logo2.png" alt="로고">
+                </a>
+                <nav class="gnb">
+                   <ul>
+                    <li class="menu item1">
+                        <a href="">직지코리아 페스티벌</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">직지코리아</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">ABOUT</a>
+                                    </li>
+                                    <li><a href="">직지코리아</a></li>
+                                    <li>
+                                        <a href="">위원장 인사말</a>
+                                    </li>
+                                    <li>
+                                        <a href="">조직도</a>
+                                    </li>
+                                    <li><a href="">스폰서</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">프로그램</a></li>
+                                    <li><a href="">국제행사</a></li>
+                                    <li><a href="">전시</a></li>
+                                    <li><a href="">체험</a></li>
+                                    <li><a href="">공연</a></li>
+                                    <li><a href="">골든씨드 토크콘서트</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">티켓</a>
+                                    </li>
+                                    <li><a href="">티켓</a></li>
+                                    <li><a href="">단체 관람신청</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">참여하기</a>
+                                    </li>
+                                    <li><a href="">프로그램참여</a></li>
+                                    <li><a href="">사전예약 프로그램</a></li>
+                                    <li><a href="">프로그램 제안하기</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit">
+                                        <a href="">뉴스/커뮤니티</a>
+                                    </li>
+                                    <li><a href="">보도자료</a></li>
+                                    <li>
+                                        <a href="">공지사항</a>
+                                    </li>
+                                    <li><a href="">직지코리아웹진</a></li>
+                                    <li><a href="">갤러리</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="">청주여행</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">청주여행</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit"><a href="">시티투어</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">등산코스</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">가족여행</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">공원/유원지/관광농원</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">산/계곡</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">음식</a></li>
+                                    <li><a href="">청주의 모범음식점</a></li>
+                                    <li><a href="">청주의 맛집</a></li>
+                                    <li><a href="">한정식 바로가기</a></li>
+                                    <li><a href="">향토음식 바로가기</a></li>
+                                    <li><a href="">대물림업소 바로가기</a></li>
+                                    <li><a href="">삼겹살거리 바로가기</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">숙박</a></li>
+                                    <li><a href="">관광호텔</a></li>
+                                    <li><a href="">일반숙박업소(300실이상)</a></li>
+                                    <li><a href="">일반숙박업소</a></li>
+                                    <li><a href="">펜션/민박</a></li>
+                                    <li><a href="">호텔/콘도</a></li>
+
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">쇼핑</a></li>
+                                    <li><a href="">한국공예관</a></li>
+                                    <li><a href="">한국도자기</a></li>
+                                    <li><a href="">육거리전통시장</a></li>
+                                    <li><a href="">성안길</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="">즐거운 축제</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">즐거운축제</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit"><a href="">직지코리아 페스티벌</a></li>
+                                    <li class="subTit"><a href="">세종대왕과초정약수축제</a></li>
+                                    <li class="subTit"><a href="">대청호마라톤대회</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">청원생명축제</a></li>
+                                    <li class="subTit"><a href="">청주읍성큰잔치</a></li>
+                                    <li class="subTit"><a href="">청풍명월예술제</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">청주예술제</a></li>
+                                    <li class="subTit"><a href="">청주공예비엔날레</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">문화공간</a></li>
+                                    <li><a href="">박물관</a></li>
+                                    <li><a href="">공연장</a></li>
+                                    <li><a href="">미술관</a></li>
+                                    <li><a href="">도서관</a></li>
+                                    <li><a href="">영화관</a></li>
+                                    <li><a href="">문화공간</a></li>
+                                </ul>
+                                <ul>
+
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="">역사/문화</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">역사/문화</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit"><a href="">문화유적</a></li>
+                                    <li><a href="">지정문화재</a></li>
+                                    <li><a href="">유형문화재</a></li>
+                                    <li><a href="">무형문화재</a></li>
+                                    <li><a href="">등록문화재</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">도지정문화재</a></li>
+                                    <li><a href="">유형문화재</a></li>
+                                    <li><a href="">기념물</a></li>
+                                    <li><a href="">문화재자료</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">청주시 향토유적</a></li>
+                                    <li><a href="">문화유적</a></li>
+                                    <li><a href="">고분유적</a></li>
+                                    <li><a href="">전통사찰</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">문화예술단체</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="">여행가이드</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">여행가이드</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit"><a href="">여행준비</a></li>
+                                    <li><a href="">관광안내전화</a></li>
+                                    <li><a href="">관광안내책자 신청</a></li>
+                                    <li><a href="">문화관광해설사</a></li>
+                                    <li><a href="">손안의 나드리</a></li>
+                                    <li><a href="">여행불편신고</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="">커뮤니티</a>
+                        <div class="sub">
+                            <aside class="left">
+                                <h2 class="menuTit">커뮤니티</h2>
+                                <p class="menuCon">문화관광 행복한 도시! 청주</p>
+                            </aside>
+                            <section class="right">
+                                <ul>
+                                    <li class="subTit"><a href="">공지사항</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">관광뉴스</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">내가 쓰는 청주여행</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="subTit"><a href="">홍보영상</a></li>
+                                    <li class="subTit"><a href="">공모전</a></li>
+                                    <li class="subTit"><a href="">이벤트</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                  </ul>
+                </nav>
+                <input type="checkbox" id="ck">
+                <label for="ck" class="lstBtn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </label>
+
+            </div>
+        </header>
+        <section id="con1" class="pg">
+            <!-- (input[type=radio][name=rdo1]#ra1*4)+(ul.imgBox>li*4>h2.banTit+a.detail)+(div.upBox>img+(div.wt>span>img)+span.cl)+(ul.btnBox>(li*2>button)+(li*4>label[for=ra1]))  -->
+            <input type="radio" name="rdo1" class="raIt" id="ra1" checked>
+            <input type="radio" name="rdo1" class="raIt" id="ra2">
+            <input type="radio" name="rdo1" class="raIt" id="ra3">
+            <input type="radio" name="rdo1" class="raIt" id="ra4">
+            <ul class="imgBox">
+                <li class="item1">
+                    <h2 class="banTit">꽃피는 골목길, 수암골</h2>
+                    <a href="http://www.cheongju.go.kr/tour/selectClturCntntsView.do?key=797&clturCntntsNo=152&clturCntntsCode=12&pageUnit=5&pageIndex=1&searchCnd=all&searchKrwd=%EC%88%98%EC%95%94%EA%B3%A8" class="detail">바로가기</a>
+                </li>
+                <li class="item2">
+                    <h2 class="banTit">남쪽의 청와대, 청남대</h2>
+                    <a href="http://www.cheongju.go.kr/tour/selectClturCntntsView.do?key=796&clturCntntsNo=189&clturCntntsCode=11&pageUnit=5&pageIndex=1&searchCnd=all&searchKrwd=%EC%B2%AD%EB%82%A8%EB%8C%80" class="detail">바로가기</a>
+                </li>
+                <li class="item3">
+                    <h2 class="banTit">삼국시대 포곡식 석축산성, 상당산성</h2>
+                    <a href="http://www.cheongju.go.kr/tour/selectClturCntntsView.do?key=796&clturCntntsNo=143&clturCntntsCode=11&pageUnit=5&pageIndex=1&searchCnd=all&searchKrwd=%EC%83%81%EB%8B%B9" class="detail">바로가기</a>
+                </li>
+                <li class="item4">
+                    <h2 class="banTit">청주시의 자랑, 청주시립무용단</h2>
+                    <a href="http://www.cheongju.go.kr/ac/sub1/index.do" class="detail">바로가기</a>
+                </li>
+            </ul>
+            <div class="upBox">
+                <img src="./img/p_visual.png" class="ty" alt="청주">
+                <div class="wt">
+                    <span class="wd1"><img src="./img/ico_w-i-v1.png" alt="맑음"></span>
+                    <span class="cl1">흐림</span>
+                    <span class="cl2">28.9℃</span>
+                    <span id="RN1"></span>
+                </div>
+            </div>
+            <ul class="btnBox">
+                <li><button class="playBtn"></button></li>
+                <li><button class="stopBtn"></button></li>
+                <li><label for="ra1" class="slBtn item1" data-val="0"></label></li>
+                <li><label for="ra2" class="slBtn item2" data-val="1"></label></li>
+                <li><label for="ra3" class="slBtn item3" data-val="2"></label></li>
+                <li><label for="ra4" class="slBtn item4" data-val="3"></label></li>
+            </ul>
+        </section>
+        <section id="con2" class="pg">
+            <!-- ul.grid>(li.col.left>(div.box*4>h3.boxTit+p.boxCom+a.ito*2))+(li.col.right#vs1>(input[type=radio]#ra11*8)+(ul.imgBox2>li*8>h3.ban1+h2.ban2+a.more)+(div.box>li*8>label))
+            ul.grid>(li.col.left#vs2>(input[type=radio]#ra21*10)+(ul.imgBox3>li*10>h1.ban3+p.banCom+a.more)+(div.box>(ul.btnBox2>li*10>label.left+label.right)+(ul.imgBox3>li*10>(span>img+h3.boxTit))))+(li.col.right>(div.box>h3.boxTit+a.fIco)+(div.box>a.mvIco)+(div.box>h3.boxTit+p.boxCom+a.more)+(div.box>h3.boxTit2+(ul.btn2>li*4>a)))
+              -->
+            <ul class="grid">
+                <li class="col left">
+                    <div class="box_01" id="box11">
+                        <h3 class="boxTit"></h3>
+                        <p class="boxCom"></p>
+                    </div>
+                    <div class="box" id="box13">
+                      <a href="https://youtu.be/SCSkzD4wqW4" target="_blank" style="color:#fff;">
+                        <h3 class="boxTit">홍보동영상</h3>
+                        <p class="boxCom"></p>
+                        <a href="" class="mvIco"></a>
+                      </a>
+                    </div>
+                   <div class="box" id="box14">
+                     <a href="http://jikjikorea.com/sub.php?code=58">
+                         <img src="./img/ticket.PNG" alt="" class="ticket">
+                     </a>
+                   </div>
+                </li>
+                <li class="col right" id="vs1">
+                    <input type="radio" name="rdo2" class="raIt" id="ra11" checked>
+                    <input type="radio" name="rdo2" class="raIt" id="ra12">
+                    <input type="radio" name="rdo2" class="raIt" id="ra13">
+                    <input type="radio" name="rdo2" class="raIt" id="ra14">
+                    <input type="radio" name="rdo2" class="raIt" id="ra15">
+                    <input type="radio" name="rdo2" class="raIt" id="ra16">
+                    <input type="radio" name="rdo2" class="raIt" id="ra17">
+                    <input type="radio" name="rdo2" class="raIt" id="ra18">
+                    <ul class="imgBox2">
+                        <li class="item1">
+                            <h3 class="ban1">이야기여행</h3>
+                            <h2 class="ban2">문의문화재단지</h2>
+                            <p class="banCom">과거와 미래, 그리고 현재가 공존하는<br/>청원군의 향토문화유적</p>
+                            <a href="" class="more"></a>
+                        </li>
+                        <li class="item2">
+                            <h3 class="ban1">이야기여행</h3>
+                            <h2 class="ban2">상수허브랜드</h2>
+                            <p class="banCom">365일 꽃이 지지않는 곳<br/>500여종의 허브가 잘는 허브 식물원</p>
+                            <a href="" class="more"></a>
+                        </li>
+                        <li class="item3">
+                            <h3 class="ban1">이야기여행</h3>
+                            <h2 class="ban2">수암골</h2>
+                            <p class="banCom">골목의 사시사치러 꽃이 피고 웃음이 넘쳐나는<br/>정감어린 그림들이 그려진 추억의 장소</p>
+                            <a href="" class="more"></a>
+                        </li>
+                        <li class="item4">
+                            <h3 class="ban1">이야기여행</h3>
+                            <h2 class="ban2">명암유원지</h2>
+                            <p class="banCom">보트놀이를 즐길 수 있는<br/>청주의 가장 큰 저수지</p>
+                            <a href="" class="more"></a>
+                        </li>
+                        <li class="item5">
+                            <h3 class="ban1">이야기여행</h3>
+                            <h2 class="ban2">우암산</h2>
+                            <p class="banCom">청주의 동쪽에 우뚝 솟은<br/>청주의 진산</p>
+                            <a href="" class="more"></a>
+                        </li>
+                        <li class="item6">
+                            <h3 class="ban1">이야기여행</h3>
+                            <h2 class="ban2">가로수길</h2>
+                            <p class="banCom">한국의 아름다운 길 100선 선정<br/>전국에서 가장 아름다운 길</p>
+                            <a href="" class="more"></a>
+                        </li>
+                        <li class="item7">
+                            <h3 class="ban1">이야기여행</h3>
+                            <h2 class="ban2">무심천</h2>
+                            <p class="banCom">청주를 대표하는 자연물 <br> 청주의 상징</p>
+                            <a href="" class="more"></a>
+                        </li>
+                        <li class="item8">
+                            <h3 class="ban1">이야기여행</h3>
+                            <h2 class="ban2">중앙공원</h2>
+                            <p class="banCom">중요한 문화유적들이 산재되어 있는<br/>청주역사의 산 증인</p>
+                            <a href="" class="more"></a>
+                        </li>
+                    </ul>
+                    <div class="box" id="box24">
+                       <ul>
+                        <li class="item1"><label for="ra11">문의 문화재단지</label></li>
+                        <li class="item2"><label for="ra12">상수 허브랜드</label></li>
+                        <li class="item3"><label for="ra13">수암골</label></li>
+                        <li class="item4"><label for="ra14">명암저수지</label></li>
+                        <li class="item5"><label for="ra15">우암산</label></li>
+                        <li class="item6"><label for="ra16">가로수길</label></li>
+                        <li class="item7"><label for="ra17">무심천</label></li>
+                        <li class="item8"><label for="ra18">중앙공원</label></li>
+                      </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="grid">
+                <li class="col left" id="vs2">
+                    <input type="radio" name="rdo3" class="raIt" id="ra21" checked>
+                    <input type="radio" name="rdo3" class="raIt" id="ra22">
+                    <input type="radio" name="rdo3" class="raIt" id="ra23">
+                    <input type="radio" name="rdo3" class="raIt" id="ra24">
+                    <input type="radio" name="rdo3" class="raIt" id="ra25">
+                    <input type="radio" name="rdo3" class="raIt" id="ra26">
+                    <input type="radio" name="rdo3" class="raIt" id="ra27">
+                    <input type="radio" name="rdo3" class="raIt" id="ra28">
+                    <input type="radio" name="rdo3" class="raIt" id="ra29">
+                    <input type="radio" name="rdo3" class="raIt" id="ra30">
+                    <ul class="imgBox3">
+                        <li>
+                            <img src="./img/20150223075417270.jpg" class="bg" alt="힐링">
+                            <div class="titBox">
+                                <h2 class="banT">청주에서</h2>
+                                <h1 class="ban3">힐링하자</h1>
+                                <p class="banCom">클레이 사격이 가능한 <br/>청주종합사격장</p>
+                                <a href="" class="more"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/kuk.jpg" class="bg" alt="힐링">
+                            <div class="titBox">
+                                <h2 class="banT">청주에서</h2>
+                                <h1 class="ban3">힐링하자</h1>
+                                <p class="banCom">활을 통해 심신을 단련하고 훌륭한 인격을 도야하자
+                                <a href="" class="more"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/nan.jpg" class="bg" alt="힐링">
+                            <div class="titBox">
+                                <h2 class="banT">청주에서</h2>
+                                <h1 class="ban3">힐링하자</h1>
+                                <p class="banCom">다슬기가 많아 반딧불이의 서식지로 유명한 <br/>
+                                낭추골현장체험학습원</p>
+                                <a href="" class="more"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/jang.jpg" class="bg" alt="힐링">
+                            <div class="titBox">
+                                <h2 class="banT">청주에서</h2>
+                                <h1 class="ban3">힐링하자</h1>
+                                <p class="banCom">맑은 공기 가득한 구룡산에서 다양한 모습의 장승을 만나고
+                                <br/>자연과 함께하는 시간 보내세요</p>
+                                <a href="" class="more"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/suam.jpg" class="bg" alt="힐링">
+                            <div class="titBox">
+                                <h2 class="banT">청주에서</h2>
+                                <h1 class="ban3">힐링하자</h1>
+                                <p class="banCom">드라마 촬영지로 유명한 수암골에 <br/>
+                                문화와 예술 현장체험학습자인 수암골 예술촌 조성</p>
+                                <a href="" class="more"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/zoo.jpg" class="bg" alt="힐링">
+                            <div class="titBox">
+                                <h2 class="banT">청주에서</h2>
+                                <h1 class="ban3">힐링하자</h1>
+                                <p class="banCom">아이들에게 꿈과 희망을 주는 휴식공간 <br/>
+                                청주랜드에 놀러오세요</p>
+                                <a href="" class="more"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/namd.jpg" class="bg" alt="힐링">
+                            <div class="titBox">
+                                <h2 class="banT">청주에서</h2>
+                                <h1 class="ban3">힐링하자</h1>
+                                <p class="banCom">역사의 숨결이 깃든 대통령별장 청남대</p>
+                                <a href="" class="more"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/san.jpg" class="bg" alt="힐링">
+                            <div class="titBox">
+                                <h2 class="banT">청주에서</h2>
+                                <h1 class="ban3">힐링하자</h1>
+                                <p class="banCom">천넌고도의 위용을 드러내는 청주의 상징</p>
+                                <a href="" class="more"></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="box" id="box34">
+                        <ul class="btnBox2">
+                            <li>
+                                <label for="ra30" class="left"></label>
+                                <label for="ra22" class="right"></label>
+                            </li>
+                            <li>
+                                <label for="ra21" class="left"></label>
+                                <label for="ra23" class="right"></label>
+                            </li>
+                            <li>
+                                <label for="ra22" class="left"></label>
+                                <label for="ra24" class="right"></label>
+                            </li>
+                            <li>
+                                <label for="ra23" class="left"></label>
+                                <label for="ra25" class="right"></label>
+                            </li>
+                            <li>
+                                <label for="ra24" class="left"></label>
+                                <label for="ra26" class="right"></label>
+                            </li>
+                            <li>
+                                <label for="ra25" class="left"></label>
+                                <label for="ra27" class="right"></label>
+                            </li>
+                            <li>
+                                <label for="ra26" class="left"></label>
+                                <label for="ra28" class="right"></label>
+                            </li>
+                            <li>
+                                <label for="ra27" class="left"></label>
+                                <label for="ra29" class="right"></label>
+                            </li>
+                            <li>
+                                <label for="ra28" class="left"></label>
+                                <label for="ra30" class="right"></label>
+                            </li>
+                            <li>
+                                <label for="ra29" class="left"></label>
+                                <label for="ra21" class="right"></label>
+                            </li>
+                        </ul>
+                        <ul class="imgBox4">
+                            <li>
+                                <h3 class="boxTit">사격장</h3>
+                                <span class="cicle1">
+                                    <img src="./img/20150223075417238.jpg" alt="사격장">
+                                </span>
+                            </li>
+                            <li>
+                                <h3 class="boxTit">국궁장</h3>
+                                <span class="cicle1">
+                                    <img src="./img/kuk2.jpg" alt="모노레일">
+                                </span>
+                            </li>
+                            <li>
+                                <h3 class="boxTit">낭추골</h3>
+                                <span class="cicle1">
+                                    <img src="./img/nan2.jpg" alt="모노레일">
+                                </span>
+                            </li>
+                            <li>
+                                <h3 class="boxTit">장승마을</h3>
+                                <span class="cicle1">
+                                    <img src="./img/jang2.jpg" alt="모노레일">
+                                </span>
+                            </li>
+                            <li>
+                                <h3 class="boxTit">수암골 예술촌</h3>
+                                <span class="cicle1">
+                                    <img src="./img/suam2.jpg" alt="모노레일">
+                                </span>
+                            </li>
+                            <li>
+                                <h3 class="boxTit">청주랜드</h3>
+                                <span class="cicle1">
+                                    <img src="./img/zoo2.jpg" alt="모노레일">
+                                </span>
+                            </li>
+                            <li>
+                                <h3 class="boxTit">청남대</h3>
+                                <span class="cicle1">
+                                    <img src="./img/namd2.jpg" alt="모노레일">
+                                </span>
+                            </li>
+                            <li>
+                                <h3 class="boxTit">상당산성</h3>
+                                <span class="cicle1">
+                                    <img src="./img/san2.jpg" alt="모노레일">
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="col right">
+                    <div class="box_01" id="box41">
+                        <h3 class="boxTit_01">
+                          <a href="http://www.cheongju.go.kr/tour/contents.do?key=800">청주 시티투어</a></h3>
+                        <a href="" class="fIco"></a>
+                    </div>
+
+                    <div class="box" id="box43">
+                      <a href=""></a>
+                        <h3 class="boxTit">청주의 축제</h3>
+                        <p class="boxCom">열정의 도시! 청주의 축제에<br/>대해 알려드립니다.</p>
+                        <a href="http://www.cheongju.go.kr/tour/selectClturCntntsList.do?key=788&clturCode=7" class="more"></a>
+                    </div>
+                    <div class="box" id="box44">
+                        <h3 class="boxTit2">먹고, 자고, 즐기는<br/>알찬 청주여행</h3>
+                        <ul class="btn2">
+                            <li class="trap1"><a href="http://www.cheongju.go.kr/tour/contents.do?key=825">음식</a></li>
+                            <li class="trap2"><a href="http://www.cheongju.go.kr/tour/selectTurCntntsList.do?key=6974&clturCntntsCode=10">숙박</a></li>
+                            <li class="trap3"><a href="http://www.cheongju.go.kr/tour/contents.do?key=828">특산물</a></li>
+                            <li class="trap4"><a href="http://www.cheongju.go.kr/tour/contents.do?key=826">교통</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="con3" class="pg">
+            <!-- div.noti#news*2>h2.secTit+a.more2+h3.notiTit+p.notiCom+hr+(ul.lstBox>li*3>a.lstTit+span.date) -->
+            <div class="pgWrap">
+                <div class="noti" id="news">
+                    <h2 class="secTit">새소식</h2>
+                    <a href="http://www.cheongju.go.kr/tour/selectBbsNttList.do?bbsNo=623&key=7594" class="more2"></a>
+                    <h3 class="notiTit"><a href="http://www.cheongju.go.kr/tour/selectBbsNttView.do?key=7594&bbsNo=623&nttNo=112808&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode=">2018년 하반기 관광진흥개발기금 융자 시행계획 안내</a>
+                    </h3>
+                    <p class="notiCom">2018년 하반기 관광진흥개발기금 융자지원지침을 붙임과 같이 알려드리오니, 관심 있는 관광기금 융자지원대상 사업자분께서는 적극 활용하시기 바랍니다. </p>
+                    <hr class="notiline">
+                    <ul class="lsBox">
+                        <li><a href="http://www.cheongju.go.kr/tour/selectBbsNttView.do?key=7594&bbsNo=623&nttNo=58096&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode=" class="lstTit">청주 촬영 드라마 왕은 사랑한다 방영 시작</a><span class="date">2017.07.14</span>
+                        </li>
+                        <li><a href="http://www.cheongju.go.kr/tour/selectBbsNttView.do?key=7594&bbsNo=623&nttNo=58089&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode=" class="lstTit">찾아가는 서비스 '책나래.책바다'</a><span class="date">	2017.07.14</span>
+                        </li>
+                        <li><a href="http://www.cheongju.go.kr/tour/selectBbsNttView.do?key=7594&bbsNo=623&nttNo=40970&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode=" class="lstTit">청주시지 발간 원고 공람 안내</a><span class="date">2016.11.07</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="noti" id="day">
+                    <h2 class="secTit">직지코리아 페스티벌 '전시' 일정</h2>
+                    <a href="http://jikjikorea.com/sub.php?code=4" class="more2"></a>
+                    <h3 class="notiTit"><a href="http://jikjikorea.com/sub.php?code=50">무심의 숲</a></h3>
+                    <p class="notiCom">전시기간 : 2018.10.1 ~ 10.21<br/>장소 : 청주예술의전당 전시동(1F)</p>
+                    <hr class="notiline">
+                    <ul class="lsBox">
+                        <li><a href="http://jikjikorea.com/sub.php?code=51" class="lstTit">직지숲에서 만난 사람들</a><span class="date">2018.10.1 ~ 10.21</span></li>
+                        <li><a href="http://jikjikorea.com/sub.php?code=52" class="lstTit">세계기록 유산전</a><span class="date">2018.10.1 ~ 10.21</span></li>
+                        <li><a href="http://jikjikorea.com/sub.php?code=53" class="lstTit">직지로드</a><span class="date">2018.10.1 ~ 10.21</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="con4" class="pg">
+            <!-- (div.slBox>(div.ctBox>h2.proTit+p.proCom+(ul.tBox>li*3>button))+(ul.lstBox>li*6>img+h3.itemTit+p.itemDate))+(ul.iconBox>li.ico1*9>a) -->
+            <div class="pgWrap">
+              <div class="slBox">
+                  <div class="ctBox">
+                      <h2 class="proTit">충청북도 추천 <strong>관광코스</strong></h2>
+                      <p class="proCom">문화관광 행복한 도시! 청주</p>
+
+                  </div>
+                  <div class="rtBox">
+                      <ul class="lstBox">
+                          <li>
+                              <div class="thumBox">
+                                <a href="http://tour.chungbuk.go.kr/home/sub.php?menukey=219&mod=01"><img src="./img/14645934360.png" alt="코스"></a>
+
+                              </div>
+                          </li>
+                          <li>
+                              <div class="thumBox"><img src="" alt=""></div>
+                          </li>
+                          <li class="control">
+                              <a href="" class="prev">prev</a>
+                              <a href="" class="next" style="display:none;">next</a>
+                          </li>
+
+                      </ul>
+                 </div>
+              </div>
+              <div>
+              <ul class="iconBox">
+                  <li class="ico1"><a href="http://tour.chungbuk.go.kr/home/sub.php?menukey=219">여행코스</a></li>
+                  <li class="ico2"><a href="http://tour.chungbuk.go.kr/home/sub.php?menukey=229">축제.공연</a></li>
+                  <li class="ico3"><a href="http://tour.chungbuk.go.kr/home/sub.php?menukey=235">문화관광해설사</a></li>
+                  <li class="ico4"><a href="http://tour.chungbuk.go.kr/home/sub.php?menukey=232">관광안내착자</a></li>
+                  <li class="ico5"><a href="http://www.cb21.net/www/mwhjList.do?key=1343&bbsCategoryCode=1">여행불편신고</a></li>
+                </ul>
+                </div>
+            </div>
+        </section>
+        <!-- footer#ft>div.ft_wrap>(nav#fnb>ul>li*5>a)+p.copyright+(a.wa>img)  -->
+        <footer id="ft">
+            <div class="ft_wrap">
+                <nav id="fnb">
+                    <ul>
+                        <li class="first"><a href="" class="imp">저작권보호정책</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="">뷰어다운로드</a></li>
+                        <li class="last"><a href="">행정전화번호부</a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">우)28542 충청북도 청주시 상당구 상당로 155 (북문로3가) 청주시청 대표전화 043-201-0001 <br>Copyright ⓒ 2017 Cheongju City. All Rights Reserved.</p>
+                <a href="" class="cj"><img src="./img/lnb_title_after6.png" alt="cj"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
