@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>news-2017</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+
+    <style>
+        *{list-style: none;text-decoration: none;}
+      section {height: auto; background: #ffffff; overflow: hidden;margin: 0 auto;}
+      #visual {z-index: 3;background-image:url("http://telcokoreais.cdn3.cafe24.com/about2.jpg");position: relative;height: 200px;background-repeat: no-repeat;background-position: center top; background-size: cover !important;}
+      #pgTit:after {position: absolute;display: block;content: ""; background:rgba(0,0,0,.3); width: 100%;height: 100%;top: 0; z-index: 1;}
+      .visualCon {width: 100%;display: table;table-layout: fixed;}
+      #pgTit {display: table-cell;vertical-align: middle;height: 200px;width: 100%;}
+      #pgTit h2 {max-width: 900px; padding: 0 10px;margin: 0 auto;;}
+      #pgTit .Tit span {position: absolute;overflow: hidden; font-family: 'Oswald', sans-serif; color: #ffffff; font-size: 2.4em;z-index: 9;margin-top: -50px;}
+         #pgTit:after {position: absolute;display: block;content: ""; background:rgba(0,0,0,.3); width: 100%;height: 100%;top: 0; z-index: 1;}
+
+      #menuCon {z-index: 22;margin-top: -42px;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc; position: relative; background: #fff; opacity: 0.8;}
+      #menuCon_wrap {position: relative;max-width: 1920px;height: 40px;margin: 0 auto;}
+      .conSub {font-family: 'Source Sans Pro', sans-serif;position: absolute;left: 50%;width: 1000px;margin-left: -545px;text-align: center;margin-top: 8px;}
+      .conSub li {float: left; position: relative;width: 200px;}
+      .conSub li:first-child {margin-left: 48px;margin-right: 10px;}
+      .conSub li a {display: block;height: 58px;font-size: 18px;color: #444;font-family: 'Source Sans Pro', sans-serif; font-weight: 600;}
+      .conSub li .active{color: #009cb9}
+      .conSub li a:hover {color: #009cb9;}
+
+      .conWrap { margin-bottom: 100px;}
+      .conTit {text-align: center;margin-bottom: 10px;width: 900px; margin: 0 auto;}
+      .conTit h2 {font-size:1.7em;margin-bottom: 20px;font-family: 'Noto Sans KR', sans-serif; color: #333;}
+      .conTit h2::after {width: 88px;
+              content: "";color: #000;
+              height: 2px;
+              display: block;
+              background-color: #777;
+              left: 45%;
+              top: 2px;
+              position: relative;}
+      .conImg {width: 1400px;height: 600px;margin: 0 auto;margin-bottom: 200px;}
+      .conWrap img {width: 100%;height: 100%;}
+  </style>
+
+<!--  jquery-ui-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+  } );
+  </script>
+ <style>
+    .ui-tabs-vertical { width: 55em; }
+    .ui-tabs-vertical .ui-tabs-nav { padding: .2em .4em .2em .2em; float: left; width: 21em; overflow-y: scroll; height: 900px; overflow-x: hidden; padding-top: 10px;}
+    .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; cursor: pointer}
+    .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+    .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+    .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 45em;}
+       .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+      float: left;padding: 1.5em 1em; font-weight: bold;
+      text-decoration: none;}
+       .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+      border: 1px solid #0099b3;
+      background: #0099b3;
+      font-weight: normal;
+      color: #ffffff; cursor: pointer
+  }
+  </style>
+  <style>
+      #tabs {width: 1100px;margin: 0 auto;}
+      .tabsbox { overflow-y: scroll;overflow-x: hiddenl;height: 900px }
+
+      .Tit {text-align: center;}
+      .date {float: right; margin-top: 10px;}
+      .newsImg {margin-top: 60px;margin-bottom: 30px;}
+      .subTit {font-size: 0.8em; color: #888;text-align: center;888;}
+      #news
+      .newslink {text-align: right; display: block;}
+      .newslink span {text-align: right; display: block;color:orange}
+      .newslink a {text-align: right; display: block; color:red}
+    </style>
+
+</head>
+<body>
+  <div class="wrap">
+  <!-- section 시작 -->
+    <section id="content">
+      <div id="visual" class="visualCon">
+        <div id="pgTit">
+            <h2 class="Tit">
+              <span>기사 스크랩</span>
+            </h2>
+        </div>
+      </div>
+      <div id="menuCon">
+        <div id="menuCon_wrap">
+          <ul class="conSub">
+            <li><a href="index.html" class="active">2017</a></li>
+            <li><a href="2018.html">2018</a></li>
+            <li><a href="2019.html">2019</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="conWrap">
+        <div class="conTit">
+          <h2>텔코코리아아이에스 뉴스</h2>
+        </div>
+        <div id="tabs">
+          <ul>
+            <li><a href="#tabs-1">기울어진 부산 오피스텔이 주는 교훈</a></li>
+        </ul>
+            <div id="tabs-1" class="tabsbox">
+           <span id="news">[대전 타임뉴스]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="https://www.timenews.co.kr/web/news/article/1189915">https://www.timenews.co.kr/web/news/article/1189915</a>
+           </div>
+            <h2 class="Tit">기울어진 부산 오피스텔이 주는 교훈</h2><br>
+            <span class="date"> 2017-10-29</span>
+            <p class="newsImg"><img src="https://www.timenews.co.kr/web/news/article_image/92db69fdea0fabcd6ff00ef18148025c" alt="" style="width:220px; height:245px; margin: auto;display: block"><a style="font-size: 11px;color:#069; text-align: center;display: block">(주)텔코코리아아이에스 김정집 대표</a></p>
+            <p style="margin: 30px;">
+                [대전타임뉴스=홍대인 기자] 최근 우리 사회를 떠들썩하게 한 세월호 사건은 국민에게 각종 재난사고가 남의 이야기가 아니라는 인식을 심어주었다.<br><br>
+                이러한 재난사고는 크게 '자연재난'과 '사회재난'으로 구별된다. 지난해 있었던 경주대지진 같은 '자연재난'의 경우 통상적으로 예측하기 어려워 재난을 피하기가 어렵다.<br><br>
+                하지만 '사회재난'의 경우는 이야기가 완전히 다르다. 사전에 철저한 준비가 돼있으면 예방할 수 있다는 특성을 지닌다. 재난 관련법의 개정과 강화, 예방 및 복구기술의 고도화로 일정부분 커버가 가능한 것.<br><br>
+                최근 사회재난 대표적인 케이스라 할 수 있는 부산 사하구 오피스텔 기울어짐 사태의 경우가 바로 그렇다. 부산경찰청에서 조사가 시작됐으나, 그전에 관계기관이 조금만 더 철저히 관리했으면 이 사태를 피할 수 있었다는 것이 전문가들의 의견이다.<br><br>
+                건축물의 기울어짐 현상에 대해 건축물 재해방지시스템 전문기업 ㈜텔코코리아아이에스 김정집 대표는 현행 건축법 제11조, 제22조를 근거로 “건축허가 및 사용승인에 따르면 건축허가와 사용승인은 건축사와 감리사의 현장조서만을 근거로 구에서 허가와 승인을 내주고 있는데 너무나도 허점이 많다"고 지적한다.<br><br>
+                김 대표는 이러한 허점을 보완하기 위해 허가 승인과 동시에 건축물 안전에 대한 안전등급(Safety Level)을 나누어 건축물의 안전기준을 마련해야만 한다고 조언한다.<br><br>
+                그는 “인허가 승인 후 진행되는 건축물구조안전진단, 건축물정밀안전진단, 건축물정밀점검 등 건축물의 변형 현상에 대한 측정은 고비용으로 지속적인 관리가 어렵다"며 “이에 상응하는 건축물의 변형을 수시로 측정할 수 있는 건축물붕괴사전예방기준 마련과 건축물에 대한 실시간 모니터링 시스템이 반드시 필요하다"고 역설한다.<br><br>
+                또한 “이번 기울어짐 현상이 발생한 부산 사하구 지역의 경우 연약지반"이었다 지적하며, "이러한 지역은 미국과 일본의 경우처럼 건축시공부터 또는 완공 후 일정기간 동안 건축물에 대한 변형, 변위 등에 대한 모니터링뿐만 아니라 지반자체에 대한 모니터링이 함께 이루어져야 한다"고 설명한다.<br><br>
+                현재 부산시 사하구 오피스텔 주변 일대도 점차 기울어짐 현상이 심화돼 안전점검이 지속적으로 필요한 상황이다. ‘연약지반이지만 인허가가 됐으니 무슨 일이 있겠냐“며 안심하던 주민들은 "이제는 그 인허가를 어떻게 믿을 수 있냐“며 울분을 토하는 실정이다.<br><br>
+                부산시 사하구와 건설사는 법적인 책임소재만을 다투지 말고, 이제라도 주민들의 안전을 위한 실질적인 대책마련에 힘써야 하는 주장이 힘을 얻는 가운데, 이러한 사회적 재난에 대한 다양한 예방책을 강구하여 안전한 사회를 만들도록 해야 할 것이라는 지적이다.<br><br>
+                <img src="https://www.timenews.co.kr/web/news/article_image/12c74985693c29a5693dbfaa1d623217" alt="">
+                홍대인 기자 &lt;htcpone@naver.com&gt;
+
+            </p>
+          </div>			
+
+
+</div>
+
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
