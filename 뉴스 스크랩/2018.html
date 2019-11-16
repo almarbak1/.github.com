@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>news-2017</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+
+    <style>
+        *{list-style: none;text-decoration: none;}
+      section {height: auto; background: #ffffff; overflow: hidden;margin: 0 auto;}
+      #visual {z-index: 3;background-image:url("http://telcokoreais.cdn3.cafe24.com/about2.jpg");position: relative;height: 200px;background-repeat: no-repeat;background-position: center top; background-size: cover !important;}
+      #pgTit:after {position: absolute;display: block;content: ""; background:rgba(0,0,0,.3); width: 100%;height: 100%;top: 0; z-index: 1;}
+      .visualCon {width: 100%;display: table;table-layout: fixed;}
+      #pgTit {display: table-cell;vertical-align: middle;height: 200px;width: 100%;}
+      #pgTit h2 {max-width: 900px; padding: 0 10px;margin: 0 auto;;}
+      #pgTit .Tit span {position: absolute;overflow: hidden; font-family: 'Oswald', sans-serif; color: #ffffff; font-size: 2.4em;z-index: 9;margin-top: -50px;}
+         #pgTit:after {position: absolute;display: block;content: ""; background:rgba(0,0,0,.3); width: 100%;height: 100%;top: 0; z-index: 1;}
+
+      #menuCon {z-index: 22;margin-top: -42px;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc; position: relative; background: #fff; opacity: 0.8;}
+      #menuCon_wrap {position: relative;max-width: 1920px;height: 40px;margin: 0 auto;}
+      .conSub {font-family: 'Source Sans Pro', sans-serif;position: absolute;left: 50%;width: 1000px;margin-left: -545px;text-align: center;margin-top: 8px;}
+      .conSub li {float: left; position: relative;width: 200px;}
+      .conSub li:first-child {margin-left: 48px;margin-right: 10px;}
+      .conSub li a {display: block;height: 58px;font-size: 18px;color: #444;font-family: 'Source Sans Pro', sans-serif; font-weight: 600;}
+      .conSub li .active{color: #009cb9}
+      .conSub li a:hover {color: #009cb9;}
+
+      .conWrap { margin-bottom: 100px;}
+      .conTit {text-align: center;margin-bottom: 10px;width: 900px; margin: 0 auto;}
+      .conTit h2 {font-size:1.7em;margin-bottom: 20px;font-family: 'Noto Sans KR', sans-serif; color: #333;}
+      .conTit h2::after {width: 88px;
+              content: "";color: #000;
+              height: 2px;
+              display: block;
+              background-color: #777;
+              left: 45%;
+              top: 2px;
+              position: relative;}
+      .conImg {width: 1400px;height: 600px;margin: 0 auto;margin-bottom: 200px;}
+      .conWrap img {width: 100%;height: 100%;}
+  </style>
+
+<!--  jquery-ui-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+  } );
+  </script>
+ <style>
+    .ui-tabs-vertical { width: 55em; }
+    .ui-tabs-vertical .ui-tabs-nav { padding: .2em .4em .2em .2em; float: left; width: 21em; overflow-y: scroll; height: 900px; overflow-x: hidden; padding-top: 10px;}
+    .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; cursor: pointer}
+    .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+    .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+    .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 45em;}
+       .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+      float: left;padding: 1.5em 1em; font-weight: bold;
+      text-decoration: none;}
+       .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+      border: 1px solid #0099b3;
+      background: #0099b3;
+      font-weight: normal;
+      color: #ffffff; cursor: pointer
+  }
+  </style>
+  <style>
+      #tabs {width: 1100px;margin: 0 auto;}
+      .tabsbox { overflow-y: scroll;overflow-x: hiddenl;height: 900px }
+
+      .Tit {text-align: center;}
+      .Titsub {
+    text-align: center;
+    color: #888888;
+}
+      .date {float: right; margin-top: 10px;}
+      .newsImg {margin-top: 60px;margin-bottom: 30px;}
+      .subTit {font-size: 0.8em; color: #888;text-align: left;888;width: 80%;margin: auto;display: block}
+      #news
+      .newslink {text-align: right; display: block;}
+      .newslink span {text-align: right; display: block;color:orange}
+      .newslink a {text-align: right; display: block; color:red}
+    </style>
+
+</head>
+<body>
+  <div class="wrap">
+  <!-- section 시작 -->
+    <section id="content">
+      <div id="visual" class="visualCon">
+        <div id="pgTit">
+            <h2 class="Tit">
+              <span>기사 스크랩</span>
+            </h2>
+        </div>
+      </div>
+      <div id="menuCon">
+        <div id="menuCon_wrap">
+          <ul class="conSub">
+            <li><a href="2017.html" >2017</a></li>
+            <li><a href="2018.html" class="active">2018</a></li>
+            <li><a href="2019.html">2019</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="conWrap">
+        <div class="conTit">
+          <h2>텔코코리아아이에스 뉴스</h2>
+        </div>
+        <div id="tabs">
+          <ul>
+            <li><a href="#tabs-1">대전 벤처기업-미주한인상공회의소총연합회 <br> 상생 시동</a></li>
+             <li><a href="#tabs-2">대전 벤처기업들, <br>미주한인상공회의소 총연합회와 손잡아</a></li>
+             <li><a href="#tabs-3">미주 한인상공회의소총연합회, <br>대전 유망벤처기업 미주진출 돕는다</a></li>
+             <li><a href="#tabs-4">美 한인상의총연합회, <br>대전 유망벤처 미 진출 돕는다</a></li>
+             <li><a href="#tabs-5">미주한인상공회의소총연합회-대전 벤처기업 <br>상생 ‘시동</a></li>
+             <li><a href="#tabs-6">텔코코리아IS 등 지역 유망벤처기업<br> 미주 진출 신호탄 쏘나?</a></li>
+             <li><a href="#tabs-7">대전창조경제혁신센터, <br>지역기업혁신역량강화사업 12개 기업 지원</a></li>
+             <li><a href="#tabs-8">'대한민국 균형발전박람회' 대전DCC서 개막</a></li>
+             <li><a href="#tabs-9">[균형발전박람회]기술창업 42번가 대전</a></li>
+             <li><a href="#tabs-10">대한민국의 중심 대전에서 싹트는 혁신성장, <br>‘2018 대한민국 균형발전박람회’</a></li>
+             <li><a href="#tabs-11">대한민국의 중심 대전에서 싹트는 혁신성장</a></li>
+        </ul>
+           
+<!-- tabs1----------------------------------------------------------------------------------------------->
+            <div id="tabs-1" class="tabsbox">
+           <span id="news">[KPANEWS]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="http://www.kpa.so/sub_read.html?uid=7812&section=sc2&section2=">http://www.kpa.so/sub_read.html?uid=7812&section=sc2&section2=</a>
+           </div>
+            <h2 class="Tit">대전 벤처기업-미주한인상공회의소총연합회 상생 시동</h2>
+            <h4 class="Titsub">미주 기업진출 활성화 위한 간담회 가져</h4>
+            <span class="date"> 2018-06-28</span>
+            <p class="newsImg" style="text-align: center"><img src="http://www.kpa.so/imgdata/kpa_so/201806/2018062834531996.jpg" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit">▲ 보육기업 기술 제품 상담회를 마치고 기념촬영을 하고 있다. &nbsp; &nbsp; © 이현재 기자</span></p>
+            <p style="margin: 30px;">
+                미주한인상공회의소총연합회(이하 총연합회)는 28일 배재대학교 산학협력단에서 대전시 관내 유망벤처기업들과 미주 기업진출을 위한 간담회를 가졌다고 밝혔다.<br><br>
+ 
+                이 자리에는 총연합회 강영기 회장과 장마리아 사무총장이 직접 참석, 이목을 집중시켰다.<br><br>
+ 
+                더굿경제연구소(대표 조현욱)와 ㈜베스트팀(대표 송혜선) 등 투자자문회사 2곳까지 참석, ㈜텔코코리아아이에스(대표 김정집) 등 5개 유망벤처기업의 제품․기술들을 살펴보고 미주 진출지원 방안에 대해 함께 논의했다.<br><br>
+ 
+                강영기 총연합회 회장은 모두발언에서 “한국의 유망 스타트업 기업이 집중된 대덕과학특구를 관심 있게 지켜보던 차에 재난관리 시스템 전문기업인 (주)텔코코리아아이에스 김정집 대표를 만났다”며 “서울에서 만나 재난예방 관련 건축물 실시간 관리시스템, 딥러닝 기반 긴급대피로 안내시스템 등의 우수한 제품에 깊은 인상을 받았다”고 말했다.<br><br>
+ 
+                유망기업들을 둘러본 후에는 엄지손가락을 들어 보이며, 세계시장에 내놓아도 경쟁력 있는 대덕특구 유망벤처기업들의 미주 진출을 적극적으로 돕고 싶다고 힘주어 말했다. <br><br>
+ 
+                이번 총연합회와의 간담회에 참여한 기업으로는 재난예방 및 관리시스템 전문기업인 ㈜텔코코리아아이에스(대표 김정집), 증강현실 기업 (주)리모샷, 바이오 사료첨가제 기업 ㈜에스앤에이치 바이오텍, 차량용LED 기업 ㈜엔바이어스, 유선통신장비 기업 ㈜레이컴즈 등이다.<br><br>
+ 
+                해당 기업관계자들은 이번 간담회에서 총연합회의 적극적인 지원의사에 해외진출에의 자신감과 든든한 우군을 얻게 된 것 같아 기쁨 가득한 자리였다고 전했다. <br><br>
+ 
+                한편 미주 한인상공회의소 총연합회는 1980년 조직을 시작으로 현재 미국 50개주 78개 지부와 150만 회원으로 구성돼 있다. 주요사업으로는 비즈니스 네트워크 구축, 미국진출 컨설팅서비스, 통상․정책개선 지원, 경제정보 제공 등이다.<br><br>
+ 
+                한국우수상품의 판로개척을 위한 연계에 힘쓰고 있는 단체로서, 한국정부와 지방자치단체와 협력해 한국기업이 미국에 진출하도록 돕고 있으며 한국문화보급 등 교류사업도 추진하고 있다.<br><br>
+ 
+                한편 강영기 총연합회 회장의 극찬을 받았던 ㈜텔코코리아아이에스는 국민건강과 안전 등 정부정책과 관련한 재난 재해 방지 분야를 주력사업으로 하고 있다.<br><br>
+ 
+                최근 빈번한 지진 및 건축물 노후화에 따른 재난을 보다 효율적이고 경제적으로 관측 및 모니터링을 하기 위한 DSHM(DISASTER STRUCTURE HEALTH MONITORING) 서비스에 특화됐으며, 화재재난 발생 시 대피로 안내를 통한 인명피해를 최소화하는 시스템 구축에도 강점을 보이고 있다.<br><br>
+               <span>이현재 기자</span>
+            </p>
+          </div>	
+          
+<!-- tabs2----------------------------------------------------------------------------------------------->          
+         <div id="tabs-2" class="tabsbox">
+           <span id="news">[뉴스타운]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="http://www.newstown.co.kr/news/articleView.html?idxno=330688">http://www.newstown.co.kr/news/articleView.html?idxno=330688</a>
+           </div>
+            <h2 class="Tit">대전 벤처기업들, 미주한인상공회의소 총연합회와 손잡아</h2>
+            <h4 class="Titsub"></h4>
+            <span class="date"> 2018-06-28</span><br>
+            <h4>미주 기업진출 활성화 위한 간담회 성료</h4>
+            <p class="newsImg" style="text-align: center"><img src="http://www.newstown.co.kr/news/photo/201806/330688_220827_439.jpg" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit">▲ 미주한인상공회의소총연합회가 대전시 관내 유망벤처기업들과 미주 기업진출을 위한 간담회를 가졌다. ⓒ뉴스타운</span></p>
+            <p style="margin: 30px;">
+                미주한인상공회의소 총연합회(이하 총연합회)는 28일 배재대학교 창업지원단에서 대전시 관내 유망벤처기업들과 미주 기업진출을 위한 간담회를 가졌다고 밝혔다. 이 자리에는 총연합회 강영기 회장과 장마리아 사무총장이 직접 참석, 이목을 집중시켰다.<br><br>
+
+                더굿경제연구소(대표 조현욱)와 ㈜베스트팀(대표 송혜선) 등 투자자문회사 2곳까지 참석, ㈜텔코코리아아이에스(대표 김정집) 등 5개 유망벤처기업의 제품․기술들을 살펴보고 미주 진출지원 방안에 대해 함께 논의했다.<br><br>
+
+                강영기 총연합회 회장은 모두발언에서 “한국의 유망 스타트업 기업이 집중된 대덕과학특구를 관심 있게 지켜보던 차에 재난관리 시스템 전문기업인 (주)텔코코리아 아이에스 김정집 대표를 만났다”며 “서울에서 만나 재난예방 관련 건축물 실시간 관리시스템, 딥러닝 기반 긴급대피로 안내시스템 등의 우수한 제품에 깊은 인상을 받았다”고 말했다.<br><br>
+
+                유망기업들을 둘러본 후에는 엄지손가락을 들어 보이며, 세계시장에 내놓아도 경쟁력 있는 대덕특구 유망벤처기업들의 미주 진출을 적극적으로 돕고 싶다고 힘주어 말했다. <br><br>
+
+                이번 총연합회와의 간담회에 참여한 기업으로는 재난예방 및 관리시스템 전문기업인 ㈜텔코코리아 아이에스(대표 김정집), 증강현실 기업 (주)리모샷, 바이오 사료첨가제 기업 ㈜에스앤에이치 바이오텍, 차량용LED 기업 ㈜엔바이어스, 유선통신장비 기업 ㈜레이컴즈 등이다.<br><br>
+
+                해당 기업관계자들은 이번 간담회에서 총연합회의 적극적인 지원의사에 해외진출에의 자신감과 든든한 우군을 얻게 된 것 같아 기쁨 가득한 자리였다고 전했다. <br><br>
+
+                한편 미주한인상공회의소총연합회는 1980년 조직을 시작으로 현재 미국 50개주 78개 지부와 150만 회원으로 구성돼 있다. 주요사업으로는 비즈니스 네트워크 구축, 미국진출 컨설팅서비스, 통상․정책개선 지원, 경제정보 제공 등이다.<br><br>
+
+                한국우수상품의 판로개척을 위한 연계에 힘쓰고 있는 단체로서, 한국정부와 지방자치단체와 협력해 한국기업이 미국에 진출하도록 돕고 있으며 한국문화보급 등 교류사업도 추진하고 있다.<br><br>
+
+                한편 강영기 총연합회 회장의 극찬을 받았던 ㈜텔코코리아 아이에스는 국민건강과 안전 등 정부정책과 관련한 재난 재해 방지 분야를 주력사업으로 하고 있다.<br><br>
+
+                최근 빈번한 지진 및 건축물 노후화에 따른 재난을 보다 효율적이고 경제적으로 관측 및 모니터링을 하기 위한 DSHM(DISASTER STRUCTURE HEALTH MONITORING) 서비스에 특화됐으며, 화재재난 발생 시 대피로 안내를 통한 인명피해를 최소화하는 시스템 구축에도 강점을 보이고 있다.<br><br>
+               <span>이승일 기자</span>
+            </p>
+          </div>		
+
+<!-- tabs3----------------------------------------------------------------------------------------------->          
+         <div id="tabs-3" class="tabsbox">
+           <span id="news">[대전일보]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="http://www.daejonilbo.com/news/newsitem.asp?pk_no=1323709">http://www.daejonilbo.com/news/newsitem.asp?pk_no=1323709</a>
+           </div>
+            <h2 class="Tit">미주 한인상공회의소총연합회, 대전 유망벤처기업 미주진출 돕는다</h2>
+            <h4 class="Titsub"></h4>
+            <span class="date"> 2018-06-28</span><br>
+            <p class="newsImg" style="text-align: center"><img src="http://www.daejonilbo.com/admin/news/news_photo/oImg/2018/06/28/2018062901001594300000001.jpg?r_key=9860868177" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit">28일 배재대 산학협력관에서 대전지역 유망벤처기업의 미주진출을 위한 간담회가 열린 가운데 참석자들이 기념촬영을 하고 있다. 사진 = 배재대 제공</span></p>
+            <p style="margin: 30px;">
+                대전지역 유망벤처기업들이 미주진출에 발판을 마련하고 있다.<br><br>
+
+            미주 한인상공회의소 총연합회는 28일 대전 서구 배재대 산학협력관에서 대전지역 유망벤처기업의 미주 기업기준을 위한 간담회를 가졌다.<br><br>
+
+            이번 간담회는 배재대 창업지원단이 강영기 미주 한인상의 연합회 회장을 비롯해 장 마리아 사무총장, 투자자문회사인 더굿 경제연구소, ㈜베스트팀 등 투자자문회사를 초청하며 마련됐다. 간담회에서는 ㈜텔코코리아 IS 등 5개 유망벤처기업 제품·기술들을 둘러보고 미주 진출지원에 대한 논의가 열렸다. 미주 한인상공회의소 총연합회는 1980년 설립돼 현재 미국 50개 주 78개 지부와 150만 명의 회원이 활동하고 있다. 주요사업으로는 비즈니스 네트워크 구축과 미국진출 컨설팅서비스, 통상·정책개선 지원, 경제정보 제공 등을 지속하면서 한국 우수상품의 판로개척을 위한 연계에 힘쓰고 있는 단체다.<br><br>
+
+            강 회장은 "한국의 유망 스타트업 기업이 집중된 대덕특구를 관심 있게 지켜봐 왔다"며 "특히 재난관리 시스템 전문기업인 텔코코리아의 건축물 실시간 관리시스템과 딥러닝기반 긴급대피로 안내시스템 등의 우수한 제품에 깊은 인상을 받아 직접 보기 위해 대전을 찾았다"고 말했다.<br><br>
+
+            그는 또 "대덕연구단지 등이 있는 대전은 익히 알고 있지만, 방문을 좋음으로 과학도시답게 이미지 또한 좋다"며 "세계시장에 내놓아도 경쟁력 있는 대덕특구 유망벤처기업들의 미주 진출을 적극적으로 돕고 싶다"며 덧붙였다.<br><br>
+
+            이번 간담회에 참석한 지역 유망벤처기업으로는 재난예방관리시스템 전문기업인 텔코코리아 IS, 증강현실 기업 ㈜리모샷, 바이오 사료 첨가제 기업 ㈜에스앤에이치 바이오텍, 차량용 LED 기업 ㈜엔바이어스, 유선통신장비 기업 ㈜레이컴즈 등이다.<br><br>
+
+            김학진 배재대 창업보육센터장은 "창업지원 사업을 8년째 이어오면서 많은 입주기업이 기술개발 등에 많은 노력을 기울이고 있다"며 "이들 기업이 국내는 물론 해외시장에 진출해 꿈을 이룰 수 있도록 적극적으로 도움을 주겠다"고 말했다<br><br>
+               <span>김대욱 기자</span>
+            </p>
+          </div>		
+
+<!-- tabs4----------------------------------------------------------------------------------------------->          
+         <div id="tabs-4" class="tabsbox">
+           <span id="news">[HelloDD]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="http://hellodd.com/?md=news&mt=view&pid=65356">http://hellodd.com/?md=news&mt=view&pid=65356</a>
+           </div>
+            <h2 class="Tit">美 한인상의총연합회, 대전 유망벤처 미 진출 돕는다</h2>
+            <h4 class="Titsub">28일, 대덕특구내 5개 기업과 간담회 가져</h4>
+            <span class="date"> 2018-06-28</span><br>
+            <p style="margin: 30px;">
+                미주 한인상공회의소 총연합회(이하 총연합회·회장 강영기)는 28일 오전 배재대 산학협력단에서 대전의 유망벤처기업들과 미주 기업진출을 위한 간담회를 가졌다고 이날 밝혔다.<br><br>
+
+                참여기업은 재난예방과 관리시스템 전문기업인 텔코코리아 IS, 증강현실 기업 리모샷, 바이오 사료첨가제 기업 에스앤에이치 바이오텍, 차량용LED 기업 엔바이어스, 유선통신장비 기업 레이컴즈 등 5개사다..<br><br>
+
+                양측의 만남은 강영기 회장이 대덕연구개발특구 내 유망기업을 눈여겨 보던 중 김정집 텔코코리아 대표와 만남이 성사되며 마련됐다..<br><br>
+
+                이날 간담회는 5개 벤처, 더굿 경제연구소와 베스트팀 등 투자자문회사 2곳이 참여한 가운데 각 기업 제품, 기술을 둘러보고 미국 진출지원을 논의했다..<br><br>
+
+
+                강영기 회장은 유망기업들을 둘러본 후 엄지를 들어보이며 "세계시장에 내놓아도 경쟁력있는 대덕특구 유망벤처기업들의 미주 진출을 적극 돕고 싶다"고 말했다..<br><br>
+
+                한편 미주 한인상공회의소 총연합회는 1980년 조직됐으며 현재 미국 50개주 78개 지부와 150만 회원으로 구성돼 있다..<br><br>
+               <span>김애경 기자</span>
+            </p>
+          </div>		
+
+<!-- tabs5----------------------------------------------------------------------------------------------->          
+         <div id="tabs-5" class="tabsbox">
+           <span id="news">[타임뉴스]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="https://www.timenews.co.kr/web/news/article/1313579">https://www.timenews.co.kr/web/news/article/1313579</a>
+           </div>
+            <h2 class="Tit">미주한인상공회의소총연합회-대전 벤처기업 상생 ‘시동</h2>
+            <h4 class="Titsub">미주 기업진출 활성화 위한 간담회 가져</h4>
+            <span class="date"> 2018-06-28</span><br><br>
+            [대전타임뉴스=홍대인 기자] 미주한인상공회의소총연합회(이하 총연합회)는 28일 배재대학교 창업지원단에서 대전시 관내 유망벤처기업들과 미주 기업진출을 위한 간담회를 가졌다.
+            <p class="newsImg" style="text-align: center"><img src="https://www.timenews.co.kr/web/news/article_image/bdfcfe5d74c379d1339a32b5af12218a" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit"></span></p>
+            <p style="margin: 30px;">
+                이 자리에는 총연합회 강영기 회장과 장마리아 사무총장이 직접 참석, 이목을 집중시켰다.<br><br>
+                더굿경제연구소(대표 조현욱)와 ㈜베스트팀(대표 송혜선) 등 투자자문회사 2곳까지 참석, ㈜텔코코리아아이에스(대표 김정집) 등 5개 유망벤처기업의 제품․기술들을 살펴보고 미주 진출지원 방안에 대해 함께 논의했다.<br><br>
+                강영기 총연합회 회장은 모두발언에서 “한국의 유망 스타트업 기업이 집중된 대덕과학특구를 관심 있게 지켜보던 차에 재난관리 시스템 전문기업인 (주)텔코코리아아이에스 김정집 대표를 만났다"며 “서울에서 만나 재난예방 관련 건축물 실시간 관리시스템, 딥러닝 기반 긴급대피로 안내시스템 등의 우수한 제품에 깊은 인상을 받았다"고 말했다.<br><br>
+                또한 유망기업들을 둘러본 후에는 엄지손가락을 들어 보이며, 세계시장에 내놓아도 경쟁력 있는 대덕특구 유망벤처기업들의 미주 진출을 적극적으로 돕고 싶다고 힘주어 말했다.<br><br>
+                <img src="https://www.timenews.co.kr/web/news/article_image/d63bf0b8ee5b5f7ea0d4ecfbc4d495ab" alt="" style="width:580px; height:387x; margin: auto;display: block"><br>
+                 이번 총연합회와의 간담회에 참여한 기업으로는 재난예방 및 관리시스템 전문기업인 ㈜텔코코리아아이에스(대표 김정집), 증강현실 기업 (주)리모샷, 바이오 사료첨가제 기업 ㈜에스앤에이치 바이오텍, 차량용LED 기업 ㈜엔바이어스, 유선통신장비 기업 ㈜레이컴즈 등이다.<br><br>
+                해당 기업관계자들은 이번 간담회에서 총연합회의 적극적인 지원의사에 해외진출에의 자신감과 든든한 우군을 얻게 된 것 같아 기쁨 가득한 자리였다고 전했다.<br><br>
+                한편 미주 한인상공회의소 총연합회는 1980년 조직을 시작으로 현재 미국 50개주 78개 지부와 150만 회원으로 구성돼 있다. 주요사업으로는 비즈니스 네트워크 구축, 미국진출 컨설팅서비스, 통상․정책개선 지원, 경제정보 제공 등이다.<br><br>
+                한국우수상품의 판로개척을 위한 연계에 힘쓰고 있는 단체로서, 한국정부와 지방자치단체와 협력해 한국기업이 미국에 진출하도록 돕고 있으며 한국문화보급 등 교류사업도 추진하고 있다.<br><br>
+                <img src="https://www.timenews.co.kr/web/news/article_image/da2498d03bc48556d6033298749a4cc8" alt="" style="width:580px; height:387x; margin: auto;display: block"><br>
+                한편 강영기 총연합회 회장의 극찬을 받았던 ㈜텔코코리아아이에스는 국민건강과 안전 등 정부정책과 관련한 재난 재해 방지 분야를 주력사업으로 하고 있다.<br><br>
+                최근 빈번한 지진 및 건축물 노후화에 따른 재난을 보다 효율적이고 경제적으로 관측 및 모니터링을 하기 위한 DSHM(DISASTER STRUCTURE HEALTH MONITORING) 서비스에 특화됐으며, 화재재난 발생 시 대피로 안내를 통한 인명피해를 최소화하는 시스템 구축에도 강점을 보이고 있다.<br><br>
+              
+               <span>김대욱 기자</span>
+             </p>
+            
+          </div>		
+
+<!-- tabs6----------------------------------------------------------------------------------------------->          
+         <div id="tabs-6" class="tabsbox">
+           <span id="news">[중도일보]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="http://www.joongdo.co.kr/main/view.php?key=20180628010011649">http://www.joongdo.co.kr/main/view.php?key=20180628010011649</a>
+           </div>
+            <h2 class="Tit">텔코코리아IS 등 지역 유망벤처기업 미주 진출 신호탄 쏘나?</h2>
+            <h4 class="Titsub">미주 한인 상공회의소 총연합회 대전 유망기업 방문</h4>
+            <span class="date"> 2018-06-28</span><br>
+            <p class="newsImg" style="text-align: center"><img src="http://dn.joongdo.co.kr/mnt/images/file/2018y/06m/28d/2018062801002534100116491.jpg" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit"></span></p>
+            <p style="margin: 30px;">
+                미주 한인상공회의소 총연합회(회장 강영기)는 28일 대전을 찾아 유망벤처기업의 미국 진출에 대해 의견을 나눴다.<br><br>
+
+                연합회는 이날 오전 유성구 배재대 산학협력관에서 대전 유망벤처기업의 미주 기업진출을 위한 간담회를 가졌다.<br><br>
+
+                간담회는 배재대 창업지원단이 강영기 총연합회 회장을 비롯해 장 마리아 사무총장, 더굿 경제연구소(대표 조현욱)와 (주)베스트팀(대표 송혜선) 등 투자자문회사를 초청해 마련됐다.<br><br>
+
+                간담회에서는 (주)텔코코리아 IS(대표 김정집) 등 5개 유망벤처기업의 제품·기술들을 둘러보고 미주 진출지원에 대해 함께 논의했다.<br><br>
+
+                강영기 회장은 모두발언에서, "한국의 유망 스타트업 기업이 집중된 대덕특구를 관심 있게 지켜봐 왔다"며 "특히 재난관리 시스템 전문기업인 텔코코리아의 건축물 실시간 관리시스템과 딥러닝기반 긴급대피로 안내시스템 등의 우수한 제품에 깊은 인상을 받아 직접 보기 위해 대전을 찾았다"고 말했다.<br><br>
+ 
+                이어, "대덕연구단지 등이 있는 대전은 익히 알고 있지만, 방문을 하고 기업인들을 직접 만나보니 과학도시답게 이미지 또한 좋다"며 "세계시장에 내놓아도 경쟁력 있는 대덕특구 유망벤처기업들의 미주 진출을 적극적으로 돕고 싶다"며 덧붙였다.<br><br>
+
+                간담회에 참가한 지역 유망벤처기업으로는 재난예방·관리시스템 전문기업인 텔코코리아 IS, 증강현실 기업 (주)리모샷, 바이오 사료 첨가제 기업 (주)에스앤에이치 바이오텍, 차량용 LED 기업 (주)엔바이어스, 유선통신장비 기업 (주)레이컴즈 등이다.<br><br>
+
+                김학진 창업보육센터장은 "창업지원 사업을 8년째 이어오면서 많은 입주기업이 기술개발 등에 노력을 기울이고 있다"며 "이들 기업이 국내는 물론 해외시장에 진출해 꿈을 이룰 수 있도록 적극적으로 도움을 주겠다"고 말했다.<br><br>
+
+                한편, 미주 한인상공회의소 총연합회는 1980년 설립해 현재 미국 50개 주 78개 지부와 150만 회원으로 구성됐다.<br><br>
+
+                주요사업으로는 비즈니스 네트워크 구축과 미국진출 컨설팅서비스, 통상·정책개선 지원, 경제정보 제공 등을 영위하며 한국 우수상품의 판로개척을 위한 연계에 힘쓰고 있는 단체다.<br><br>
+
+                또 한국 정부와 지방자치단체와 협력해 한국기업이 미국에 진출하도록 돕고 있으며 한국문화보급 등 교류사업도 추진하고 있다.<br><br>
+              
+               <span>박병주 기자</span>
+             </p>
+            
+          </div>		
+
+<!-- tabs7----------------------------------------------------------------------------------------------->          
+         <div id="tabs-7" class="tabsbox">
+           <span id="news">[전자신문]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="http://www.etnews.com/20180712000287">http://www.etnews.com/20180712000287</a>
+           </div>
+            <h2 class="Tit">대전창조경제혁신센터, 지역기업혁신역량강화사업 12개 기업 지원</h2>
+            <h4 class="Titsub">미주 한인 상공회의소 총연합회 대전 유망기업 방문</h4>
+            <span class="date"> 2018-07-12</span><br>
+            <p class="newsImg" style="text-align: center"><img src="http://img.etnews.com/photonews/1807/1090733_20180712143739_676_0001.jpg" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit"></span></p>
+            <p style="margin: 30px;">
+            대전창조경제혁신센터(센터장 임종태)가 지역기업혁신역량강화사업을 통해 12개 첨단센서 기업을 지원한다고 12일 밝혔다.<br><br>
+
+            지원 대상은 피에스에스, 굿텍, 에너리트, 테크앤, 엘센, 후로스, 엠쏘텍, 텔코코리아아이에스, 더줌, 센서랩, 플렉스컴, 원컴 등 창업 7년 이내 기업이다.<br><br>
+
+            이들 기업에게 최대 4000만 원씩을 투입해 시제품테스트와 제품 성능 시험평가 등을 지원한다. 투·융자 연계와 해외시장 진출 기회도 부여할 계획이다.<br><br>
+
+            임종태 센터장은 “지난해 사업을 통해 21개 기업을 지원한 결과, 투자유치와 지식재산권, 기술 및 성능인증 취득 등의 성과를 창출했다”면서 “올해도 유망기업 산업 고도화를 위한 지원 체계를 확고히 해 첨단센서 육성 전초기지로 앞장서겠다”고 말했다.<br><br>
+              
+               <span>강우성 기자</span>
+             </p>
+            
+          </div>		
+
+<!-- tabs8----------------------------------------------------------------------------------------------->          
+         <div id="tabs-8" class="tabsbox">
+           <span id="news">[news1뉴스]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="http://news1.kr/articles/?3419272">http://news1.kr/articles/?3419272</a>
+           </div>
+            <h2 class="Tit">'대한민국 균형발전박람회' 대전DCC서 개막</h2>
+            <h4 class="Titsub"></h4>
+            <span class="date"> 2018-09-06</span><br>
+            <p class="newsImg" style="text-align: center"><img src="http://image.news1.kr/system/photos/2018/9/6/3288626/article.jpg" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit">허태정 대전시장과 송재호 국가균형발전위원회 위원장 등 참석자들이 6일 오전 대전 유성구 대전컨벤션센터에서 열린 2018 대한민국 균형발전박람회에서 국민의례를 하고 있다. 2018.9.6/뉴스1 © News1 주기철 기자</span></p>
+            <p style="margin: 30px;">
+            문재인 정부의 5대 국정 목표 중 하나인 ‘고르게 발전하는 지역’을 실현하고 균형발전의 의지를 다지는 ‘2018 대한민국 균형발전박람회’가 대전 컨벤션센터(DCC)에서 6일 개막했다. 박람회는 8일까지 이어진다.<br><br>
+
+            산업통상자원부와 균형발전위원회, 17개 시·도가 주최하고 한국산업기술진흥원(KIAT)과 대전시가 주관하는 이번 박람회는 2004년 지역혁신박람회 개최 이후 중부권에서 처음으로 대전에서 개최됐다.<br><br>
+
+            이 자리에는 허태정 대전시장, 김종천 대전시의회 의장, 송재호 국가균형발전위원회 위원장, 한병도 청와대 정무수석, 전국 광역자치단체 관계자들이 참석했다.<br><br>
+
+            허태정 대전시장은 환영사를 통해 “균형박람회가 성공리에 잘 개최돼 중앙부처와 지방자치단체가 함께 혁신하는 소중한 기회가 되면 좋겠다”며 “민선7기 출범 이후 우리시가 주관하는 첫 전국 단위 대규모 행사인 만큼 4차산업혁명특별시 대전의 도시브랜드 가치를 널리 알릴 수 있도록 최선을 다하겠다”고 말했다.<br><br>
+
+            국가균형발전위원회 송재호 위원장은 “지역을 강하게 하는 것이야 말로 대한민국을 바로 세우는 길”이라며 “‘균형발전 5개년계획’, ‘혁신도시 종합발전계획’을 통해 균형발전정책을 체계적으로 추진해 나갈 것”이라고 밝혔다.<br><br>
+            
+            <img src="http://image.news1.kr/system/photos/2018/9/6/3288783/article.jpg" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit">2018 대한민국 균형발전박람회에 대전 시는 '창업성공 42번가대전'을 주제로 42개 업체를 알리고 있다.© News1</span>
+            박람회는 17개 시·도관과 균형위 특별전시관으로 구성되는 ‘균형마당’, 지역혁신활동가 사례 공유와 네트워킹으로 구성되는 ‘혁신마당’, 국내외 균형발전정책 전문가 토론 및 컨퍼런스로 진행되는 ‘정책마당’ 등 다양한 부대행사로 구성됐다.<br><br>
+
+            대전시는 ‘혁신성장이 시작되는 창업성공 42번가 대전’을 주제로 창업지원사업을 통해 성공한 창업 5년 이내의 기업 42개 업체를 알리고, 대전시만의 차별화된 창업정책(5대 창업 플랫폼 조성, 키워드별 창업지원 사업 등)을 홍보한다.<br><br>
+
+            42개 업체는 관내 대학, 출연연, 혁신기관 등이 추천한 기술기반의 창업성공기업이며, 텔코코리아아이에스(재난안전솔루션), 페인트팜(특수 페인트 재료), 딥센트랩스(향기생성) 등에서 제품을 전시한다.<br><br>
+
+            특히 전국 청년활동가 사례가 전시·공유되는 청년혁신카페는 대전 지역의 ‘혁신청’, ‘위즈온 협동조합’, ‘윙윙’청년혁신단체가 참가해 지역의 사회문제를 해결한 사회혁신 사례도 발표한다.<br><br>
+             
+            <img src="http://image.news1.kr/system/photos/2018/9/6/3288785/article.jpg" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit">허태정 대전시장이 박람회에 참석해 기념사진을 촬영하고 있다.© News1</span> <br>
+              
+               <span>김아영 기자</span>
+             </p>
+            
+          </div>		
+
+<!-- tabs9----------------------------------------------------------------------------------------------->          
+         <div id="tabs-9" class="tabsbox">
+           <span id="news">[대전일보]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="http://www.daejonilbo.com/news/newsitem.asp?pk_no=1333659">http://www.daejonilbo.com/news/newsitem.asp?pk_no=1333659</a>
+           </div>
+            <h2 class="Tit">[균형발전박람회]기술창업 42번가 대전</h2>
+            <h4 class="Titsub"></h4>
+            <span class="date"> 2018-09-06</span><br>
+            <p style="margin: 30px;">
+            6일 막을 올린 '2018 대한민국 균형발전박람회'에서 전국 17개 시·도는 '지역주도 혁신성장'을 주제로 하는 지역관을 선보였다.<br><br>
+
+            청년커플 창업, 도시청년 시골파견제, 아름다운 공장 등에서 첨단 의료, 로봇 산업에 이르기까지 지역 특색을 살린 정책과 혁신 사례들이 눈에 띈다.<br><br>
+
+            개최지인 대전은 '기술창업 42번가'를 타이틀로 내세웠다. '4차 산업혁명 특별시'로서 대전의 차별적 창업 정책과 크라우드펀딩으로 유명해진 스크린페인트 기업 페인트팜 등 기술기반형 창업 기업 42곳을 소개했다.<br><br>
+
+            42개 업체는 대학, 출연연, 혁신기관 등이 추천한 기술기반의 창업성공기업이며, 5대 창업 플랫폼 조성, 키워드별 창업지원 사업 등 대전시만의 차별화된 창업정책을 잘 드러내고 있다.<br><br>
+
+            이날 박람회에 참석한 국가균형발전위원회 송재호 위원장은 지진을 감지하고 자동으로 대피 안내를 해주는 텔코코리아아이에스의 재난안전솔루션에 큰 관심을 보이며 허태정 대전시장과 이야기를 나누기도 했다. 페인트팜(특수 페인트 재료), 딥센트랩스(향기생성) 등의 제품도 눈길을 끌었다.<br><br>
+
+            충남은 내포 신도시를 중심으로 한 수소에너지 산업의 육성을 충남 국가혁신클러스터의 비전으로 내세웠다.<br><br>
+
+            도는 전시관 기본 골격을 수소충전소로 꾸미고, 패키지형 수소충전소와 이동식 수소충전소, 주유기 등을 복합적으로 배치했다. 또 홀로그램 패널 영상을 통해 수소의 안정성과 용도, 수소연료전지 자동차 구조 및 특징 등을 설명하고 LED 영상을 이용해 수소연료전지 자동차와 수소 충전 기반산업 육성 등 도의 혁신클러스터 비전을 선보였다. 혁신 클러스터 비전은 수소연료전지 자동차와 수소 충전 기반 산업을 글로벌 클러스터로 육성하는 것으로 오는 2030년까지 수소연료전지 자동차 10만 대와 수소충전소 100개소를 보급한다는 계획이다.<br><br>
+
+            충북은 강호축 철도(강원-호남)의 완성과 유라시아 철도의 연결을 모사한 대형 디오라마를 전시관에 설치해 경제 무대를 세계로 넓히겠다는 구상을 내비쳤다.<br><br>
+
+            7일과 8일에는 국가균형발전의 3대 가치인 '분권', '혁신', '포용' 을 주제로 27개의 학회세션(병렬), 개막세션, 국제세션, 특별세션이 열린다.<br><br>
+
+            학회세션은 '분권', '혁신', '포용'이라는 세 가지 주제를 바탕으로 69개 발제로 진행한다. 분권부문에서는 지역간 균형발전을 위해서 필요한 자치분권개헌, 거버넌스(협치), 주변지역과의 상생 등의 세션주제들이 다루어질 예정이다. 혁신부문에서는 지역의 자생력을 위해서 필요한 지역관광활성화, 지역산업육성, 농산어업의 새로운 가치 구현 등이 논의된다.<br><br>
+
+            대한민국의 포용적 성장 구현을 위해 지역 간 불균형 해소와 지방재정의 역할 등 주제들도 토론 할 예정이다. 국제세션에서는 '해외 국가균형발전 정책 및 지역혁신 사례'라는 주제 하에 일본 지방창생본부와 중국개혁발전연구원, 프랑스 국토균형청이 각 국의 균형발전 정책사례와 성과를 소개한다. <br>
+              
+               <span>이용민 기자</span>
+             </p>
+            
+          </div>		
+
+<!-- tabs10----------------------------------------------------------------------------------------------->          
+         <div id="tabs-10" class="tabsbox">
+           <span id="news">[타임뉴스]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="https://www.timenews.co.kr/web/news/article/1328342">https://www.timenews.co.kr/web/news/article/1328342</a>
+           </div>
+            <h2 class="Tit">대한민국의 중심 대전에서 싹트는 혁신성장, ‘2018 대한민국 균형발전박람회’</h2>
+            <h4 class="Titsub">민선7기 출범 이후 첫 대규모 전국행사, 2004년 이후 중부권 최초</h4>
+            <span class="date"> 2018-09-06</span><br><br>
+            [대전타임뉴스=홍대인 기자] 문재인 정부의 5대 국정 목표 중 하나인‘고르게 발전하는 지역’을 실현하고 균형발전의 의지를 다지는 ‘2018 대한민국 균형발전박람회’가 6일부터 8일까지 대전 컨벤션센터(DCC)에서 개최된다.
+            <p class="newsImg" style="text-align: center"><img src="https://www.timenews.co.kr/web/news/article_image/3f11536689e9065e455703bad3b560c1" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit"></span></p>
+            <p style="margin: 30px;">
+            산업통상자원부와 균형발전위원회, 17개 시․도가 주최하고 한국산업기술진흥원(KIAT)과 대전시가 주관하는 이번 박람회는 2004년 지역 혁신 박람회 개최 이후 중부권 최초로 대전에서 개최됐다.<br><br>
+            박람회의 주제는 ‘혁신을 통한 지역의 미래 성장동력 마련’이며 주요내용으로는 17개 시도관과 균형위 특별전시관으로 구성되는 ‘균형마당’, 지역혁신활동가 사례 공유와 네트워킹으로 구성되는 ‘혁신마당’, 국내외 균형발전정책 전문가 토론 및 컨퍼런스로 진행되는 ‘정책마당’과 다채로운 부대행사로 구성된다.<br><br>
+            균형마당에는 17개 시도가 각각의 주제로 전시관을 운영한다.<br><br>
+            <img src="https://www.timenews.co.kr/web/news/article_image/2dd5718b97c61bb3be14d26163a808ac" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit"></span><br>
+            대전시는 ‘혁신성장이 시작되는 창업성공 42번가 대전’을 전시 주제로 정하고 대덕특구를 품고 있는 대전시의 기술기반창업을 통해 대한민국의 혁신성장을 선도한다는 메시지를 전달한다.<br><br>
+            전시 주요내용은 우리시 창업지원사업을 통해 성공한 창업 5년 이내의 기업 42개 업체를 알리고, 우리시만의 차별화된 창업정책(5대 창업 플랫폼 조성, 키워드별 창업지원 사업 등)을 소개한다.<br><br>
+            <img src="https://www.timenews.co.kr/web/news/article_image/596ce86a14274e90fd52f467520761fb" alt="" style="width:580px; height:387x; margin: auto;display: block"><br>
+             42개 업체는 관내 대학, 출연연, 혁신기관 등이 추천한 기술기반의 창업성공기업이며, 텔코코리아아이에스(재난안전솔루션), 페인트팜(특수 페인트 재료), 딥센트랩스(향기생성) 등에서 제품을 전시, 시연하며 관람객의 이목을 끌 예정이다.<br><br>
+            대전시는 주요 제품의 전시, 시연 이외에도 전시관을 찾는 관람객에게 다양한 볼거리, 즐길 거리를 제공해, 기억에 남는 즐거운 관람을 제공할 예정이다.<br><br>
+            이번 박람회의 특징은 현 정부의 정책기조에 맞는 시민주도형 혁신성장의 실제 성과를 확인 할 수 있도록 전국 각 지역의 사회적 경제, 마을만들기, 도시재생, 문화운동 등 지역혁신을 위한 활동을 전개하는 현장 혁신활동가의 사례 공유와 네트워킹이 마련된다.<br><br>
+            아울러, 전국 청년활동가 사례가 전시·공유되는 청년혁신카페는 우리지역의‘혁신청’, ‘위즈온 협동조합’, ‘윙윙’청년혁신단체가 참가해 지역의 사회문제를 해결한 사회혁신 사례를 발표한다.<br>
+              <img src="https://www.timenews.co.kr/web/news/article_image/1f9e662d46d0f9f3eb37b8eebf2dad15" alt="" style="width:580px; height:387x; margin: auto;display: block">
+               <br>
+               금번 박람회 행사를 주최한 국가균형발전위원회 송재호 위원장은 격려사를 통해 “지역이 살아야 서울을 비롯한 수도권도 살고 지역을 강하게 하는 것이야 말로 대한민국을 바로 세우는 길"이라고 강조하며, “문재인정부는 분권과 포용, 특히 혁신의 새로운 바람으로 국가균형발전의 길을 탄탄하게 만들어 나갈 것"이라고 밝혔다.<br><br>
+            허태정 대전시장은 “균형박람회가 성공리에 잘 개최돼 중앙부처와 지방자치단체가 함께 혁신하는 소중한 기회가 되면 좋겠다"며 “민선7기 출범 이후 우리시가 주관하는 첫 전국 단위 대규모 행사인 만큼 4차산업혁명특별시 대전의 도시브랜드 가치를 널리 알릴 수 있도록 최선을 다하겠다"고 말했다.<br><br>
+               <img src="https://www.timenews.co.kr/web/news/article_image/7cc556005e6bb562023bc1a2b7e9ead5" alt="" style="width:580px; height:387x; margin: auto;display: block"><br>
+               <span>홍대인 기자</span>
+             </p>
+            
+          </div>		
+
+<!-- tabs11----------------------------------------------------------------------------------------------->          
+         <div id="tabs-10" class="tabsbox">
+           <span id="news">[세종타임즈]</span><br>
+           <div class="newslink">
+               <span>기사링크 : </span>
+               <a href="http://www.sejongtimes.kr/310284">http://www.sejongtimes.kr/310284</a>
+           </div>
+            <h2 class="Tit">대한민국의 중심 대전에서 싹트는 혁신성장</h2>
+            <h4 class="Titsub">혁신성장 사례 배우고 공유하고 나누는 균형발전 축제의 장</h4>
+            <span class="date"> 2018-09-06</span><br><br>
+            <p class="newsImg" style="text-align: center"><img src="http://gtr.xza.kr/imgdata/gtr_xza_kr/201809/5-20180906114949.png" alt="" style="width:580px; height:387x; margin: auto;display: block">
+            <span class="subTit">대전광역시</span></p>
+            <p style="margin: 30px;">
+            [세종타임즈] 문재인 정부의 5대 국정 목표 중 하나인‘고르게 발전하는 지역’을 실현하고 균형발전의 의지를 다지는 ‘2018 대한민국 균형발전박람회’가 6일부터 오는 8일까지 대전 컨벤션센터에서 개최된다.<br><br>
+
+            산업통상자원부와 균형발전위원회, 17개 시·도가 주최하고 한국산업기술진흥원과 대전시가 주관하는 이번 박람회는 2004년 지역 혁신 박람회 개최 이후 중부권 최초로 대전에서 개최된다.<br><br>
+
+            박람회의 주제는 ‘혁신을 통한 지역의 미래 성장동력 마련’이며 주요내용으로는 17개 시도관과 균형위 특별전시관으로 구성되는 ‘균형마당’, 지역혁신활동가 사례 공유와 네트워킹으로 구성되는 ‘혁신마당’, 국내외 균형발전정책 전문가 토론 및 컨퍼런스로 진행되는 ‘정책마당’과 다채로운 부대행사로 구성된다.<br><br>
+
+            균형마당에는 17개 시도가 각각의 주제로 전시관을 운영한다.<br><br>
+
+            대전시는 ‘혁신성장이 시작되는 창업성공 42번가 대전’을 전시 주제로 정하고 대덕특구를 품고 있는 대전시의 기술기반창업을 통해 대한민국의 혁신성장을 선도한다는 메시지를 전달한다.<br><br>
+
+            전시 주요내용은 우리시 창업지원사업을 통해 성공한 창업 5년 이내의 기업 42개 업체를 알리고, 우리시만의 차별화된 창업정책을 소개한다.<br><br>
+
+            42개 업체는 관내 대학, 출연연, 혁신기관 등이 추천한 기술기반의 창업성공기업이며, 텔코코리아아이에스, 페인트팜, 딥센트랩스 등에서 제품을 전시, 시연하며 관람객의 이목을 끌 예정이다.<br><br>
+
+            대전시는 주요 제품의 전시, 시연 이외에도 전시관을 찾는 관람객에게 다양한 볼거리, 즐길 거리를 제공해, 기억에 남는 즐거운 관람을 제공할 예정이다.<br><br>
+
+            이번 박람회의 특징은 현 정부의 정책기조에 맞는 시민주도형 혁신성장의 실제 성과를 확인 할 수 있도록 전국 각 지역의 사회적 경제, 마을만들기, 도시재생, 문화운동 등 지역혁신을 위한 활동을 전개하는 현장 혁신활동가의 사례 공유와 네트워킹이 마련된다.<br><br>
+
+            아울러, 전국 청년활동가 사례가 전시·공유되는 청년혁신카페는 우리지역의‘혁신청’, ‘위즈온 협동조합’, ‘윙윙’청년혁신단체가 참가해 지역의 사회문제를 해결한 사회혁신 사례를 발표한다.<br><br>
+
+            허태정 대전시장은 “균형박람회가 성공리에 잘 개최돼 중앙부처와 지방자치단체가 함께 혁신하는 소중한 기회가 되면 좋겠다”며 “민선7기 출범 이후 우리시가 주관하는 첫 전국 단위 대규모 행사인 만큼 4차산업혁명특별시 대전의 도시브랜드 가치를 널리 알릴 수 있도록 최선을 다하겠다”고 말했다.<br><br>
+               <span>이재희 기자</span>
+             </p>
+            
+          </div>		
+
+
+</div>
+
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
